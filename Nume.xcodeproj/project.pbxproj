@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D003D1AEB122100D32F95 /* RecordingViewController.swift */; };
+		201D00401AEB12AD00D32F95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201D003F1AEB12AD00D32F95 /* AVFoundation.framework */; };
 		20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C71AE81D82005AFB27 /* AppDelegate.swift */; };
 		20A552CA1AE81D82005AFB27 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C91AE81D82005AFB27 /* MasterViewController.swift */; };
 		20A552CC1AE81D82005AFB27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552CB1AE81D82005AFB27 /* DetailViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		201D003D1AEB122100D32F95 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		201D003F1AEB12AD00D32F95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552C61AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552C71AE81D82005AFB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201D00401AEB12AD00D32F95 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 		20A552B91AE81D82005AFB27 = {
 			isa = PBXGroup;
 			children = (
+				201D003F1AEB12AD00D32F95 /* AVFoundation.framework */,
 				20A552C41AE81D82005AFB27 /* Nume */,
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
 				20A552C31AE81D82005AFB27 /* Products */,
@@ -82,6 +88,7 @@
 				20A552C71AE81D82005AFB27 /* AppDelegate.swift */,
 				20A552C91AE81D82005AFB27 /* MasterViewController.swift */,
 				20A552CB1AE81D82005AFB27 /* DetailViewController.swift */,
+				201D003D1AEB122100D32F95 /* RecordingViewController.swift */,
 				20A552CD1AE81D82005AFB27 /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
@@ -215,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */,
 				20A552CC1AE81D82005AFB27 /* DetailViewController.swift in Sources */,
 				20A552CA1AE81D82005AFB27 /* MasterViewController.swift in Sources */,
 				20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */,
@@ -413,6 +421,7 @@
 				20A552E51AE81D82005AFB27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20A552E61AE81D82005AFB27 /* Build configuration list for PBXNativeTarget "NumeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				20A552E81AE81D82005AFB27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
