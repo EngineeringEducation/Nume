@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dwN-8V-ykF">
-                                <rect key="frame" x="135" y="429" width="50" height="39"/>
+                                <rect key="frame" x="135" y="393" width="50" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Record">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,14 +37,47 @@
                                     <action selector="recordAudio:" destination="rHy-ma-jkF" eventType="touchUpInside" id="zhJ-XU-3xN"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="frd-Lk-4sf" customClass="EZAudioPlot">
+                                <rect key="frame" x="45" y="194" width="231" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVk-Am-hF2">
+                                <rect key="frame" x="135" y="440" width="50" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio" destination="rHy-ma-jkF" eventType="touchUpInside" id="phE-3m-935"/>
+                                    <action selector="recordAudio:" destination="rHy-ma-jkF" eventType="touchUpInside" id="RF1-Xr-EYF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vJg-Kv-7Dt"/>
+                    <connections>
+                        <segue destination="g33-rC-vBe" kind="modal" id="Yxy-RB-qvX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKx-QF-p7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="60"/>
+            <point key="canvasLocation" x="380" y="67"/>
+        </scene>
+        <!--Rating View Controller-->
+        <scene sceneID="oDC-WB-Vqi">
+            <objects>
+                <viewController id="g33-rC-vBe" customClass="RatingViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1QJ-Sb-X3p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D50-dK-o5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="67"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

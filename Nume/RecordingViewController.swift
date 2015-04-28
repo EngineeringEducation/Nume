@@ -8,20 +8,36 @@
 import UIKit
 import AVFoundation
 
-
 class RecordingViewController: UIViewController, AVAudioRecorderDelegate {
     
-    let audioURL : NSURL
+    
+    // Audio Recorder implementation
+    
+    var audioURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("02HoldinOn", ofType: "mp3")!)
     let audioSession : AVAudioSession
     let audioRecorder : AVAudioRecorder
-    var audioPlayer : AVAudioPlayer!
+    
+    //initialize audioPlayer as AVAudioPlayer
+    var audioPlayer = AVAudioPlayer()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: audioURL, error: nil)
+    }
+    
+    @IBAction func playButton(sender: UIButton) {
+        audioPlayer.play()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
     
     required init(coder aDecoder: NSCoder) {
-        
-        let documentDirectoryString = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        
-        self.audioURL = NSURL(string: documentDirectoryString + "/audiofile.m4a")!
-        
+       
         var error : NSError?
         
         // TODO: Vet the appropriateness of these settings
@@ -71,4 +87,6 @@ class RecordingViewController: UIViewController, AVAudioRecorderDelegate {
         
         var error : NSError?
     }
+    
+
 }

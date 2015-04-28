@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D003D1AEB122100D32F95 /* RecordingViewController.swift */; };
 		201D00401AEB12AD00D32F95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201D003F1AEB12AD00D32F95 /* AVFoundation.framework */; };
+		201D00781AEFF7F800D32F95 /* 02HoldinOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */; };
 		20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C71AE81D82005AFB27 /* AppDelegate.swift */; };
 		20A552CA1AE81D82005AFB27 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C91AE81D82005AFB27 /* MasterViewController.swift */; };
-		20A552CC1AE81D82005AFB27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552CB1AE81D82005AFB27 /* DetailViewController.swift */; };
+		20A552CC1AE81D82005AFB27 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552CB1AE81D82005AFB27 /* RatingViewController.swift */; };
 		20A552CF1AE81D82005AFB27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A552CD1AE81D82005AFB27 /* Main.storyboard */; };
 		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
@@ -31,11 +32,12 @@
 /* Begin PBXFileReference section */
 		201D003D1AEB122100D32F95 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		201D003F1AEB12AD00D32F95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 02HoldinOn.mp3; path = "../../../Music/iTunes/iTunes Media/Music/Flume/Flume/02HoldinOn.mp3"; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552C61AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552C71AE81D82005AFB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A552C91AE81D82005AFB27 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		20A552CB1AE81D82005AFB27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		20A552CB1AE81D82005AFB27 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		20A552CE1AE81D82005AFB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20A552D01AE81D82005AFB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20A552D31AE81D82005AFB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 			children = (
 				20A552C71AE81D82005AFB27 /* AppDelegate.swift */,
 				20A552C91AE81D82005AFB27 /* MasterViewController.swift */,
-				20A552CB1AE81D82005AFB27 /* DetailViewController.swift */,
+				20A552CB1AE81D82005AFB27 /* RatingViewController.swift */,
 				201D003D1AEB122100D32F95 /* RecordingViewController.swift */,
 				20A552CD1AE81D82005AFB27 /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
@@ -100,6 +102,7 @@
 		20A552C51AE81D82005AFB27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */,
 				20A552C61AE81D82005AFB27 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +208,7 @@
 				20A552CF1AE81D82005AFB27 /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
+				201D00781AEFF7F800D32F95 /* 02HoldinOn.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */,
-				20A552CC1AE81D82005AFB27 /* DetailViewController.swift in Sources */,
+				20A552CC1AE81D82005AFB27 /* RatingViewController.swift in Sources */,
 				20A552CA1AE81D82005AFB27 /* MasterViewController.swift in Sources */,
 				20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */,
 			);
