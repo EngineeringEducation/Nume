@@ -12,7 +12,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rHy-ma-jkF" kind="relationship" relationship="rootViewController" id="C7b-b8-Vc2"/>
+                        <segue destination="g33-rC-vBe" kind="relationship" relationship="rootViewController" id="F50-KH-hTW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
@@ -57,9 +57,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vJg-Kv-7Dt"/>
-                    <connections>
-                        <segue destination="g33-rC-vBe" kind="modal" id="Yxy-RB-qvX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKx-QF-p7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,8 +69,29 @@
                     <view key="view" contentMode="scaleToFill" id="1QJ-Sb-X3p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-1.5" minValue="-5" maxValue="5" id="MFD-CT-sE0">
+                                <rect key="frame" x="48" y="385" width="224" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="g33-rC-vBe" eventType="valueChanged" id="HTe-HT-nUa"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Bk-r1-XXh">
+                                <rect key="frame" x="94" y="222" width="133" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="140"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Nok-Ke-BZO"/>
+                    <connections>
+                        <outlet property="ratinglabel" destination="0Bk-r1-XXh" id="7jK-cf-yhK"/>
+                        <outlet property="slider" destination="MFD-CT-sE0" id="3fq-oF-H4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D50-dK-o5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

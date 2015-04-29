@@ -11,11 +11,18 @@ import UIKit
 class RatingViewController: UIViewController {
 
     //initialize variables
-    var number : Int
+    
     
     //create slider for selecting number
+    @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var ratinglabel: UILabel!
     //show large number while selecting on slider
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        var currentValue = Int(sender.value)
+        ratinglabel.text = "\(currentValue)"
+    }
     
     //take user file and add number selection
 
