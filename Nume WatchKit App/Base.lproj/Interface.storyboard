@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Nume_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="I feel like a . . ." textAlignment="center" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="12"/>
+                        </label>
+                        <label width="136" height="31" alignment="left" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                            <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="31"/>
+                        </label>
+                        <slider width="1" height="46" alignment="center" continuous="YES" value="1" minimum="-5" maximum="5" steps="10" id="RID-RP-14O">
+                            <color key="color" red="0.41951069079999997" green="0.79671365049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="updateRating:" destination="AgC-eL-Hgc" id="uiE-bC-hcu"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="aUs-6X-o42">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <button width="31" height="31" alignment="center" backgroundImage="Microphone" id="iP0-j0-W9J">
+                            <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES"/>
+                            <connections>
+                                <action selector="onVoiceDictationTap" destination="AgC-eL-Hgc" id="n1X-a6-caW"/>
+                            </connections>
+                        </button>
+                        <label width="136" alignment="left" text="my text" textAlignment="center" id="6SX-I1-MxV">
+                            <color key="textColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button width="1" alignment="left" title="Send" id="82Z-bK-eWK"/>
+                    </items>
+                    <connections>
+                        <outlet property="microphoneButton" destination="iP0-j0-W9J" id="weQ-fQ-vCd"/>
+                        <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="zC9-3X-yEb"/>
+                        <outlet property="slider" destination="RID-RP-14O" id="wbs-Ao-45R"/>
+                        <outlet property="textResult" destination="6SX-I1-MxV" id="0Sb-1T-vEg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="360.5"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aDz-1t-Vdn">
+            <objects>
+                <controller id="kfE-Wh-HpK">
+                    <menu key="menu" id="ChK-Yb-cih">
+                        <items>
+                            <menuItem title="Menu Item" icon="maybe" id="gWk-ly-dNA"/>
+                            <menuItem title="Menu Item" id="olC-bE-xXu"/>
+                            <menuItem title="Menu Item" id="BNE-gR-d3F"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="447" y="353"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Nume_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

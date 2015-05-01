@@ -10,15 +10,37 @@
 		201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D003D1AEB122100D32F95 /* RecordingViewController.swift */; };
 		201D00401AEB12AD00D32F95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201D003F1AEB12AD00D32F95 /* AVFoundation.framework */; };
 		201D00781AEFF7F800D32F95 /* 02HoldinOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */; };
+		201D00851AF1F8BA00D32F95 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* InterfaceController.swift */; };
+		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
+		201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00881AF1F8BA00D32F95 /* Images.xcassets */; };
+		201D008D1AF1F8BA00D32F95 /* Nume WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */; };
+		201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D00931AF1F8BA00D32F95 /* Interface.storyboard */; };
+		201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00961AF1F8BA00D32F95 /* Images.xcassets */; };
+		201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C71AE81D82005AFB27 /* AppDelegate.swift */; };
 		20A552CC1AE81D82005AFB27 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552CB1AE81D82005AFB27 /* RatingViewController.swift */; };
 		20A552CF1AE81D82005AFB27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A552CD1AE81D82005AFB27 /* Main.storyboard */; };
 		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
+		20E187CF1AF30EEF00911852 /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E187CE1AF30EEF00911852 /* Microphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		201D008E1AF1F8BA00D32F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 201D008B1AF1F8BA00D32F95;
+			remoteInfo = "Nume WatchKit App";
+		};
+		201D00981AF1F8BA00D32F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 201D007E1AF1F8BA00D32F95;
+			remoteInfo = "Nume WatchKit Extension";
+		};
 		20A552DA1AE81D82005AFB27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
@@ -28,10 +50,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		201D00A11AF1F8BA00D32F95 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		201D003D1AEB122100D32F95 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		201D003F1AEB12AD00D32F95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 02HoldinOn.mp3; path = "../../../Music/iTunes/iTunes Media/Music/Flume/Flume/02HoldinOn.mp3"; sourceTree = "<group>"; };
+		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		201D00831AF1F8BA00D32F95 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		201D00841AF1F8BA00D32F95 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		201D00861AF1F8BA00D32F95 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		201D00881AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nume WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		201D00921AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		201D00941AF1F8BA00D32F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		201D00961AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552C61AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552C71AE81D82005AFB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,9 +88,17 @@
 		20A552D91AE81D82005AFB27 /* NumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
+		20E187CE1AF30EEF00911852 /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Microphone.png; path = ../../../Downloads/Microphone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		201D007C1AF1F8BA00D32F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20A552BF1AE81D82005AFB27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,12 +117,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				201D00841AF1F8BA00D32F95 /* InterfaceController.swift */,
+				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
+				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
+				201D00811AF1F8BA00D32F95 /* Supporting Files */,
+			);
+			path = "Nume WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		201D00811AF1F8BA00D32F95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				201D00821AF1F8BA00D32F95 /* Info.plist */,
+				201D00831AF1F8BA00D32F95 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		201D00901AF1F8BA00D32F95 /* Nume WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				201D00931AF1F8BA00D32F95 /* Interface.storyboard */,
+				201D00961AF1F8BA00D32F95 /* Images.xcassets */,
+				201D00911AF1F8BA00D32F95 /* SupportingFiles */,
+			);
+			path = "Nume WatchKit App";
+			sourceTree = "<group>";
+		};
+		201D00911AF1F8BA00D32F95 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				20E187CE1AF30EEF00911852 /* Microphone.png */,
+				201D00921AF1F8BA00D32F95 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		20A552B91AE81D82005AFB27 = {
 			isa = PBXGroup;
 			children = (
 				201D003F1AEB12AD00D32F95 /* AVFoundation.framework */,
 				20A552C41AE81D82005AFB27 /* Nume */,
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
+				201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */,
+				201D00901AF1F8BA00D32F95 /* Nume WatchKit App */,
 				20A552C31AE81D82005AFB27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +173,8 @@
 			children = (
 				20A552C21AE81D82005AFB27 /* Nume.app */,
 				20A552D91AE81D82005AFB27 /* NumeTests.xctest */,
+				201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */,
+				201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +222,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 201D009E1AF1F8BA00D32F95 /* Build configuration list for PBXNativeTarget "Nume WatchKit Extension" */;
+			buildPhases = (
+				201D007B1AF1F8BA00D32F95 /* Sources */,
+				201D007C1AF1F8BA00D32F95 /* Frameworks */,
+				201D007D1AF1F8BA00D32F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				201D008F1AF1F8BA00D32F95 /* PBXTargetDependency */,
+			);
+			name = "Nume WatchKit Extension";
+			productName = "Nume WatchKit Extension";
+			productReference = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		201D008B1AF1F8BA00D32F95 /* Nume WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 201D009B1AF1F8BA00D32F95 /* Build configuration list for PBXNativeTarget "Nume WatchKit App" */;
+			buildPhases = (
+				201D008A1AF1F8BA00D32F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nume WatchKit App";
+			productName = "Nume WatchKit App";
+			productReference = 201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		20A552C11AE81D82005AFB27 /* Nume */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20A552E31AE81D82005AFB27 /* Build configuration list for PBXNativeTarget "Nume" */;
@@ -132,10 +262,12 @@
 				20A552BE1AE81D82005AFB27 /* Sources */,
 				20A552BF1AE81D82005AFB27 /* Frameworks */,
 				20A552C01AE81D82005AFB27 /* Resources */,
+				201D00A11AF1F8BA00D32F95 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				201D00991AF1F8BA00D32F95 /* PBXTargetDependency */,
 			);
 			name = Nume;
 			productName = Nume;
@@ -169,6 +301,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Daniel Hsu";
 				TargetAttributes = {
+					201D007E1AF1F8BA00D32F95 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					201D008B1AF1F8BA00D32F95 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = J4VYN3B6QR;
+					};
 					20A552C11AE81D82005AFB27 = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -193,11 +332,32 @@
 			targets = (
 				20A552C11AE81D82005AFB27 /* Nume */,
 				20A552D81AE81D82005AFB27 /* NumeTests */,
+				201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */,
+				201D008B1AF1F8BA00D32F95 /* Nume WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		201D007D1AF1F8BA00D32F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */,
+				201D008D1AF1F8BA00D32F95 /* Nume WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		201D008A1AF1F8BA00D32F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */,
+				20E187CF1AF30EEF00911852 /* Microphone.png in Resources */,
+				201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20A552C01AE81D82005AFB27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +379,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		201D007B1AF1F8BA00D32F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
+				201D00851AF1F8BA00D32F95 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20A552BE1AE81D82005AFB27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +409,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		201D008F1AF1F8BA00D32F95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 201D008B1AF1F8BA00D32F95 /* Nume WatchKit App */;
+			targetProxy = 201D008E1AF1F8BA00D32F95 /* PBXContainerItemProxy */;
+		};
+		201D00991AF1F8BA00D32F95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */;
+			targetProxy = 201D00981AF1F8BA00D32F95 /* PBXContainerItemProxy */;
+		};
 		20A552DB1AE81D82005AFB27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 20A552C11AE81D82005AFB27 /* Nume */;
@@ -248,6 +427,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		201D00931AF1F8BA00D32F95 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				201D00941AF1F8BA00D32F95 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		20A552CD1AE81D82005AFB27 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -267,6 +454,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		201D009C1AF1F8BA00D32F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Nume_WatchKit_Extension;
+				INFOPLIST_FILE = "Nume WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		201D009D1AF1F8BA00D32F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = Nume_WatchKit_Extension;
+				INFOPLIST_FILE = "Nume WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		201D009F1AF1F8BA00D32F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Nume WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		201D00A01AF1F8BA00D32F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Nume WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		20A552E11AE81D82005AFB27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,6 +654,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		201D009B1AF1F8BA00D32F95 /* Build configuration list for PBXNativeTarget "Nume WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				201D009C1AF1F8BA00D32F95 /* Debug */,
+				201D009D1AF1F8BA00D32F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		201D009E1AF1F8BA00D32F95 /* Build configuration list for PBXNativeTarget "Nume WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				201D009F1AF1F8BA00D32F95 /* Debug */,
+				201D00A01AF1F8BA00D32F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		20A552BD1AE81D82005AFB27 /* Build configuration list for PBXProject "Nume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
