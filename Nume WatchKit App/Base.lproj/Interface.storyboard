@@ -5,62 +5,127 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Rate Number Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Nume_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
                         <label width="136" alignment="left" text="I feel like a . . ." textAlignment="center" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="12"/>
                         </label>
-                        <label width="136" height="31" alignment="left" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                        <label width="136" height="31" alignment="left" text="1" textAlignment="center" id="kjk-Cl-pzw">
                             <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="light" pointSize="31"/>
                         </label>
                         <slider width="1" height="46" alignment="center" continuous="YES" value="1" minimum="-5" maximum="5" steps="10" id="RID-RP-14O">
                             <color key="color" red="0.41951069079999997" green="0.79671365049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="updateRating:" destination="AgC-eL-Hgc" id="uiE-bC-hcu"/>
+                                <action selector="updateRating:" destination="AgC-eL-Hgc" id="cbz-sO-BUP"/>
                             </connections>
                         </slider>
-                        <separator alignment="left" id="aUs-6X-o42">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </separator>
-                        <button width="31" height="31" alignment="center" backgroundImage="Microphone" id="iP0-j0-W9J">
-                            <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES"/>
+                        <button width="84" height="47" alignment="center" verticalAlignment="bottom" title="➡︎" id="82Z-bK-eWK">
+                            <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="35"/>
                             <connections>
-                                <action selector="onVoiceDictationTap" destination="AgC-eL-Hgc" id="n1X-a6-caW"/>
+                                <segue destination="5lG-0V-42a" kind="push" id="7yF-Tx-2d8"/>
                             </connections>
                         </button>
-                        <label width="136" alignment="left" text="my text" textAlignment="center" id="6SX-I1-MxV">
-                            <color key="textColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <button width="1" alignment="left" title="Send" id="82Z-bK-eWK"/>
                     </items>
                     <connections>
-                        <outlet property="microphoneButton" destination="iP0-j0-W9J" id="weQ-fQ-vCd"/>
-                        <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="zC9-3X-yEb"/>
-                        <outlet property="slider" destination="RID-RP-14O" id="wbs-Ao-45R"/>
-                        <outlet property="textResult" destination="6SX-I1-MxV" id="0Sb-1T-vEg"/>
+                        <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="ufO-zF-T35"/>
+                        <outlet property="slider" destination="RID-RP-14O" id="spL-aa-MNH"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="360.5"/>
+            <point key="canvasLocation" x="220" y="318"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="aDz-1t-Vdn">
+        <scene sceneID="n7D-nY-pcn">
             <objects>
-                <controller id="kfE-Wh-HpK">
-                    <menu key="menu" id="ChK-Yb-cih">
-                        <items>
-                            <menuItem title="Menu Item" icon="maybe" id="gWk-ly-dNA"/>
-                            <menuItem title="Menu Item" id="olC-bE-xXu"/>
-                            <menuItem title="Menu Item" id="BNE-gR-d3F"/>
-                        </items>
-                    </menu>
+                <controller id="XLe-eE-GyL">
+                    <items>
+                        <group width="1" height="52" alignment="left" id="tog-fI-TAb">
+                            <items>
+                                <imageView width="50" alignment="center" image="Beer.png" id="aOF-9G-sh1"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Fez-O1-W2B">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <group width="1" height="52" alignment="left" id="GDJ-kM-tUQ">
+                            <items>
+                                <imageView width="50" alignment="left" image="Book.png" id="hui-hf-QH7"/>
+                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
+                                    <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="31"/>
+                                </label>
+                                <imageView width="50" alignment="right" image="Microphone" id="grq-jC-vR4"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Wgj-Zw-rx6">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <group width="1" height="52" alignment="left" id="Man-Jf-fD9">
+                            <items>
+                                <separator alignment="left" id="dyq-Io-lAh">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <separator alignment="left" id="qvR-b5-ECT">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <separator alignment="left" id="a9g-ss-uAM">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <imageView width="50" alignment="left" image="Restaurant.png" id="vdY-yw-Mg3"/>
+                                <separator alignment="left" id="L3F-Ij-aYm">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <separator alignment="left" id="KwC-yL-AuN">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <separator alignment="left" id="L9c-ry-thk">
+                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <imageView width="50" alignment="left" image="Commute.png" id="TLZ-cn-amt"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="L94-tV-muz">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                    </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="447" y="353"/>
+            <point key="canvasLocation" x="699" y="331.75"/>
+        </scene>
+        <!--Activity Controller-->
+        <scene sceneID="PWk-mL-qgM">
+            <objects>
+                <controller id="5lG-0V-42a" customClass="ActivityController" customModule="Nume_WatchKit_Extension">
+                    <items>
+                        <button width="136" height="31" alignment="center" title="Activity" id="iP0-j0-W9J">
+                            <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES"/>
+                            <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="onVoiceDictationTap" destination="5lG-0V-42a" id="Qdn-jY-vWz"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="62" alignment="left" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.50000000000000011" id="HjV-bs-s9R">
+                            <color key="textColor" red="0.41951069079999997" green="0.79671365049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="13"/>
+                        </label>
+                        <button width="84" height="44" alignment="center" verticalAlignment="bottom" title="➡︎" id="aa1-k8-rpQ">
+                            <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="35"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="microphoneButton" destination="iP0-j0-W9J" id="0NH-Rq-oO0"/>
+                        <outlet property="textResult" destination="HjV-bs-s9R" id="zW4-SP-tQZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="492" y="332"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

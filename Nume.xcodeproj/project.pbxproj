@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		201D003E1AEB122100D32F95 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D003D1AEB122100D32F95 /* RecordingViewController.swift */; };
 		201D00401AEB12AD00D32F95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201D003F1AEB12AD00D32F95 /* AVFoundation.framework */; };
-		201D00781AEFF7F800D32F95 /* 02HoldinOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */; };
-		201D00851AF1F8BA00D32F95 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* InterfaceController.swift */; };
+		201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* RateNumberController.swift */; };
 		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
 		201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00881AF1F8BA00D32F95 /* Images.xcassets */; };
 		201D008D1AF1F8BA00D32F95 /* Nume WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */; };
 		201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D00931AF1F8BA00D32F95 /* Interface.storyboard */; };
 		201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00961AF1F8BA00D32F95 /* Images.xcassets */; };
 		201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		207D5A3E1AF5F14A00E8C7E2 /* Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A3D1AF5F14A00E8C7E2 /* Book.png */; };
+		207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A3F1AF5F15200E8C7E2 /* Commute.png */; };
+		207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A411AF5F15B00E8C7E2 /* Beer.png */; };
+		207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A431AF5F16400E8C7E2 /* Restaurant.png */; };
+		207D5A461AF82C5500E8C7E2 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D5A451AF82C5500E8C7E2 /* ActivityController.swift */; };
 		20A552C81AE81D82005AFB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552C71AE81D82005AFB27 /* AppDelegate.swift */; };
 		20A552CC1AE81D82005AFB27 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552CB1AE81D82005AFB27 /* RatingViewController.swift */; };
 		20A552CF1AE81D82005AFB27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A552CD1AE81D82005AFB27 /* Main.storyboard */; };
@@ -67,17 +71,21 @@
 /* Begin PBXFileReference section */
 		201D003D1AEB122100D32F95 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		201D003F1AEB12AD00D32F95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 02HoldinOn.mp3; path = "../../../Music/iTunes/iTunes Media/Music/Flume/Flume/02HoldinOn.mp3"; sourceTree = "<group>"; };
 		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00831AF1F8BA00D32F95 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		201D00841AF1F8BA00D32F95 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		201D00841AF1F8BA00D32F95 /* RateNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateNumberController.swift; sourceTree = "<group>"; };
 		201D00861AF1F8BA00D32F95 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		201D00881AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nume WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00921AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00941AF1F8BA00D32F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		201D00961AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		207D5A3D1AF5F14A00E8C7E2 /* Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Book.png; sourceTree = "<group>"; };
+		207D5A3F1AF5F15200E8C7E2 /* Commute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Commute.png; sourceTree = "<group>"; };
+		207D5A411AF5F15B00E8C7E2 /* Beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beer.png; sourceTree = "<group>"; };
+		207D5A431AF5F16400E8C7E2 /* Restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurant.png; sourceTree = "<group>"; };
+		207D5A451AF82C5500E8C7E2 /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552C61AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552C71AE81D82005AFB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +128,8 @@
 		201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				201D00841AF1F8BA00D32F95 /* InterfaceController.swift */,
+				201D00841AF1F8BA00D32F95 /* RateNumberController.swift */,
+				207D5A451AF82C5500E8C7E2 /* ActivityController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
 				201D00811AF1F8BA00D32F95 /* Supporting Files */,
@@ -150,6 +159,10 @@
 		201D00911AF1F8BA00D32F95 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				207D5A431AF5F16400E8C7E2 /* Restaurant.png */,
+				207D5A411AF5F15B00E8C7E2 /* Beer.png */,
+				207D5A3F1AF5F15200E8C7E2 /* Commute.png */,
+				207D5A3D1AF5F14A00E8C7E2 /* Book.png */,
 				20E187CE1AF30EEF00911852 /* Microphone.png */,
 				201D00921AF1F8BA00D32F95 /* Info.plist */,
 			);
@@ -196,7 +209,6 @@
 		20A552C51AE81D82005AFB27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				201D00771AEFF7F800D32F95 /* 02HoldinOn.mp3 */,
 				20A552C61AE81D82005AFB27 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -353,7 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */,
+				207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */,
+				207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */,
 				20E187CF1AF30EEF00911852 /* Microphone.png in Resources */,
+				207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */,
+				207D5A3E1AF5F14A00E8C7E2 /* Book.png in Resources */,
 				201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +381,6 @@
 				20A552CF1AE81D82005AFB27 /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
-				201D00781AEFF7F800D32F95 /* 02HoldinOn.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +399,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
-				201D00851AF1F8BA00D32F95 /* InterfaceController.swift in Sources */,
+				207D5A461AF82C5500E8C7E2 /* ActivityController.swift in Sources */,
+				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
