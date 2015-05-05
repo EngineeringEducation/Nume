@@ -27,7 +27,7 @@
 		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
-		20E187CF1AF30EEF00911852 /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E187CE1AF30EEF00911852 /* Microphone.png */; };
+		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,7 @@
 		20A552D91AE81D82005AFB27 /* NumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
-		20E187CE1AF30EEF00911852 /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Microphone.png; path = ../../../Downloads/Microphone.png; sourceTree = "<group>"; };
+		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +163,7 @@
 				207D5A411AF5F15B00E8C7E2 /* Beer.png */,
 				207D5A3F1AF5F15200E8C7E2 /* Commute.png */,
 				207D5A3D1AF5F14A00E8C7E2 /* Book.png */,
-				20E187CE1AF30EEF00911852 /* Microphone.png */,
+				20D152721AF978320072E2AA /* Microphone.png */,
 				201D00921AF1F8BA00D32F95 /* Info.plist */,
 			);
 			name = SupportingFiles;
@@ -367,8 +367,8 @@
 				201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */,
 				207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */,
 				207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */,
-				20E187CF1AF30EEF00911852 /* Microphone.png in Resources */,
 				207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */,
+				20D152731AF978320072E2AA /* Microphone.png in Resources */,
 				207D5A3E1AF5F14A00E8C7E2 /* Book.png in Resources */,
 				201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */,
 			);
