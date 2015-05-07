@@ -33,22 +33,24 @@ class RateNumberController: WKInterfaceController {
     @IBOutlet weak var minusNumber: WKInterfaceButton!
     @IBOutlet weak var ratingLabel: WKInterfaceLabel!
 
+    let maxNumber = 5
+    let minNumber = -5
     var ratingNumber = 0  {
         didSet {
             ratingLabel.setText("\(ratingNumber)")
-            addNumber.setEnabled(ratingNumber < 5)
-            minusNumber.setEnabled(ratingNumber > -5)
+            addNumber.setEnabled(ratingNumber < maxNumber)
+            minusNumber.setEnabled(ratingNumber > minNumber)
         }
     }
     @IBAction func increaseRating() {
-        if ratingNumber == 5 {
+        if ratingNumber == maxNumber {
             return
         }
         ratingNumber += 1
     }
     
     @IBAction func decreaseRating() {
-        if ratingNumber == -5 {
+        if ratingNumber == minNumber {
             return
         }
         ratingNumber -= 1
