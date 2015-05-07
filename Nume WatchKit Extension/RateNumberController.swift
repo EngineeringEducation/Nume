@@ -36,23 +36,21 @@ class RateNumberController: WKInterfaceController {
     var ratingNumber = 0  {
         didSet {
             ratingLabel.setText("\(ratingNumber)")
-            if ratingNumber < 5 {
-                addNumber.setEnabled(true)
-            } else {
-                addNumber.setEnabled(false)
-            }
-            if ratingNumber > -5 {
-                minusNumber.setEnabled(true)
-            } else {
-                minusNumber.setEnabled(false)
-            }
+            addNumber.setEnabled(ratingNumber < 5)
+            minusNumber.setEnabled(ratingNumber > -5)
         }
     }
     @IBAction func increaseRating() {
+        if ratingNumber == 5 {
+            return
+        }
         ratingNumber += 1
     }
     
     @IBAction func decreaseRating() {
+        if ratingNumber == -5 {
+            return
+        }
         ratingNumber -= 1
     }
    
