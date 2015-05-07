@@ -36,29 +36,23 @@ class RateNumberController: WKInterfaceController {
     var ratingNumber = 0
     @IBAction func increaseRating() {
         minusNumber.setEnabled(true)
-        if ratingNumber == 4 {
-            ratingNumber += 1
-            ratingLabel.setText("\(ratingNumber)")
+        ratingNumber += 1
+        ratingLabel.setText("\(ratingNumber)")
+        if ratingNumber == 5 {
             addNumber.setEnabled(false)
-        } else {
-            addNumber.setEnabled(true)
-            ratingNumber += 1
-            ratingLabel.setText("\(ratingNumber)")
-        }
+        } 
     }
     
     @IBAction func decreaseRating() {
         addNumber.setEnabled(true)
-        if ratingNumber == -4 {
-            ratingNumber -= 1
-            ratingLabel.setText("\(ratingNumber)")
+        ratingNumber -= 1
+        ratingLabel.setText("\(ratingNumber)")
+        if ratingNumber == -5 {
             minusNumber.setEnabled(false)
-        } else {
-            minusNumber.setEnabled(true)
-            ratingNumber -= 1
-            ratingLabel.setText("\(ratingNumber)")
         }
     }
+
+    
     
     //create number ratings
 //    @IBOutlet weak var slider: WKInterfaceSlider!
