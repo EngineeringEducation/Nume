@@ -10,20 +10,36 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <label width="136" alignment="left" text="I FEEL LIKE A . . ." textAlignment="center" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
+                        <label width="136" height="11" alignment="center" text="HOW DO YOU FEEL RIGHT NOW?" textAlignment="center" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="12"/>
                         </label>
-                        <label width="136" height="31" alignment="left" text="1" textAlignment="center" id="kjk-Cl-pzw">
-                            <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" weight="light" pointSize="31"/>
-                        </label>
+                        <group width="1" alignment="left" id="IBt-un-Nnk">
+                            <items>
+                                <button width="40" alignment="left" title="—" id="C1L-Da-snV">
+                                    <connections>
+                                        <action selector="decreaseRating" destination="AgC-eL-Hgc" id="kdS-8C-DJ5"/>
+                                    </connections>
+                                </button>
+                                <label width="49" height="38" alignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                                    <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="31"/>
+                                </label>
+                                <button width="40" alignment="right" title="+" id="IDt-Hl-aSO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="31"/>
+                                    <connections>
+                                        <action selector="increaseRating" destination="AgC-eL-Hgc" id="FZQ-Cr-M3e"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                         <slider width="1" height="46" alignment="center" verticalAlignment="center" continuous="YES" value="1" minimum="-5" maximum="5" steps="10" id="RID-RP-14O">
                             <color key="color" red="0.41951069079999997" green="0.79671365049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="updateRating:" destination="AgC-eL-Hgc" id="cbz-sO-BUP"/>
                             </connections>
                         </slider>
-                        <button width="84" height="40" alignment="center" verticalAlignment="bottom" title="➡︎" id="82Z-bK-eWK">
+                        <button width="57" height="45" alignment="center" verticalAlignment="bottom" backgroundImage="Microphone" id="82Z-bK-eWK">
                             <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="35"/>
                             <connections>
@@ -35,12 +51,14 @@
                         </separator>
                     </items>
                     <connections>
+                        <outlet property="addNumber" destination="IDt-Hl-aSO" id="NHT-zM-DZF"/>
+                        <outlet property="minusNumber" destination="C1L-Da-snV" id="qIL-ZK-aLN"/>
                         <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="ufO-zF-T35"/>
                         <outlet property="slider" destination="RID-RP-14O" id="spL-aa-MNH"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="315"/>
+            <point key="canvasLocation" x="220" y="315.494140625"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="n7D-nY-pcn">
