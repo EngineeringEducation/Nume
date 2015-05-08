@@ -18,11 +18,11 @@
 		207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A3F1AF5F15200E8C7E2 /* Commute.png */; };
 		207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A411AF5F15B00E8C7E2 /* Beer.png */; };
 		207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A431AF5F16400E8C7E2 /* Restaurant.png */; };
-		207D5A461AF82C5500E8C7E2 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D5A451AF82C5500E8C7E2 /* ActivityController.swift */; };
 		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
+		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
 		CA51F49C1AF9882D00BC94BC /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */; };
@@ -84,7 +84,6 @@
 		207D5A3F1AF5F15200E8C7E2 /* Commute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Commute.png; sourceTree = "<group>"; };
 		207D5A411AF5F15B00E8C7E2 /* Beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beer.png; sourceTree = "<group>"; };
 		207D5A431AF5F16400E8C7E2 /* Restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurant.png; sourceTree = "<group>"; };
-		207D5A451AF82C5500E8C7E2 /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552D01AE81D82005AFB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20A552D31AE81D82005AFB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
+		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				201D00841AF1F8BA00D32F95 /* RateNumberController.swift */,
-				207D5A451AF82C5500E8C7E2 /* ActivityController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
+				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
 				201D00811AF1F8BA00D32F95 /* Supporting Files */,
 			);
@@ -416,8 +416,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
-				207D5A461AF82C5500E8C7E2 /* ActivityController.swift in Sources */,
 				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
+				20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

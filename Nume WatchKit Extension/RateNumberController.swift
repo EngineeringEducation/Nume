@@ -12,6 +12,10 @@ import Foundation
 
 class RateNumberController: WKInterfaceController {
     
+    // Model
+    var user = User(userToken: 1, userNumber: 3, userActivity: "happy")
+    
+    // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -40,6 +44,7 @@ class RateNumberController: WKInterfaceController {
             ratingLabel.setText("\(ratingNumber)")
             addNumber.setEnabled(ratingNumber < maxNumber)
             minusNumber.setEnabled(ratingNumber > minNumber)
+            self.user.userNumber = ratingNumber
         }
     }
     @IBAction func increaseRating() {
@@ -55,6 +60,23 @@ class RateNumberController: WKInterfaceController {
         }
         ratingNumber -= 1
     }
+    
+    //create microphone button image and link to dictation
+    @IBOutlet weak var microphoneButton: WKInterfaceButton!
+    // @IBOutlet weak var textResult: WKInterfaceLabel!
+    @IBAction func onVoiceDictationTap() {
+        presentTextInputControllerWithSuggestions(nil, allowedInputMode: .Plain)
+            {(input) -> Void in
+                // self.textResult.setText(input[0] as? String)
+                println("INPUT: \(input)")
+                if (input == nil) {
+                    return
+                }
+                self.user.userActivity = input[0] as! String
+        }
+        
+    }
+
    
 
 }
