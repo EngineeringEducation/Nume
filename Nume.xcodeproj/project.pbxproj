@@ -23,6 +23,7 @@
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
+		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
 		CA51F49C1AF9882D00BC94BC /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */; };
@@ -92,6 +93,7 @@
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				201D00841AF1F8BA00D32F95 /* RateNumberController.swift */,
+				20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
 				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
@@ -418,6 +421,7 @@
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
 				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
 				20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */,
+				20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

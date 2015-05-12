@@ -20,5 +20,4 @@ class User: NSObject {
         self.userActivity = userActivity
         super.init()
     }
-    
 }
