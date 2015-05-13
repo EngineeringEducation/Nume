@@ -7,16 +7,41 @@
         <!--Login View Controller-->
         <scene sceneID="o0y-La-gcO">
             <objects>
-                <viewController id="2Da-rh-JnP" customClass="FBLoginViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Da-rh-JnP" customClass="LoginViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TNR-cE-2MF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="mbq-DN-gPb" kind="push" identifier="showView" id="fPe-3e-U6e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="469" y="59.999999999999993"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RGz-bF-m2g">
+            <objects>
+                <viewController id="mbq-DN-gPb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kd6-lc-FS9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="pIY-K6-vnT">
+                                <rect key="frame" x="-66" y="-14" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TNc-My-neq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5W-TA-2Pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="60"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
