@@ -10,15 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    @IBOutlet weak var profilePic: FBSDKProfilePictureView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.profilePic!.layer.cornerRadius = 75
+        self.profilePic!.clipsToBounds = true
+        self.profilePic!.layer.borderColor = UIColor.blackColor().CGColor
+        self.profilePic!.layer.borderWidth = 1.0
+
+        
         let loginView = FBSDKLoginButton()
         self.view.addSubview(loginView)
         loginView.center = self.view.center
-        loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
+        loginView.readPermissions = ["public_profile", "email", "user_friends"]
         
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
@@ -27,8 +35,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.returnUserData()
         }
         
+        self.profilePic = FBSDKProfilePictureView()
+        
+        
     }
-    
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -75,10 +85,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 println("User Name is: \(userName)")
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
+
             }
         })
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

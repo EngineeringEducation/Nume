@@ -28,7 +28,6 @@
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
-		CAC48D311B03BEC300B647EF /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC48D301B03BEC300B647EF /* ProfilePicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +98,6 @@
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
-		CAC48D301B03BEC300B647EF /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +198,6 @@
 			children = (
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
-				CAC48D301B03BEC300B647EF /* ProfilePicViewController.swift */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
@@ -331,10 +328,11 @@
 				TargetAttributes = {
 					201D007E1AF1F8BA00D32F95 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = GRFMFYY59P;
 					};
 					201D008B1AF1F8BA00D32F95 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = J4VYN3B6QR;
+						DevelopmentTeam = GRFMFYY59P;
 					};
 					20A552C11AE81D82005AFB27 = {
 						CreatedOnToolsVersion = 6.3;
@@ -425,7 +423,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
-				CAC48D311B03BEC300B647EF /* ProfilePicViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +516,7 @@
 		201D009F1AF1F8BA00D32F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -533,6 +531,7 @@
 		201D00A01AF1F8BA00D32F95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Nume WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
