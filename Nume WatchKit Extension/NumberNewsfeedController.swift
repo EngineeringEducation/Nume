@@ -25,12 +25,13 @@ class NumberNewsfeedController: WKInterfaceController {
         if let val: User = context as? User {
             self.numberResult.setText("\(val.userNumber)")
             self.dictationResult.setText("\(val.userActivity)")
-            
+
             // Placing dictation text and number rating into NSUserDefaults
             let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)
-            defaults!.setObject(val.userActivity, forKey: "userActivityKey")
-            defaults!.setInteger(val.userNumber, forKey: "userNumberKey")
+            if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                defaults.setValue(val.userNumber, forKey: "userNumberKey")
+                defaults.setValue(val.userActivity, forKey: "userActivityKey")
+            }
             
             
         } else {
@@ -56,11 +57,13 @@ class NumberNewsfeedController: WKInterfaceController {
         
         NumberNewsfeedController.openParentApplication(userDictionary) {
             (replyDictionary, error) -> Void in
+            println("test test")
             
-            if let castedResponseDictionary = replyDictionary as? [String: User],
-                responseNumber = castedResponseDictionary["userNumber"]
+            if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
+                responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
+                responseActivity = castedResponseDictionary["userActivityKey"] as? String
             {
-                println("Congratulations, you successfully rated a \(responseNumber)")
+                println("Congratulations, you successfully rated a \(responseNumber) with \(responseActivity)")
             }
         }
     }

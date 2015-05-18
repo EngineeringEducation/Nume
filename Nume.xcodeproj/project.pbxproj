@@ -22,7 +22,6 @@
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
 		20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B11B02C71100FA1719 /* DictationController.swift */; };
-		20C8F6B41B03F63C00FA1719 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B31B03F63C00FA1719 /* TestController.swift */; };
 		20C8F6B61B040FEF00FA1719 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B51B040FEF00FA1719 /* User.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
@@ -96,7 +95,6 @@
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
 		20C8F6B11B02C71100FA1719 /* DictationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictationController.swift; sourceTree = "<group>"; };
-		20C8F6B31B03F63C00FA1719 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		20C8F6B51B040FEF00FA1719 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
-				20C8F6B31B03F63C00FA1719 /* TestController.swift */,
 				20C8F6B51B040FEF00FA1719 /* User.swift */,
 			);
 			path = Nume;
@@ -353,7 +350,7 @@
 					};
 					201D008B1AF1F8BA00D32F95 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = GRFMFYY59P;
+						DevelopmentTeam = J4VYN3B6QR;
 					};
 					20A552C11AE81D82005AFB27 = {
 						CreatedOnToolsVersion = 6.3;
@@ -452,8 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C8F6B61B040FEF00FA1719 /* User.swift in Sources */,
-				20C8F6B41B03F63C00FA1719 /* TestController.swift in Sources */,
-				CA51F49C1AF9882D00BC94BC /* FBLoginViewController.swift in Sources */,
+				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

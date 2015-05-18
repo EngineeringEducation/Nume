@@ -101,6 +101,7 @@
                                 <imageView width="65" alignment="left" id="NwF-UF-Zx4"/>
                             </items>
                         </group>
+                        <imageView alignment="left" id="s06-8F-uSB"/>
                         <button width="1" alignment="left" title="Test Send" id="cBR-cG-8FS">
                             <connections>
                                 <action selector="openParentAppToSend" destination="XLe-eE-GyL" id="TSW-Dd-f1v"/>

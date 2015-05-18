@@ -57,9 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Prepare and send dictionary with NSUserDefaults data
         let appGroupID = "group.io.github.dhsu210.Nume"
         let defaults = NSUserDefaults(suiteName: appGroupID)
-        let number = defaults!.stringForKey("userNumberKey")
-        let activity = defaults!.stringForKey("userActivityKey")
-        
+        // defaults!.integerForKey("userNumberKey")
+        // defaults!.stringForKey("userActivityKey") "doesnt do anything"
 
         let userDictionary = defaults!.dictionaryRepresentation()
         

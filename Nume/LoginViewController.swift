@@ -95,4 +95,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateExtension() {
+        // Prepare and send dictionary with NSUserDefaults data
+        let appGroupID = "group.io.github.dhsu210.Nume"
+        let defaults = NSUserDefaults(suiteName: appGroupID)
+        let number = defaults!.stringForKey("userNumberKey")
+        let activity = defaults!.stringForKey("userActivityKey")
+    }
+    
 }
