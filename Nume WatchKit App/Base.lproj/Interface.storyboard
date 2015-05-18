@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <label width="113" height="34" alignment="center" verticalAlignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
+                        <label width="113" height="34" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
                             <fontDescription key="font" type="system" weight="light" pointSize="14"/>
                         </label>
                         <group width="1" alignment="left" verticalAlignment="center" id="IBt-un-Nnk">
@@ -21,7 +21,7 @@
                                     </connections>
                                 </button>
                                 <label width="49" height="38" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
-                                    <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="light" pointSize="31"/>
                                 </label>
                                 <button width="40" alignment="right" verticalAlignment="center" title="+" id="IDt-Hl-aSO">
@@ -33,81 +33,87 @@
                                 </button>
                             </items>
                         </group>
-                        <button width="47" height="40" alignment="center" verticalAlignment="bottom" backgroundImage="Microphone" id="82Z-bK-eWK">
-                            <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" pointSize="35"/>
+                        <button width="134" height="46" alignment="center" verticalAlignment="bottom" title="Next" id="aoJ-LH-DLU">
                             <connections>
-                                <action selector="onVoiceDictationTap" destination="AgC-eL-Hgc" id="2uk-nA-XCj"/>
-                            </connections>
-                        </button>
-                        <button width="1" height="28" alignment="center" verticalAlignment="bottom" title="Send" id="aoJ-LH-DLU">
-                            <connections>
-                                <segue destination="XLe-eE-GyL" kind="push" identifier="showDetail" id="wHf-31-POe"/>
+                                <segue destination="fz6-vz-CmI" kind="push" identifier="toMicrophone" id="Q5l-Ke-x9K"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
                         <outlet property="addNumber" destination="IDt-Hl-aSO" id="NHT-zM-DZF"/>
-                        <outlet property="microphoneButton" destination="82Z-bK-eWK" id="0uo-xa-4iI"/>
                         <outlet property="minusNumber" destination="C1L-Da-snV" id="qIL-ZK-aLN"/>
                         <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="ufO-zF-T35"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="304.5"/>
+            <point key="canvasLocation" x="220" y="304"/>
+        </scene>
+        <!--Dictation Controller-->
+        <scene sceneID="Je4-AJ-KYC">
+            <objects>
+                <controller id="fz6-vz-CmI" customClass="DictationController" customModule="Nume_WatchKit_Extension">
+                    <items>
+                        <button width="47" height="40" alignment="center" verticalAlignment="center" backgroundImage="Microphone" id="82Z-bK-eWK">
+                            <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="35"/>
+                            <connections>
+                                <action selector="onVoiceDictationTap" destination="fz6-vz-CmI" id="sZF-wP-Fl5"/>
+                            </connections>
+                        </button>
+                        <button width="134" height="46" alignment="center" verticalAlignment="bottom" title="Send" id="HdP-AB-6C7">
+                            <connections>
+                                <segue destination="XLe-eE-GyL" kind="push" identifier="toNumberNewsFeed" id="9hc-Lr-hb5"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="microphoneButton" destination="82Z-bK-eWK" id="E9q-CZ-MxZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="460" y="305"/>
         </scene>
         <!--Number Newsfeed Controller-->
         <scene sceneID="n7D-nY-pcn">
             <objects>
                 <controller id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="1" height="52" alignment="left" id="tog-fI-TAb"/>
-                        <separator alignment="left" id="Fez-O1-W2B">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </separator>
-                        <group width="1" height="52" alignment="left" id="GDJ-kM-tUQ">
+                        <group width="1" alignment="left" id="GDJ-kM-tUQ">
                             <items>
                                 <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
-                                    <color key="textColor" red="0.84773334700000003" green="0.8302477385" blue="0.14500411190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" weight="light" pointSize="31"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
                             </items>
                         </group>
-                        <separator alignment="left" id="Wgj-Zw-rx6">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </separator>
-                        <group width="1" height="52" alignment="left" id="Man-Jf-fD9">
+                        <label width="121" alignment="center" text="Test Dictation" textAlignment="center" id="EQy-rd-RAF">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <group width="1" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <separator alignment="left" id="dyq-Io-lAh">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
-                                <separator alignment="left" id="qvR-b5-ECT">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
-                                <separator alignment="left" id="a9g-ss-uAM">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
-                                <separator alignment="left" id="L3F-Ij-aYm">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
-                                <separator alignment="left" id="KwC-yL-AuN">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
-                                <separator alignment="left" id="L9c-ry-thk">
-                                    <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </separator>
+                                <imageView width="65" alignment="left" id="N5J-R0-Tcb"/>
+                                <imageView width="65" alignment="left" id="xdt-Fp-jl6"/>
                             </items>
                         </group>
-                        <separator alignment="left" id="L94-tV-muz">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </separator>
+                        <group width="1" alignment="left" id="Man-Jf-fD9">
+                            <items>
+                                <imageView width="65" alignment="left" id="Yk9-yv-824"/>
+                                <imageView width="65" alignment="left" id="NwF-UF-Zx4"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Test Send" id="cBR-cG-8FS">
+                            <connections>
+                                <action selector="openParentAppToSend" destination="XLe-eE-GyL" id="TSW-Dd-f1v"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="dictationResult" destination="EQy-rd-RAF" id="CZp-cw-SvV"/>
                         <outlet property="numberResult" destination="Xtn-R0-X2A" id="fPT-Wh-8Pl"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="479" y="315"/>
+            <point key="canvasLocation" x="658" y="303.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

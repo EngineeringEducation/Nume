@@ -33,7 +33,7 @@ class RateNumberController: WKInterfaceController {
     }
     
     override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
-        return self.ratingNumber
+        return self.user
     }
     
     //create plus and minus buttons for rating numbers
@@ -49,7 +49,6 @@ class RateNumberController: WKInterfaceController {
             addNumber.setEnabled(ratingNumber < maxNumber)
             minusNumber.setEnabled(ratingNumber > minNumber)
             self.user.userNumber = ratingNumber
-//            NSNotificationCenter.defaultCenter().postNotificationName("numberChanged", object: self, userInfo: ["changedNumber" : ratingNumber])
         }
     }
     @IBAction func increaseRating() {
@@ -66,20 +65,7 @@ class RateNumberController: WKInterfaceController {
         ratingNumber -= 1
     }
     
-    //create microphone button image and link to dictation
-    @IBOutlet weak var microphoneButton: WKInterfaceButton!
-    @IBAction func onVoiceDictationTap() {
-        presentTextInputControllerWithSuggestions(nil, allowedInputMode: .Plain)
-            {(input) -> Void in
-                println("INPUT: \(input)")
-                if (input == nil) {
-                    return
-                }
-                self.user.userActivity = input[0] as! String
-        }
-        
-    }
-
+    
    
 
 }

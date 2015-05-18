@@ -12,35 +12,60 @@ import WatchKit
 class NumberNewsfeedController: WKInterfaceController {
     
     // Model
+    var user : User?
+    
     @IBOutlet weak var numberResult: WKInterfaceLabel!
+    @IBOutlet weak var dictationResult: WKInterfaceLabel!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Make sure data was passed properly and update the label accordingly
-        if let val: Int = context as? Int {
-            self.numberResult.setText("\(val)")
+        if let val: User = context as? User {
+            self.numberResult.setText("\(val.userNumber)")
+            self.dictationResult.setText("\(val.userActivity)")
+            
+            // Placing dictation text and number rating into NSUserDefaults
+            let appGroupID = "group.io.github.dhsu210.Nume"
+            let defaults = NSUserDefaults(suiteName: appGroupID)
+            defaults!.setObject(val.userActivity, forKey: "userActivityKey")
+            defaults!.setInteger(val.userNumber, forKey: "userNumberKey")
+            
+            
         } else {
             self.numberResult.setText("")
         }
         
         
-//        NSNotificationCenter.defaultCenter().addObserverForName("numberChanged", object: nil, queue: nil) { (numberNotification) -> Void in
-//            let numberResult = numberNotification.userInfo!["changedNumber"] as! Int
-//            self.numberResult.setText("\(numberResult)")
-//        }
     }
     
-    override func willActivate() {
+     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
-    override func didDeactivate() {
+     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    @IBAction func openParentAppToSend() {
+        let defaults = NSUserDefaults.standardUserDefaults()        
+        let userDictionary = defaults.dictionaryRepresentation()
+        
+        NumberNewsfeedController.openParentApplication(userDictionary) {
+            (replyDictionary, error) -> Void in
+            
+            if let castedResponseDictionary = replyDictionary as? [String: User],
+                responseNumber = castedResponseDictionary["userNumber"]
+            {
+                println("Congratulations, you successfully rated a \(responseNumber)")
+            }
+        }
+    }
+    
+   
     
    
 }
