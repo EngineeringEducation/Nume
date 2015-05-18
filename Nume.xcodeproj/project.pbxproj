@@ -29,10 +29,9 @@
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
-		CA51F49C1AF9882D00BC94BC /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */; };
+		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
-		CA51F4A61AF9898B00BC94BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4A51AF9898B00BC94BC /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,11 +103,10 @@
 		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
+		CA51F4991AF9882D00BC94BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		CA51F4A51AF9898B00BC94BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +187,6 @@
 		20A552B91AE81D82005AFB27 = {
 			isa = PBXGroup;
 			children = (
-				CA51F4A51AF9898B00BC94BC /* Default-568h@2x.png */,
 				20A552C41AE81D82005AFB27 /* Nume */,
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
 				201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */,
@@ -214,7 +211,7 @@
 			children = (
 				209307401B06C1F7003C4D80 /* Nume.entitlements */,
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
-				CA51F4991AF9882D00BC94BC /* FBLoginViewController.swift */,
+				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
@@ -356,7 +353,7 @@
 					};
 					201D008B1AF1F8BA00D32F95 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = J4VYN3B6QR;
+						DevelopmentTeam = GRFMFYY59P;
 					};
 					20A552C11AE81D82005AFB27 = {
 						CreatedOnToolsVersion = 6.3;
@@ -424,7 +421,6 @@
 			files = (
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
-				CA51F4A61AF9898B00BC94BC /* Default-568h@2x.png in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
