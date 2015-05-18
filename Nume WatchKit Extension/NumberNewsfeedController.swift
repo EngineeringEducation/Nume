@@ -57,7 +57,6 @@ class NumberNewsfeedController: WKInterfaceController {
         
         NumberNewsfeedController.openParentApplication(userDictionary) {
             (replyDictionary, error) -> Void in
-            println("test test")
             
             if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
                 responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
