@@ -29,6 +29,7 @@
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
+		CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
+		CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialPage.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
+				CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
 			);
@@ -397,6 +400,7 @@
 			files = (
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
+				CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
