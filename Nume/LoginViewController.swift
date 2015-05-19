@@ -23,8 +23,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
         
         let loginView = FBSDKLoginButton()
-        self.view.addSubview(loginView)
-        loginView.center = self.view.center
+//        self.view.addSubview(loginView)
+//        loginView.center = self.view.center
         loginView.delegate = self
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         
