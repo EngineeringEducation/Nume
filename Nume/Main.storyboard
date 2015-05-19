@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-bc-uh3" customClass="FBSDKProfilePictureView">
-                                <rect key="frame" x="112" y="112" width="150" height="150"/>
+                                <rect key="frame" x="85" y="109" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="AAa-nG-zc8"/>
@@ -25,9 +25,10 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SIy-bc-uh3" firstAttribute="top" secondItem="TNR-cE-2MF" secondAttribute="top" constant="112" id="inq-9Y-1yf"/>
-                            <constraint firstItem="SIy-bc-uh3" firstAttribute="leading" secondItem="TNR-cE-2MF" secondAttribute="leading" constant="112" id="x9H-tR-p7a"/>
+                            <constraint firstAttribute="centerX" secondItem="SIy-bc-uh3" secondAttribute="centerX" id="QUx-wl-uHj"/>
+                            <constraint firstAttribute="centerY" secondItem="SIy-bc-uh3" secondAttribute="centerY" constant="100" id="eHZ-Yn-etP"/>
                         </constraints>
                     </view>
                     <connections>
