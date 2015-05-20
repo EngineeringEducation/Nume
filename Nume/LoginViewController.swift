@@ -12,9 +12,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var profilePic: FBSDKProfilePictureView?
     
+    @IBOutlet weak var Scroller: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        Scroller.userInteractionEnabled = true
+        Scroller.contentSize = CGSizeMake(600, 320)
+        Scroller.pagingEnabled = true
+        
         
         self.profilePic!.layer.cornerRadius = 75
         self.profilePic!.clipsToBounds = true
