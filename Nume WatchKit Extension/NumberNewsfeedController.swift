@@ -62,7 +62,7 @@ class NumberNewsfeedController: WKInterfaceController {
                 responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
                 responseActivity = castedResponseDictionary["userActivityKey"] as? String
             {
-                println("Congratulations, you successfully rated a \(responseNumber) with \(responseActivity)")
+                println("Congratulations, you successfully rated a \(responseNumber) with '\(responseActivity)'")
             }
         }
     }

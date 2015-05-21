@@ -73,14 +73,14 @@
             </objects>
             <point key="canvasLocation" x="460" y="305"/>
         </scene>
-        <!--Number Newsfeed Controller-->
+        <!--SocialFeed-->
         <scene sceneID="n7D-nY-pcn">
             <objects>
-                <controller id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
+                <controller identifier="SocialFeed" id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="GDJ-kM-tUQ">
                             <items>
-                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
+                                <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
@@ -114,7 +114,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="658" y="303.5"/>
+            <point key="canvasLocation" x="658" y="302.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
