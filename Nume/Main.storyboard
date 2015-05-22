@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Da-rh-JnP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xpt-At-uO7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -38,8 +38,8 @@
                                     <constraint firstAttribute="width" constant="320" id="vJe-Qq-ky7"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-WL-E6w">
-                                <rect key="frame" x="1" y="20" width="319" height="480"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-WL-E6w">
+                                <rect key="frame" x="0.0" y="20" width="320" height="480"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,45 +66,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133" y="668"/>
+            <point key="canvasLocation" x="365" y="678"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="lpr-Yv-J1z">
+        <!--Paged Scroll View Controller-->
+        <scene sceneID="wjV-T1-AWv">
             <objects>
-                <viewController id="Fpx-g4-XfI" sceneMemberID="viewController">
+                <viewController id="Xpt-At-uO7" customClass="PagedScrollViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8P9-sG-yo0"/>
-                        <viewControllerLayoutGuide type="bottom" id="o1m-3o-gNE"/>
+                        <viewControllerLayoutGuide type="top" id="vip-fl-iC2"/>
+                        <viewControllerLayoutGuide type="bottom" id="DFl-TD-HyQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gdp-nn-pOs">
+                    <view key="view" contentMode="scaleToFill" id="UyT-oE-YtK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
+                                <rect key="frame" x="140" y="481" width="39" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.027805624139999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52L-QL-56g">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="0OW-54-HJb"/>
+                            <constraint firstItem="DFl-TD-HyQ" firstAttribute="top" secondItem="jer-gP-4VJ" secondAttribute="bottom" constant="50" id="CwB-Xd-F4a"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="w7K-7j-fmU"/>
+                    <connections>
+                        <outlet property="pageControl" destination="jer-gP-4VJ" id="sdh-Vy-Fn6"/>
+                        <outlet property="scrollView" destination="52L-QL-56g" id="kD5-qq-cbd"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AgV-Zb-wOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHW-ha-mKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="126"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="h7J-Vp-XTv">
-            <objects>
-                <viewController id="NEl-H5-1tf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aXf-Kf-bLf"/>
-                        <viewControllerLayoutGuide type="bottom" id="YUH-Bx-BhB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="le4-iR-dmn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="LQZ-93-21O"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2DP-5L-vKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1114" y="-490"/>
+            <point key="canvasLocation" x="-32" y="678"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
