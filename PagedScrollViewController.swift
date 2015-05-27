@@ -20,7 +20,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1
+        scrollView.pagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = true
+        scrollView.delegate = self
+        
         pageImages = [UIImage(named:"01.png")!,
             UIImage(named:"02.png")!,
             UIImage(named:"03.png")!,
@@ -29,20 +32,16 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         
         let pageCount = pageImages.count
         
-        // 2
         pageControl.currentPage = 0
         pageControl.numberOfPages = pageCount
         
-        // 3
         for _ in 0..<pageCount {
             pageViews.append(nil)
         }
         
-        // 4
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
-        
-        // 5
+
         loadVisiblePages()
     }
     
@@ -53,22 +52,18 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
             return
         }
         
-        // 1
         if let pageView = pageViews[page] {
             // Do nothing. The view is already loaded.
         } else {
-            // 2
             var frame = scrollView.bounds
             frame.origin.x = frame.size.width * CGFloat(page)
             frame.origin.y = 0.0
             
-            // 3
             let newPageView = UIImageView(image: pageImages[page])
             newPageView.contentMode = .ScaleAspectFit
             newPageView.frame = frame
             scrollView.addSubview(newPageView)
             
-            // 4
             pageViews[page] = newPageView
         }
     }
