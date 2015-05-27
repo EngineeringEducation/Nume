@@ -38,13 +38,6 @@
                                     <constraint firstAttribute="width" constant="320" id="vJe-Qq-ky7"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-WL-E6w">
-                                <rect key="frame" x="0.0" y="44" width="320" height="480"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="480" id="CUa-eJ-r3L"/>
-                                    <constraint firstAttribute="width" constant="320" id="ycv-uU-GkY"/>
-                                </constraints>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -55,14 +48,11 @@
                             <constraint firstAttribute="centerX" secondItem="BtA-6d-1E9" secondAttribute="centerX" id="Rvt-p1-uqd"/>
                             <constraint firstItem="BtA-6d-1E9" firstAttribute="top" secondItem="TNR-cE-2MF" secondAttribute="topMargin" constant="-17" id="WPY-hY-Rkr"/>
                             <constraint firstAttribute="bottom" secondItem="BtA-6d-1E9" secondAttribute="bottom" constant="565" id="acl-vk-p9P"/>
-                            <constraint firstAttribute="centerX" secondItem="fhx-WL-E6w" secondAttribute="centerX" id="hw0-ZQ-XSP"/>
                             <constraint firstAttribute="centerX" secondItem="pXt-0l-7Oh" secondAttribute="centerX" id="olP-9z-OeL"/>
-                            <constraint firstAttribute="centerY" secondItem="fhx-WL-E6w" secondAttribute="centerY" id="qqJ-Kk-8TE"/>
                             <constraint firstAttribute="centerX" secondItem="SIy-bc-uh3" secondAttribute="centerX" id="sP2-zA-N8V"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Scroller" destination="fhx-WL-E6w" id="yC2-3Z-cJQ"/>
                         <outlet property="profilePic" destination="SIy-bc-uh3" id="YGb-wS-27a"/>
                     </connections>
                 </viewController>
@@ -89,6 +79,12 @@
                                     <constraint firstAttribute="width" constant="280" id="c02-gf-6XG"/>
                                 </constraints>
                             </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-Ql-9BH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="2Da-rh-JnP" kind="embed" id="0Ub-e9-SSs"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" customClass="ScrollViewContainer" customModule="Nume" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="320" height="480"/>
                                 <subviews>
@@ -100,7 +96,6 @@
                                         </constraints>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="52L-QL-56g" secondAttribute="centerX" id="7YH-1F-xnH"/>
                                     <constraint firstItem="52L-QL-56g" firstAttribute="top" secondItem="E3r-Yu-0KQ" secondAttribute="topMargin" constant="100" id="9eC-OS-O6l"/>
@@ -111,10 +106,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Y1R-Ql-9BH" secondAttribute="centerX" id="EXb-km-4ii"/>
                             <constraint firstItem="E3r-Yu-0KQ" firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="GZb-f8-IVX"/>
+                            <constraint firstItem="Y1R-Ql-9BH" firstAttribute="height" secondItem="UyT-oE-YtK" secondAttribute="height" id="cWK-Lo-wEE"/>
                             <constraint firstItem="E3r-Yu-0KQ" firstAttribute="top" secondItem="vip-fl-iC2" secondAttribute="bottom" id="hCN-7T-OXT"/>
                             <constraint firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="j5S-ST-5df"/>
                             <constraint firstItem="DFl-TD-HyQ" firstAttribute="top" secondItem="jer-gP-4VJ" secondAttribute="bottom" constant="75" id="nIO-zf-zLx"/>
+                            <constraint firstAttribute="centerY" secondItem="Y1R-Ql-9BH" secondAttribute="centerY" id="wve-5n-qgi"/>
+                            <constraint firstItem="Y1R-Ql-9BH" firstAttribute="width" secondItem="UyT-oE-YtK" secondAttribute="width" id="xIB-Lh-ue1"/>
                         </constraints>
                     </view>
                     <connections>
