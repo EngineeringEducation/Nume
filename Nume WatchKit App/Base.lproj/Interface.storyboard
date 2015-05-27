@@ -78,8 +78,13 @@
             <objects>
                 <controller identifier="SocialFeed" id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="GDJ-kM-tUQ">
+                        <group width="1" alignment="left" id="DWW-mr-Y3q">
                             <items>
+                                <button width="60" alignment="left" title="Button" id="lQ5-6g-mJu">
+                                    <connections>
+                                        <segue destination="deh-LD-Ud7" kind="push" id="DRP-V3-PNf"/>
+                                    </connections>
+                                </button>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="35"/>
@@ -111,10 +116,32 @@
                     <connections>
                         <outlet property="dictationResult" destination="EQy-rd-RAF" id="CZp-cw-SvV"/>
                         <outlet property="numberResult" destination="Xtn-R0-X2A" id="fPT-Wh-8Pl"/>
+                        <outlet property="userProfilePhoto" destination="lQ5-6g-mJu" id="zwU-Bv-Mcc"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="658" y="302.5"/>
+            <point key="canvasLocation" x="658" y="302"/>
+        </scene>
+        <!--User Detail Controller-->
+        <scene sceneID="HB6-QI-lJM">
+            <objects>
+                <controller id="deh-LD-Ud7" customClass="UserDetailController" customModule="Nume_WatchKit_Extension">
+                    <items>
+                        <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="35"/>
+                        </label>
+                        <label width="121" height="82" alignment="center" text="Test Dictation" textAlignment="center" id="ycI-XS-Bya">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="dictationResult" destination="ycI-XS-Bya" id="XGk-PD-pNW"/>
+                        <outlet property="numberResult" destination="DCN-uI-eNS" id="qB7-Ti-Yg2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="925" y="305"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

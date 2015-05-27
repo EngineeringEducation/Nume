@@ -35,10 +35,31 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.returnUserData()
         }
         
-        self.profilePic = FBSDKProfilePictureView()
+        //self.profilePic = FBSDKProfilePictureView()
+        
+//        // Place user's FB profile photo into NSUserDefaults
+//        let appGroupID = "group.io.github.dhsu210.Nume"
+//        if let defaults = NSUserDefaults(suiteName: appGroupID) {
+//            defaults.setObject(self.getUserImageFromFBView(), forKey: "userProfilePhotoKey")
+//        }
         
         
     }
+    
+//    func getUserImageFromFBView() -> UIImage {
+//        var img : UIImage?
+//        
+//        UIGraphicsBeginImageContext(self.profilePic!.frame.size)
+//        let context = UIGraphicsGetCurrentContext()
+//        
+//        self.profilePic!.layer.drawInContext(context)
+//        
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        return image
+//    }
+    
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -68,8 +89,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -86,9 +106,23 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
 
+                //Attempt 2 to get FB profile pic image
+//                // Get user profile pic
+//                let url = NSURL(string: "https://graph.facebook.com/\(result.objectID)/picture?type=large")
+//                let urlRequest = NSURLRequest(URL: url!)
+//                
+//                NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+//                    
+//                    // Display the image
+//                    let image = UIImage(data: data)
+//                    self.profilePic.image = image
+//                    
+//                }
+
             }
         })
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

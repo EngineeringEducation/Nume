@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019F1F81B167C0200F08FFA /* UserDetailController.swift */; };
 		201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* RateNumberController.swift */; };
 		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
 		201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00881AF1F8BA00D32F95 /* Images.xcassets */; };
@@ -72,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2019F1F81B167C0200F08FFA /* UserDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00831AF1F8BA00D32F95 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				201D00841AF1F8BA00D32F95 /* RateNumberController.swift */,
 				20C8F6B11B02C71100FA1719 /* DictationController.swift */,
 				20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */,
+				2019F1F81B167C0200F08FFA /* UserDetailController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
 				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
@@ -439,6 +442,7 @@
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
 				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
 				20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */,
+				2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */,
 				20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */,
 				20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */,
 			);

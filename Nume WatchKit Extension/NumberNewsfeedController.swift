@@ -14,28 +14,32 @@ class NumberNewsfeedController: WKInterfaceController {
     // Model
     var user : User?
     
-    @IBOutlet weak var numberResult: WKInterfaceLabel!
-    @IBOutlet weak var dictationResult: WKInterfaceLabel!
+    @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var userProfilePhoto: WKInterfaceButton!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Make sure data was passed properly and update the label accordingly
-        if let val: User = context as? User {
-            self.numberResult.setText("\(val.userNumber)")
-            self.dictationResult.setText("\(val.userActivity)")
+        if let val = context as? User {
+            self.numberResultLabel.setText("\(val.userNumber)")
+            self.dictationResultLabel.setText("\(val.userActivity)")
+            
 
             // Placing dictation text and number rating into NSUserDefaults
+            // Placing pulling user's FB profile picture image from NSUserDefaults
             let appGroupID = "group.io.github.dhsu210.Nume"
             if let defaults = NSUserDefaults(suiteName: appGroupID) {
                 defaults.setValue(val.userNumber, forKey: "userNumberKey")
                 defaults.setValue(val.userActivity, forKey: "userActivityKey")
+//            self.userProfilePhoto.setBackgroundImage((defaults.objectForKey("userProfilePhotoKey") as! UIImage))
             }
             
             
         } else {
-            self.numberResult.setText("")
+            self.numberResultLabel.setText("")
         }
         
         
@@ -66,8 +70,5 @@ class NumberNewsfeedController: WKInterfaceController {
             }
         }
     }
-    
-   
-    
    
 }
