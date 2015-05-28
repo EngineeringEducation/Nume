@@ -12,7 +12,7 @@ import WatchKit
 class NumberNewsfeedController: WKInterfaceController {
     
     // Model
-    var user : User?
+    var user : User!
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
@@ -53,6 +53,10 @@ class NumberNewsfeedController: WKInterfaceController {
      override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
+        return self.user
     }
     
     @IBAction func openParentAppToSend() {

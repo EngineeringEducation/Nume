@@ -12,7 +12,7 @@ import WatchKit
 class UserDetailController: WKInterfaceController {
     
     // Model
-    var user : User?
+    var user : User!
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
@@ -21,21 +21,14 @@ class UserDetailController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Pass in user data from previous interface controller
-        user = context as? User
-        
         // Make sure data was passed properly and update the label accordingly
         if let val = context as? User {
             self.numberResultLabel.setText("\(val.userNumber)")
             self.dictationResultLabel.setText("\(val.userActivity)")
-            
-            
         } else {
-            self.numberResult.setText("")
+            self.numberResultLabel.setText("")
         }
 
-        
-        
     }
     
     override func willActivate() {

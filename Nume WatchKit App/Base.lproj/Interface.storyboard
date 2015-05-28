@@ -106,7 +106,6 @@
                                 <imageView width="65" alignment="left" id="NwF-UF-Zx4"/>
                             </items>
                         </group>
-                        <imageView alignment="left" id="s06-8F-uSB"/>
                         <button width="1" alignment="left" title="Test Send" id="cBR-cG-8FS">
                             <connections>
                                 <action selector="openParentAppToSend" destination="XLe-eE-GyL" id="TSW-Dd-f1v"/>
@@ -114,8 +113,8 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="dictationResult" destination="EQy-rd-RAF" id="CZp-cw-SvV"/>
-                        <outlet property="numberResult" destination="Xtn-R0-X2A" id="fPT-Wh-8Pl"/>
+                        <outlet property="dictationResultLabel" destination="EQy-rd-RAF" id="Cga-dn-SfK"/>
+                        <outlet property="numberResultLabel" destination="Xtn-R0-X2A" id="ege-2f-RiI"/>
                         <outlet property="userProfilePhoto" destination="lQ5-6g-mJu" id="zwU-Bv-Mcc"/>
                     </connections>
                 </controller>
@@ -136,8 +135,8 @@
                         </label>
                     </items>
                     <connections>
-                        <outlet property="dictationResult" destination="ycI-XS-Bya" id="XGk-PD-pNW"/>
-                        <outlet property="numberResult" destination="DCN-uI-eNS" id="qB7-Ti-Yg2"/>
+                        <outlet property="dictationResultLabel" destination="ycI-XS-Bya" id="IG6-YX-xBb"/>
+                        <outlet property="numberResultLabel" destination="DCN-uI-eNS" id="WmV-ou-UxC"/>
                     </connections>
                 </controller>
             </objects>
