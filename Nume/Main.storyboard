@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Da-rh-JnP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xpt-At-uO7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -17,17 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-bc-uh3" customClass="FBSDKProfilePictureView">
-                                <rect key="frame" x="112" y="112" width="150" height="150"/>
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="AAa-nG-zc8"/>
                                     <constraint firstAttribute="width" constant="150" id="USr-uH-H9Z"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-0l-7Oh" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="0.0" y="508" width="320" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L7l-6f-WY0"/>
+                                    <constraint firstAttribute="width" constant="320" id="vJe-Qq-ky7"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SIy-bc-uh3" firstAttribute="top" secondItem="TNR-cE-2MF" secondAttribute="top" constant="112" id="inq-9Y-1yf"/>
-                            <constraint firstItem="SIy-bc-uh3" firstAttribute="leading" secondItem="TNR-cE-2MF" secondAttribute="leading" constant="112" id="x9H-tR-p7a"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pXt-0l-7Oh" secondAttribute="bottom" constant="30" id="6VO-it-9ZZ"/>
+                            <constraint firstAttribute="centerY" secondItem="SIy-bc-uh3" secondAttribute="centerY" id="LQf-fG-n3d"/>
+                            <constraint firstAttribute="centerX" secondItem="pXt-0l-7Oh" secondAttribute="centerX" id="olP-9z-OeL"/>
+                            <constraint firstAttribute="centerX" secondItem="SIy-bc-uh3" secondAttribute="centerX" id="sP2-zA-N8V"/>
                         </constraints>
                     </view>
                     <connections>
@@ -36,7 +49,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469" y="60"/>
+            <point key="canvasLocation" x="487" y="678"/>
+        </scene>
+        <!--Paged Scroll View Controller-->
+        <scene sceneID="wjV-T1-AWv">
+            <objects>
+                <viewController id="Xpt-At-uO7" customClass="PagedScrollViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vip-fl-iC2"/>
+                        <viewControllerLayoutGuide type="bottom" id="DFl-TD-HyQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UyT-oE-YtK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
+                                <rect key="frame" x="20" y="456" width="280" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="4Cq-zc-aUu"/>
+                                    <constraint firstAttribute="width" constant="280" id="c02-gf-6XG"/>
+                                </constraints>
+                            </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-Ql-9BH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="2Da-rh-JnP" kind="embed" id="0Ub-e9-SSs"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" customClass="ScrollViewContainer" customModule="Nume" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="480"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52L-QL-56g">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="360"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="9fe-rq-qyO"/>
+                                            <constraint firstAttribute="height" constant="360" id="lkY-Rm-LRx"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="52L-QL-56g" secondAttribute="centerX" id="7YH-1F-xnH"/>
+                                    <constraint firstItem="52L-QL-56g" firstAttribute="top" secondItem="E3r-Yu-0KQ" secondAttribute="topMargin" constant="100" id="9eC-OS-O6l"/>
+                                    <constraint firstAttribute="height" constant="480" id="qIh-bk-JH3"/>
+                                    <constraint firstAttribute="width" constant="320" id="v9t-TA-Q5y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Y1R-Ql-9BH" secondAttribute="centerX" id="EXb-km-4ii"/>
+                            <constraint firstItem="E3r-Yu-0KQ" firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="GZb-f8-IVX"/>
+                            <constraint firstItem="Y1R-Ql-9BH" firstAttribute="height" secondItem="UyT-oE-YtK" secondAttribute="height" id="cWK-Lo-wEE"/>
+                            <constraint firstItem="E3r-Yu-0KQ" firstAttribute="top" secondItem="vip-fl-iC2" secondAttribute="bottom" id="hCN-7T-OXT"/>
+                            <constraint firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="j5S-ST-5df"/>
+                            <constraint firstItem="DFl-TD-HyQ" firstAttribute="top" secondItem="jer-gP-4VJ" secondAttribute="bottom" constant="75" id="nIO-zf-zLx"/>
+                            <constraint firstAttribute="centerY" secondItem="Y1R-Ql-9BH" secondAttribute="centerY" id="wve-5n-qgi"/>
+                            <constraint firstItem="Y1R-Ql-9BH" firstAttribute="width" secondItem="UyT-oE-YtK" secondAttribute="width" id="xIB-Lh-ue1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="jer-gP-4VJ" id="sdh-Vy-Fn6"/>
+                        <outlet property="scrollView" destination="52L-QL-56g" id="kD5-qq-cbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHW-ha-mKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="678"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
