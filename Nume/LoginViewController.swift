@@ -10,12 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    
+    
     @IBOutlet weak var profilePic: FBSDKProfilePictureView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         self.profilePic!.layer.cornerRadius = 75
         self.profilePic!.clipsToBounds = true
         self.profilePic!.layer.borderColor = UIColor.blackColor().CGColor
@@ -23,8 +25,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
         
         let loginView = FBSDKLoginButton()
-        self.view.addSubview(loginView)
-        loginView.center = self.view.center
+//        self.view.addSubview(loginView)
+//        loginView.center = self.view.center
         loginView.delegate = self
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         
