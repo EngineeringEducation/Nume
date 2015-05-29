@@ -62,7 +62,7 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
-    @IBAction func openParentAppToSend() {
+    @IBAction func receiveUserDetailToSend() {
         let defaults = NSUserDefaults.standardUserDefaults()        
         let userDictionary = defaults.dictionaryRepresentation()
         
@@ -71,10 +71,13 @@ class NumberNewsfeedController: WKInterfaceController {
             
             if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
                 responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
-                responseActivity = castedResponseDictionary["userActivityKey"] as? String
+                responseActivity = castedResponseDictionary["userActivityKey"] as? String,
+                responseName = castedResponseDictionary["userNameKey"] as? String
             {
-                println("Congratulations, you successfully rated a \(responseNumber) with '\(responseActivity)'")
+                self.user!.userName = responseName
+                println("Congratulations, \(responseName) successfully rated a \(responseNumber) with '\(responseActivity)'")
             }
+            self.pushControllerWithName("UserDetail", context: self.user)
         }
     }
    

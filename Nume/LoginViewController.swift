@@ -107,6 +107,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 println("User Name is: \(userName)")
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
+                
+                let appGroupID = "group.io.github.dhsu210.Nume"
+                if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                    defaults.setValue(userName, forKey: "userNameKey")
+                }
 
                 //Attempt 2 to get FB profile pic image
 //                // Get user profile pic

@@ -16,6 +16,7 @@ class UserDetailController: WKInterfaceController {
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var userNameLabel: WKInterfaceLabel!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
@@ -25,6 +26,7 @@ class UserDetailController: WKInterfaceController {
         if let val = context as? User {
             self.numberResultLabel.setText("\(val.userNumber)")
             self.dictationResultLabel.setText("\(val.userActivity)")
+            self.userNameLabel.setText("\(val.userName)")
         } else {
             self.numberResultLabel.setText("")
         }

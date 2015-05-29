@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Rate Number Controller-->
@@ -82,7 +82,7 @@
                             <items>
                                 <button width="60" alignment="left" title="Button" id="lQ5-6g-mJu">
                                     <connections>
-                                        <segue destination="deh-LD-Ud7" kind="push" id="DRP-V3-PNf"/>
+                                        <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="kDK-Nn-jcN"/>
                                     </connections>
                                 </button>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
@@ -106,11 +106,6 @@
                                 <imageView width="65" alignment="left" id="NwF-UF-Zx4"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Test Send" id="cBR-cG-8FS">
-                            <connections>
-                                <action selector="openParentAppToSend" destination="XLe-eE-GyL" id="TSW-Dd-f1v"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
                         <outlet property="dictationResultLabel" destination="EQy-rd-RAF" id="Cga-dn-SfK"/>
@@ -121,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="658" y="302"/>
         </scene>
-        <!--User Detail Controller-->
+        <!--UserDetail-->
         <scene sceneID="HB6-QI-lJM">
             <objects>
-                <controller id="deh-LD-Ud7" customClass="UserDetailController" customModule="Nume_WatchKit_Extension">
+                <controller identifier="UserDetail" id="deh-LD-Ud7" customClass="UserDetailController" customModule="Nume_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="hpO-cH-xJm">
                             <items>
@@ -135,6 +130,10 @@
                                 </label>
                             </items>
                         </group>
+                        <label width="136" alignment="left" text="Name" textAlignment="center" id="sPP-60-ass">
+                            <color key="textColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="16"/>
+                        </label>
                         <label width="121" height="82" alignment="center" text="Test Dictation" textAlignment="center" id="ycI-XS-Bya">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
@@ -142,6 +141,7 @@
                     <connections>
                         <outlet property="dictationResultLabel" destination="ycI-XS-Bya" id="IG6-YX-xBb"/>
                         <outlet property="numberResultLabel" destination="DCN-uI-eNS" id="WmV-ou-UxC"/>
+                        <outlet property="userNameLabel" destination="sPP-60-ass" id="rH4-H3-UdA"/>
                     </connections>
                 </controller>
             </objects>
