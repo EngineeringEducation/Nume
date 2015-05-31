@@ -221,8 +221,8 @@
 			children = (
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
-				CA3BF5101B15205C00036471 /* ScrollViewContainer.swift */,
 				CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */,
+				CA3BF5101B15205C00036471 /* ScrollViewContainer.swift */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,

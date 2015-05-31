@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+//    var pagedScrollViewControllerInstance: PagedScrollViewController = PagedScrollViewController()
     
     
     @IBOutlet weak var profilePic: FBSDKProfilePictureView?
@@ -20,12 +21,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
         self.profilePic!.layer.cornerRadius = 75
         self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.blackColor().CGColor
-        self.profilePic!.layer.borderWidth = 1.0
-
+        self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profilePic!.layer.borderWidth = 3.0
         
         let loginView = FBSDKLoginButton()
-//        self.view.addSubview(loginView)
 //        loginView.center = self.view.center
         loginView.delegate = self
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
@@ -35,16 +34,21 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             // User is already logged in, do work such as go to next view controller.
             // Or Show Logout Button
             self.returnUserData()
+            
+            
+        } else {
+//            self.profilePic!.hidden = true
         }
         
         self.profilePic = FBSDKProfilePictureView()
-        
         
     }
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         println("User Logged In")
+        self.profilePic!.hidden = false
+        //hide tutorial pic stuff
         
         if ((error) != nil)
         {
@@ -67,6 +71,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         println("User Logged Out")
+        self.profilePic!.hidden = true
+        //show tutorial pic stuff
     }
     
     // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()

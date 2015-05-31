@@ -34,7 +34,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="pXt-0l-7Oh" secondAttribute="bottom" constant="30" id="6VO-it-9ZZ"/>
@@ -63,15 +63,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
-                                <rect key="frame" x="20" y="456" width="280" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="4Cq-zc-aUu"/>
-                                    <constraint firstAttribute="width" constant="280" id="c02-gf-6XG"/>
-                                </constraints>
-                            </pageControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-Ql-9BH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="2Da-rh-JnP" kind="embed" id="0Ub-e9-SSs"/>
                                 </connections>
@@ -94,15 +88,23 @@
                                     <constraint firstAttribute="width" constant="320" id="v9t-TA-Q5y"/>
                                 </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
+                                <rect key="frame" x="20" y="456" width="280" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="4Cq-zc-aUu"/>
+                                    <constraint firstAttribute="width" constant="280" id="c02-gf-6XG"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.45353929924242409" green="0.45353929924242409" blue="0.45353929924242409" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Y1R-Ql-9BH" secondAttribute="centerX" id="EXb-km-4ii"/>
                             <constraint firstItem="E3r-Yu-0KQ" firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="GZb-f8-IVX"/>
+                            <constraint firstItem="E3r-Yu-0KQ" firstAttribute="top" secondItem="vip-fl-iC2" secondAttribute="bottom" id="LII-Nv-k7e"/>
                             <constraint firstItem="Y1R-Ql-9BH" firstAttribute="height" secondItem="UyT-oE-YtK" secondAttribute="height" id="cWK-Lo-wEE"/>
-                            <constraint firstItem="E3r-Yu-0KQ" firstAttribute="top" secondItem="vip-fl-iC2" secondAttribute="bottom" id="hCN-7T-OXT"/>
                             <constraint firstAttribute="centerX" secondItem="jer-gP-4VJ" secondAttribute="centerX" id="j5S-ST-5df"/>
-                            <constraint firstItem="DFl-TD-HyQ" firstAttribute="top" secondItem="jer-gP-4VJ" secondAttribute="bottom" constant="75" id="nIO-zf-zLx"/>
+                            <constraint firstItem="DFl-TD-HyQ" firstAttribute="top" secondItem="jer-gP-4VJ" secondAttribute="bottom" constant="75" id="ops-wm-yfO"/>
                             <constraint firstAttribute="centerY" secondItem="Y1R-Ql-9BH" secondAttribute="centerY" id="wve-5n-qgi"/>
                             <constraint firstItem="Y1R-Ql-9BH" firstAttribute="width" secondItem="UyT-oE-YtK" secondAttribute="width" id="xIB-Lh-ue1"/>
                         </constraints>
