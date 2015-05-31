@@ -31,7 +31,6 @@
 		CA3BF4FF1B151BE100036471 /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4F81B151BE100036471 /* 05.png */; };
 		CA3BF5001B151BE100036471 /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4F91B151BE100036471 /* 06.png */; };
 		CA3BF5011B151BE100036471 /* 07.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4FA1B151BE100036471 /* 07.png */; };
-		CA3BF5111B15205C00036471 /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BF5101B15205C00036471 /* ScrollViewContainer.swift */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
@@ -110,7 +109,6 @@
 		CA3BF4F81B151BE100036471 /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
 		CA3BF4F91B151BE100036471 /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
 		CA3BF4FA1B151BE100036471 /* 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 07.png; sourceTree = "<group>"; };
-		CA3BF5101B15205C00036471 /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51F4991AF9882D00BC94BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */,
-				CA3BF5101B15205C00036471 /* ScrollViewContainer.swift */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
-				CA3BF5111B15205C00036471 /* ScrollViewContainer.swift in Sources */,
 				CA56783E1B0E7E0F007268F3 /* PagedScrollViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);

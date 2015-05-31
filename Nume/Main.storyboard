@@ -70,7 +70,7 @@
                                     <segue destination="2Da-rh-JnP" kind="embed" id="0Ub-e9-SSs"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" customClass="ScrollViewContainer" customModule="Nume" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" userLabel="Scroll View Container">
                                 <rect key="frame" x="0.0" y="20" width="320" height="480"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52L-QL-56g">
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="width" constant="320" id="v9t-TA-Q5y"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jer-gP-4VJ">
                                 <rect key="frame" x="20" y="456" width="280" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="4Cq-zc-aUu"/>

@@ -119,6 +119,9 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Load the pages that are now on screen
         loadVisiblePages()
+//        self.pageControl.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+        // or...:
+//        self.pageControl.addTarget(self, action: "viewDidLoad", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func didReceiveMemoryWarning() {
