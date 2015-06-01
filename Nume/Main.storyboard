@@ -17,14 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-bc-uh3" customClass="FBSDKProfilePictureView">
-                                <rect key="frame" x="85" y="209" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="AAa-nG-zc8"/>
-                                    <constraint firstAttribute="width" constant="150" id="USr-uH-H9Z"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-0l-7Oh" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="0.0" y="508" width="320" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,18 +30,48 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="pXt-0l-7Oh" secondAttribute="bottom" constant="30" id="6VO-it-9ZZ"/>
-                            <constraint firstAttribute="centerY" secondItem="SIy-bc-uh3" secondAttribute="centerY" id="LQf-fG-n3d"/>
                             <constraint firstAttribute="centerX" secondItem="pXt-0l-7Oh" secondAttribute="centerX" id="olP-9z-OeL"/>
-                            <constraint firstAttribute="centerX" secondItem="SIy-bc-uh3" secondAttribute="centerX" id="sP2-zA-N8V"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="profilePic" destination="SIy-bc-uh3" id="YGb-wS-27a"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="487" y="678"/>
+        </scene>
+        <!--Profile Picture View Controller-->
+        <scene sceneID="KDL-HK-hkt">
+            <objects>
+                <viewController id="XVZ-k2-Rka" customClass="ProfilePictureViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nt-5B-Fy6"/>
+                        <viewControllerLayoutGuide type="bottom" id="gdf-AR-x9c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="opN-Uq-6aQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-Tf-OaK" userLabel="Profile Picture View">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JXl-nl-5Ds"/>
+                                    <constraint firstAttribute="height" constant="200" id="dc8-yG-Iof"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5cS-Tf-OaK" secondAttribute="centerX" id="31V-pt-HOw"/>
+                            <constraint firstAttribute="centerY" secondItem="5cS-Tf-OaK" secondAttribute="centerY" id="QEo-Tr-z95"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profilePic" destination="5cS-Tf-OaK" id="vxx-QD-uUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtU-Qj-6SO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="678"/>
         </scene>
         <!--Paged Scroll View Controller-->
         <scene sceneID="wjV-T1-AWv">

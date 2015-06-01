@@ -10,48 +10,28 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-//    var pagedScrollViewControllerInstance: PagedScrollViewController = PagedScrollViewController()
-    
-    
-    @IBOutlet weak var profilePic: FBSDKProfilePictureView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        self.profilePic!.layer.cornerRadius = 75
-        self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
-        self.profilePic!.layer.borderWidth = 3.0
         
         let loginView = FBSDKLoginButton()
-//        loginView.center = self.view.center
         loginView.delegate = self
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
             // User is already logged in, do work such as go to next view controller.
             // Or Show Logout Button
             self.returnUserData()
-            
-            
-        } else {
-//            self.profilePic!.hidden = true
+
         }
-        
-        self.profilePic = FBSDKProfilePictureView()
         
     }
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         println("User Logged In")
-        self.profilePic!.hidden = false
-        //hide tutorial pic stuff
         
-        if ((error) != nil)
-        {
+        if ((error) != nil) {
             // Process error
         }
         else if result.isCancelled {
@@ -71,23 +51,19 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         println("User Logged Out")
-        self.profilePic!.hidden = true
+
         //show tutorial pic stuff
     }
     
     // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
-            if ((error) != nil)
-            {
+            if ((error) != nil) {
                 // Process error
                 println("Error: \(error)")
-            }
-            else
-            {
+            } else {
                 println("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 println("User Name is: \(userName)")

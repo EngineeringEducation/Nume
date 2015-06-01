@@ -24,6 +24,7 @@
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
+		CA0DCF491B1BD89300553A99 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */; };
 		CA3BF4FB1B151BE100036471 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4F41B151BE100036471 /* 01.png */; };
 		CA3BF4FC1B151BE100036471 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4F51B151BE100036471 /* 02.png */; };
 		CA3BF4FD1B151BE100036471 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BF4F61B151BE100036471 /* 03.png */; };
@@ -102,6 +103,7 @@
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
+		CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		CA3BF4F41B151BE100036471 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 		CA3BF4F51B151BE100036471 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		CA3BF4F61B151BE100036471 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
+				CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
+				CA0DCF491B1BD89300553A99 /* ProfilePictureViewController.swift in Sources */,
 				CA56783E1B0E7E0F007268F3 /* PagedScrollViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);
