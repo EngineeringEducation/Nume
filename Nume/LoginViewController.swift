@@ -105,8 +105,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 println("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 println("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                println("User Email is: \(userEmail)")
+                if let userEmail : NSString = result.valueForKey("email") as? NSString {
+                    println("User Email is: \(userEmail)")
+                }
+                
                 
                 let appGroupID = "group.io.github.dhsu210.Nume"
                 if let defaults = NSUserDefaults(suiteName: appGroupID) {
