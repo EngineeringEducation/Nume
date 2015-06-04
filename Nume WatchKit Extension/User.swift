@@ -13,11 +13,13 @@ class User: NSObject {
     var userToken: Int
     var userNumber: Int
     var userActivity: String
+    var userName: String
     
-    init(userToken: Int, userNumber: Int, userActivity: String) {
+    init(userToken: Int, userNumber: Int, userActivity: String, userName: String) {
         self.userToken = userToken
         self.userNumber = userNumber
         self.userActivity = userActivity
+        self.userName = userName
         super.init()
     }
 }

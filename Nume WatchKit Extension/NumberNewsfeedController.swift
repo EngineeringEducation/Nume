@@ -12,30 +12,37 @@ import WatchKit
 class NumberNewsfeedController: WKInterfaceController {
     
     // Model
-    var user : User?
+    var user : User!
     
-    @IBOutlet weak var numberResult: WKInterfaceLabel!
-    @IBOutlet weak var dictationResult: WKInterfaceLabel!
+    @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var userProfilePhoto: WKInterfaceButton!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        // Pass in user data from previous interface controller
+        user = context as! User
+        
         // Make sure data was passed properly and update the label accordingly
-        if let val: User = context as? User {
-            self.numberResult.setText("\(val.userNumber)")
-            self.dictationResult.setText("\(val.userActivity)")
+        if let val = context as? User {
+            self.numberResultLabel.setText("\(val.userNumber)")
+            self.dictationResultLabel.setText("\(val.userActivity)")
+            
 
             // Placing dictation text and number rating into NSUserDefaults
+            // Placing pulling user's FB profile picture image from NSUserDefaults
             let appGroupID = "group.io.github.dhsu210.Nume"
             if let defaults = NSUserDefaults(suiteName: appGroupID) {
                 defaults.setValue(val.userNumber, forKey: "userNumberKey")
                 defaults.setValue(val.userActivity, forKey: "userActivityKey")
+//            self.userProfilePhoto.setBackgroundImage((defaults.objectForKey("userProfilePhotoKey") as! UIImage))
             }
             
             
         } else {
-            self.numberResult.setText("")
+            self.numberResultLabel.setText("")
         }
         
         
@@ -51,7 +58,11 @@ class NumberNewsfeedController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    @IBAction func openParentAppToSend() {
+    override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
+        return self.user
+    }
+    
+    @IBAction func receiveUserDetailToSend() {
         let defaults = NSUserDefaults.standardUserDefaults()        
         let userDictionary = defaults.dictionaryRepresentation()
         
@@ -60,14 +71,14 @@ class NumberNewsfeedController: WKInterfaceController {
             
             if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
                 responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
-                responseActivity = castedResponseDictionary["userActivityKey"] as? String
+                responseActivity = castedResponseDictionary["userActivityKey"] as? String,
+                responseName = castedResponseDictionary["userNameKey"] as? String
             {
-                println("Congratulations, you successfully rated a \(responseNumber) with '\(responseActivity)'")
+                self.user!.userName = responseName
+                println("Congratulations, \(responseName) successfully rated a \(responseNumber) with '\(responseActivity)'")
             }
+            self.pushControllerWithName("UserDetail", context: self.user)
         }
     }
-    
-   
-    
    
 }
