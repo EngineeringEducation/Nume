@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         //old code here
-        loginView.center = self.view.center
         loginView.frame = CGRectMake(28, 610, 319, 30)
         
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)

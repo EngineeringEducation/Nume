@@ -14,12 +14,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Xpt-At-uO7" kind="relationship" relationship="rootViewController" id="LKG-WR-k3M"/>
+                        <segue destination="2Da-rh-JnP" kind="relationship" relationship="rootViewController" id="5FR-cW-upX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTx-9Q-fnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922" y="678"/>
+            <point key="canvasLocation" x="-551" y="678"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="o0y-La-gcO">
@@ -32,10 +32,27 @@
                     <view key="view" contentMode="scaleToFill" id="TNR-cE-2MF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-6Q-Wj9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="Xpt-At-uO7" kind="embed" id="W0b-o9-Xrd"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Xvd-6Q-Wj9" firstAttribute="top" secondItem="TNR-cE-2MF" secondAttribute="topMargin" id="CrM-oY-3nW"/>
+                            <constraint firstItem="Xvd-6Q-Wj9" firstAttribute="width" secondItem="TNR-cE-2MF" secondAttribute="width" id="KFu-yz-zIg"/>
+                            <constraint firstItem="Xvd-6Q-Wj9" firstAttribute="height" secondItem="TNR-cE-2MF" secondAttribute="height" id="Wqq-IO-NpE"/>
+                            <constraint firstAttribute="centerX" secondItem="Xvd-6Q-Wj9" secondAttribute="centerX" id="mDI-vm-YB6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dQr-n4-eb8"/>
+                    <connections>
+                        <segue destination="XVZ-k2-Rka" kind="push" identifier="NextView" id="dsD-Xy-Qap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtU-Qj-6SO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="1398"/>
+            <point key="canvasLocation" x="-99" y="1364"/>
         </scene>
         <!--Paged Scroll View Controller-->
         <scene sceneID="wjV-T1-AWv">
@@ -92,9 +109,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-Ql-9BH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="2Da-rh-JnP" kind="embed" id="Osb-gR-TuK"/>
-                                </connections>
                             </containerView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" userLabel="Scroll View Container">
                                 <rect key="frame" x="0.0" y="20" width="320" height="480"/>
@@ -139,12 +153,11 @@
                     <connections>
                         <outlet property="pageControl" destination="jer-gP-4VJ" id="sdh-Vy-Fn6"/>
                         <outlet property="scrollView" destination="52L-QL-56g" id="kD5-qq-cbd"/>
-                        <segue destination="XVZ-k2-Rka" kind="push" identifier="NextView" id="J6N-Pq-pmP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHW-ha-mKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="678"/>
+            <point key="canvasLocation" x="369" y="678"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
