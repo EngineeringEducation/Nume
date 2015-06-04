@@ -1,74 +1,73 @@
 //
-//  FBLoginViewController.swift
-//  Nume
-//
-//  Created by Jason Eng on 4/30/15.
-//  Copyright (c) 2015 Daniel Hsu. All rights reserved.
+// FBLoginViewController.swift
+// Nume 
+// 
+// Created by Jason Eng on 4/30/15. 
+// Copyright (c) 2015 Daniel Hsu. All rights reserved. 
 //
 
 import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    
-    
-    @IBOutlet weak var profilePic: FBSDKProfilePictureView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        self.profilePic!.layer.cornerRadius = 75
-        self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.blackColor().CGColor
-        self.profilePic!.layer.borderWidth = 1.0
-
         
-        let loginView = FBSDKLoginButton()
-//        self.view.addSubview(loginView)
-//        loginView.center = self.view.center
-        loginView.delegate = self
+        
+        let loginView : FBSDKLoginButton = FBSDKLoginButton()
+        //old code here
+        // loginView.frame = CGRectMake(28, 610, 319, 30)
+        
+        loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.view.addSubview(loginView)
+        
+        //make dictionary for constraints
+        let viewsDictionary = ["loginView":loginView]
+        
+        //sizing constraints H (horizontal) and V (vertical)
+        let loginViewSize_constraint_H:Array = NSLayoutConstraint.constraintsWithVisualFormat("H:[loginView(>=319.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        let loginViewSize_constraint_V:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:[loginView(>=30.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        
+        loginView.addConstraints(loginViewSize_constraint_H)
+        loginView.addConstraints(loginViewSize_constraint_V)
+        
+        //positioning constraints
+        let loginView_constraint_H:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("H:|-60-[loginView]-0-|", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        let loginView_constraint_V:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:|-30-[loginView]-0-|", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsDictionary)
+        // // loginView.addConstraints(loginViewconstraintH as [AnyObject]) // loginView.addConstraints(loginViewconstraintV as [AnyObject])
+        
+        //
+        
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
+        loginView.delegate = self
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
             // User is already logged in, do work such as go to next view controller.
+            
             // Or Show Logout Button
-            self.returnUserData()
+            
+            performSegueWithIdentifier("NextView", sender: nil)
+            
+        } else {
+            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            loginView.readPermissions = ["public_profile", "email", "user_friends"]
+            loginView.delegate = self
+            
         }
         
-        //self.profilePic = FBSDKProfilePictureView()
-        
-//        // Place user's FB profile photo into NSUserDefaults
-//        let appGroupID = "group.io.github.dhsu210.Nume"
-//        if let defaults = NSUserDefaults(suiteName: appGroupID) {
-//            defaults.setObject(self.getUserImageFromFBView(), forKey: "userProfilePhotoKey")
-//        }
-        
+        println("testing viewDidLoad")
         
     }
     
-//    func getUserImageFromFBView() -> UIImage {
-//        var img : UIImage?
-//        
-//        UIGraphicsBeginImageContext(self.profilePic!.frame.size)
-//        let context = UIGraphicsGetCurrentContext()
-//        
-//        self.profilePic!.layer.drawInContext(context)
-//        
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        
-//        return image
-//    }
-    
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
+    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println("User Logged In")
         
-        if ((error) != nil)
-        {
+        println("User Logged In")
+        performSegueWithIdentifier("NextView", sender: nil)
+        
+        if ((error) != nil) {
             // Process error
         }
         else if result.isCancelled {
@@ -82,7 +81,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 // Do work
             }
             
-            self.returnUserData()
         }
     }
     
@@ -95,13 +93,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
-            if ((error) != nil)
-            {
+            if ((error) != nil) {
                 // Process error
                 println("Error: \(error)")
-            }
-            else
-            {
+            } else {
                 println("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 println("User Name is: \(userName)")
@@ -109,34 +104,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     println("User Email is: \(userEmail)")
                 }
                 
-                
                 let appGroupID = "group.io.github.dhsu210.Nume"
                 if let defaults = NSUserDefaults(suiteName: appGroupID) {
                     defaults.setValue(userName, forKey: "userNameKey")
                 }
-
-                //Attempt 2 to get FB profile pic image
-//                // Get user profile pic
-//                let url = NSURL(string: "https://graph.facebook.com/\(result.objectID)/picture?type=large")
-//                let urlRequest = NSURLRequest(URL: url!)
-//                
-//                NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
-//                    
-//                    // Display the image
-//                    let image = UIImage(data: data)
-//                    self.profilePic.image = image
-//                    
-//                }
-
+                
+                let userEmail : NSString = result.valueForKey("email") as! NSString
+                println("User Email is: \(userEmail)")
+                
             }
         })
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
