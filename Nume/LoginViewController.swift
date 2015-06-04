@@ -10,44 +10,75 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    
-    
-    @IBOutlet weak var profilePic: FBSDKProfilePictureView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        self.profilePic!.layer.cornerRadius = 75
-        self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.blackColor().CGColor
-        self.profilePic!.layer.borderWidth = 1.0
-
         
-        let loginView = FBSDKLoginButton()
-//        self.view.addSubview(loginView)
-//        loginView.center = self.view.center
-        loginView.delegate = self
+        
+        let loginView : FBSDKLoginButton = FBSDKLoginButton()
+        //old code here
+        loginView.frame = CGRectMake(28, 610, 319, 30)
+        
+        loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.view.addSubview(loginView)
+        
+        //make dictionary for constraints
+        let viewsDictionary = ["loginView":loginView]
+
+        //sizing constraints H (horizontal) and V (vertical)
+        let loginViewSize_constraint_H:Array = NSLayoutConstraint.constraintsWithVisualFormat("H:[loginView(>=319.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        let loginViewSize_constraint_V:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:[loginView(>=30.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        
+        loginView.addConstraints(loginViewSize_constraint_H)
+        loginView.addConstraints(loginViewSize_constraint_V)
+        
+        //positioning constraints
+//        let loginView_constraint_H:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("H:|-30-[loginView]-0-|", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+//        let loginView_constraint_V:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:|-30-[loginView]-0-|", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsDictionary)
+//        
+//        loginView.addConstraints(loginView_constraint_H as [AnyObject])
+//        loginView.addConstraints(loginView_constraint_V as [AnyObject])
+        
+        //
+        
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
+        loginView.delegate = self
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
             // User is already logged in, do work such as go to next view controller.
+            
             // Or Show Logout Button
-            self.returnUserData()
+
+            performSegueWithIdentifier("NextView", sender: nil)
+            
+        } else {
+            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            loginView.readPermissions = ["public_profile", "email", "user_friends"]
+            loginView.delegate = self
+            
         }
-        
-        self.profilePic = FBSDKProfilePictureView()
-        
+
+        println("testing viewDidLoad")
         
     }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        if (FBSDKAccessToken.currentAccessToken() != nil) {
+//            self.returnUserData()
+//            self.parentViewController!.performSegueWithIdentifier("NextView", sender: nil)
+//        } else {
+//            self.parentViewController!.performSegueWithIdentifier("NextView", sender: nil)
+//        }
+//    }
+    
     // Facebook Delegate Methods
     // helps you know if the user did login correctly and if they did you can grab their information.
+    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println("User Logged In")
         
-        if ((error) != nil)
-        {
+        println("User Logged In")
+        performSegueWithIdentifier("NextView", sender: nil)
+        
+        if ((error) != nil) {
             // Process error
         }
         else if result.isCancelled {
@@ -61,7 +92,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 // Do work
             }
             
-            self.returnUserData()
         }
     }
     
@@ -70,24 +100,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
-            if ((error) != nil)
-            {
+            if ((error) != nil) {
                 // Process error
                 println("Error: \(error)")
-            }
-            else
-            {
+            } else {
                 println("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 println("User Name is: \(userName)")
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
-
+                
             }
         })
     }

@@ -24,13 +24,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.showsHorizontalScrollIndicator = true
         scrollView.delegate = self
         
-        pageImages = [UIImage(named:"01.png")!,
-            UIImage(named:"02.png")!,
-            UIImage(named:"03.png")!,
-            UIImage(named:"04.png")!,
-            UIImage(named:"05.png")!,
-            UIImage(named:"06.png")!,
-            UIImage(named:"07.png")!]
+        pageImages = [UIImage(named:"1.png")!,
+            UIImage(named:"2.png")!,
+            UIImage(named:"3.png")!,
+            UIImage(named:"4.png")!]
         
         let pageCount = pageImages.count
         
@@ -119,6 +116,9 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Load the pages that are now on screen
         loadVisiblePages()
+//        self.pageControl.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+        // or...:
+//        self.pageControl.addTarget(self, action: "viewDidLoad", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func didReceiveMemoryWarning() {
