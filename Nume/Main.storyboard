@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xpt-At-uO7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QMg-vs-dSU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Pxh-OL-LcE">
+            <objects>
+                <navigationController id="QMg-vs-dSU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOG-QZ-NSC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xpt-At-uO7" kind="relationship" relationship="rootViewController" id="LKG-WR-k3M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTx-9Q-fnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922" y="678"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="o0y-La-gcO">
             <objects>
@@ -16,27 +32,14 @@
                     <view key="view" contentMode="scaleToFill" id="TNR-cE-2MF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-0l-7Oh" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="0.0" y="508" width="320" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L7l-6f-WY0"/>
-                                    <constraint firstAttribute="width" constant="320" id="vJe-Qq-ky7"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="pXt-0l-7Oh" secondAttribute="bottom" constant="30" id="6VO-it-9ZZ"/>
-                            <constraint firstAttribute="centerX" secondItem="pXt-0l-7Oh" secondAttribute="centerX" id="olP-9z-OeL"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dQr-n4-eb8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="678"/>
+            <point key="canvasLocation" x="-99" y="678"/>
         </scene>
         <!--Profile Picture View Controller-->
         <scene sceneID="KDL-HK-hkt">
@@ -51,11 +54,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-Tf-OaK" userLabel="Profile Picture View">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="JXl-nl-5Ds"/>
-                                    <constraint firstAttribute="height" constant="200" id="dc8-yG-Iof"/>
+                                    <constraint firstAttribute="width" constant="150" id="JXl-nl-5Ds"/>
+                                    <constraint firstAttribute="height" constant="150" id="dc8-yG-Iof"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -65,13 +68,14 @@
                             <constraint firstAttribute="centerY" secondItem="5cS-Tf-OaK" secondAttribute="centerY" id="QEo-Tr-z95"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="75Y-K3-cL5"/>
                     <connections>
                         <outlet property="profilePic" destination="5cS-Tf-OaK" id="vxx-QD-uUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtU-Qj-6SO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="678"/>
+            <point key="canvasLocation" x="-523" y="1398"/>
         </scene>
         <!--Paged Scroll View Controller-->
         <scene sceneID="wjV-T1-AWv">
@@ -89,10 +93,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="2Da-rh-JnP" kind="embed" id="0Ub-e9-SSs"/>
+                                    <segue destination="2Da-rh-JnP" kind="embed" id="Osb-gR-TuK"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" userLabel="Scroll View Container">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3r-Yu-0KQ" userLabel="Scroll View Container">
                                 <rect key="frame" x="0.0" y="20" width="320" height="480"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52L-QL-56g">
@@ -131,14 +135,16 @@
                             <constraint firstItem="Y1R-Ql-9BH" firstAttribute="width" secondItem="UyT-oE-YtK" secondAttribute="width" id="xIB-Lh-ue1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9hv-bf-nl5"/>
                     <connections>
                         <outlet property="pageControl" destination="jer-gP-4VJ" id="sdh-Vy-Fn6"/>
                         <outlet property="scrollView" destination="52L-QL-56g" id="kD5-qq-cbd"/>
+                        <segue destination="XVZ-k2-Rka" kind="push" identifier="NextView" id="J6N-Pq-pmP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHW-ha-mKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="678"/>
+            <point key="canvasLocation" x="-523" y="678"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

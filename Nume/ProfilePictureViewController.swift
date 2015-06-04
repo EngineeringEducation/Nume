@@ -21,5 +21,6 @@ class ProfilePictureViewController: UIViewController {
         self.profilePic!.layer.borderWidth = 3.0
         
         self.profilePic = FBSDKProfilePictureView()
+        println(self.profilePic)
     }
 }

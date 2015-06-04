@@ -27,10 +27,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         pageImages = [UIImage(named:"01.png")!,
             UIImage(named:"02.png")!,
             UIImage(named:"03.png")!,
-            UIImage(named:"04.png")!,
-            UIImage(named:"05.png")!,
-            UIImage(named:"06.png")!,
-            UIImage(named:"07.png")!]
+            UIImage(named:"04.png")!]
         
         let pageCount = pageImages.count
         
