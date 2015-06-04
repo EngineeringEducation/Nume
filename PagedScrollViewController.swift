@@ -24,10 +24,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.showsHorizontalScrollIndicator = true
         scrollView.delegate = self
         
-        pageImages = [UIImage(named:"01.png")!,
-            UIImage(named:"02.png")!,
-            UIImage(named:"03.png")!,
-            UIImage(named:"04.png")!]
+        pageImages = [UIImage(named:"1.png")!,
+            UIImage(named:"2.png")!,
+            UIImage(named:"3.png")!,
+            UIImage(named:"4.png")!]
         
         let pageCount = pageImages.count
         

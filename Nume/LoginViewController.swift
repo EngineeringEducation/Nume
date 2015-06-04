@@ -22,19 +22,19 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.view.addSubview(loginView)
         
         //make dictionary for constraints
-//        let viewsDictionary = ["loginView":loginView]
-//
-//        //sizing constraints H (horizontal) and V (vertical)
-//        let loginViewSize_constraint_H:Array = NSLayoutConstraint.constraintsWithVisualFormat("H:[loginView(>=319.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
-//        let loginViewSize_constraint_V:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:[loginView(>=30.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
-//        
-//        loginView.addConstraints(loginViewSize_constraint_H)
-//        loginView.addConstraints(loginViewSize_constraint_V)
+        let viewsDictionary = ["loginView":loginView]
+
+        //sizing constraints H (horizontal) and V (vertical)
+        let loginViewSize_constraint_H:Array = NSLayoutConstraint.constraintsWithVisualFormat("H:[loginView(>=319.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        let loginViewSize_constraint_V:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:[loginView(>=30.0)]", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
+        
+        loginView.addConstraints(loginViewSize_constraint_H)
+        loginView.addConstraints(loginViewSize_constraint_V)
         
         //positioning constraints
 //        let loginView_constraint_H:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("H:|-30-[loginView]-0-|", options: NSLayoutFormatOptions(0), metrics: nil, views: viewsDictionary)
 //        let loginView_constraint_V:NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:|-30-[loginView]-0-|", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsDictionary)
-        
+//        
 //        loginView.addConstraints(loginView_constraint_H as [AnyObject])
 //        loginView.addConstraints(loginView_constraint_V as [AnyObject])
         
