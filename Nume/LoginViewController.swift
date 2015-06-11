@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
+    let skipButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,23 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     override func viewWillAppear(animated: Bool) {
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(28, 610, 319, 30)
+        loginView.frame = CGRectMake(28, 600, 319, 30)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
+        
+        
+        skipButton.frame = CGRectMake(28, 600, 319, 30)
+        skipButton.backgroundColor = UIColor.whiteColor()
+        skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)
+        skipButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(skipButton)
+        skipButton.hidden = false
+    }
+    
+    func buttonAction(sender:UIButton!){
+        println("Button tapped")
+        sender.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -126,13 +140,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
         
+        if (page == 3) {
+            skipButton.hidden = true
+        }
+        
         // Update the page control
         pageControl.currentPage = page
         
         // Work out which pages you want to load
         let firstPage = page - 1
         let lastPage = page + 1
-        
         
         // Purge anything before the first page
         for var index = 0; index < firstPage; ++index {

@@ -19,7 +19,7 @@ class ProfilePictureViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         // if there is NO user token, then show the login screen.
-        // else, populate the profile picture
+        // else, populate the profile picture and show logout button
         
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             var login = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
@@ -32,8 +32,18 @@ class ProfilePictureViewController: UIViewController {
             self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
             self.profilePic!.layer.borderWidth = 3.0
 
+            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            self.view.addSubview(loginView)
+            loginView.frame = CGRectMake(28, 610, 319, 30)
+            loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
+            loginView.readPermissions = ["public_profile", "email", "user_friends"]
             
         }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        println("User Logged Out")
+        
     }
     
     // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QMg-vs-dSU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Da-rh-JnP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -36,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="95" width="320" height="360"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-fX-vMZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
+                                        <rect key="frame" x="0.0" y="40" width="320" height="360"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="360" id="omH-cG-pK6"/>
                                             <constraint firstAttribute="width" constant="320" id="qH9-S6-nRA"/>
@@ -44,7 +45,7 @@
                                     </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" id="0AR-59-4c5"/>
+                                    <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" constant="40" id="0AR-59-4c5"/>
                                     <constraint firstAttribute="height" constant="360" id="2fl-j9-WJj"/>
                                     <constraint firstAttribute="centerX" secondItem="7Tb-fX-vMZ" secondAttribute="centerX" id="Gh0-uT-gFu"/>
                                     <constraint firstItem="7Tb-fX-vMZ" firstAttribute="leading" secondItem="haP-dd-L8h" secondAttribute="leading" id="Wva-w7-DS9"/>
@@ -60,10 +61,18 @@
                                 <color key="pageIndicatorTintColor" red="0.45353929920000002" green="0.45353929920000002" blue="0.45353929920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-a2-RmV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Mt6-a2-RmV" firstAttribute="leading" secondItem="b3z-SQ-9Nk" secondAttribute="leadingMargin" constant="-16" id="5Zh-fi-8IL"/>
                             <constraint firstItem="CbY-ID-w4G" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="500" id="S0h-3H-zie"/>
                             <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="75" id="Sur-Bt-gbB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mt6-a2-RmV" secondAttribute="trailing" constant="-16" id="bSA-Cn-v7O"/>
+                            <constraint firstItem="Mt6-a2-RmV" firstAttribute="top" secondItem="b3z-SQ-9Nk" secondAttribute="topMargin" id="u6V-kP-u81"/>
+                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="bottom" id="xf3-bN-AQA"/>
                             <constraint firstAttribute="centerX" secondItem="CbY-ID-w4G" secondAttribute="centerX" id="yox-x4-VGW"/>
                             <constraint firstAttribute="centerX" secondItem="haP-dd-L8h" secondAttribute="centerX" id="z0V-R2-ijX"/>
                         </constraints>
@@ -76,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="678"/>
+            <point key="canvasLocation" x="-673" y="-42"/>
         </scene>
         <!--Profile Picture View Controller-->
         <scene sceneID="KDL-HK-hkt">
@@ -98,14 +107,22 @@
                                     <constraint firstAttribute="height" constant="150" id="dc8-yG-Iof"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go check out your Apple Watch!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZl-mx-Vts">
+                                <rect key="frame" x="36.5" y="400" width="247" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5cS-Tf-OaK" secondAttribute="centerX" id="31V-pt-HOw"/>
+                            <constraint firstAttribute="centerX" secondItem="WZl-mx-Vts" secondAttribute="centerX" id="JXn-uH-1n8"/>
                             <constraint firstAttribute="centerY" secondItem="5cS-Tf-OaK" secondAttribute="centerY" id="QEo-Tr-z95"/>
+                            <constraint firstItem="WZl-mx-Vts" firstAttribute="top" secondItem="5cS-Tf-OaK" secondAttribute="bottom" constant="41" id="xrN-p4-eAZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="75Y-K3-cL5"/>
+                    <navigationItem key="navigationItem" id="sfH-wH-0FO"/>
                     <connections>
                         <outlet property="profilePic" destination="5cS-Tf-OaK" id="vxx-QD-uUc"/>
                     </connections>
@@ -120,4 +137,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
