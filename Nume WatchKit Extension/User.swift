@@ -22,4 +22,5 @@ class User: NSObject {
         self.userName = userName
         super.init()
     }
+    
 }
