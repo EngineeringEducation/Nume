@@ -10,8 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginButtonDelegate {
     
+
+    @IBOutlet weak var numifyUserLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet weak var profilePic: FBSDKProfilePictureView?
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
@@ -19,9 +22,48 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        numifyUserLabel.text = "Numify"
+        numifyUserLabel.font = UIFont(name: numifyUserLabel.font.fontName, size: 38)
+
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        self.profilePic!.layer.cornerRadius = 40
+        self.profilePic!.clipsToBounds = true
+        self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profilePic!.layer.borderWidth = 3.0
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+            graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                
+                if ((error) != nil) {
+                    // Process error
+                    println("Error: \(error)")
+                } else {
+                    println("fetched user: \(result)")
+                    let userName : NSString = result.valueForKey("name") as! NSString
+                    println("User Name is: \(userName)")
+                    if let userEmail : NSString = result.valueForKey("email") as? NSString {
+                        println("User Email is: \(userEmail)")
+                    }
+                    
+                    let appGroupID = "group.io.github.dhsu210.Nume"
+                    if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                        defaults.setValue(userName, forKey: "userNameKey")
+                    }
+                    
+                    let userEmail : NSString = result.valueForKey("email") as! NSString
+                    println("User Email is: \(userEmail)")
+                    
+                    self.numifyUserLabel.text = "Hi, \(userName)!"
+                    self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 14)
+                }
+            })
+            
+        }
+        
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
         loginView.frame = CGRectMake(28, 600, 319, 30)
@@ -39,7 +81,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     }
     
     func buttonAction(sender:UIButton!){
-        println("Button tapped")
         sender.hidden = true
     }
     
@@ -86,7 +127,38 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
-                dismissViewControllerAnimated(true, completion: nil)
+
+                if (FBSDKAccessToken.currentAccessToken() != nil) {
+                    let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+                    graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                        
+                        if ((error) != nil) {
+                            // Process error
+                            println("Error: \(error)")
+                            self.numifyUserLabel.text = "error"
+                        } else {
+                            println("fetched user: \(result)")
+                            let userName : NSString = result.valueForKey("name") as! NSString
+                            println("User Name is: \(userName)")
+                            if let userEmail : NSString = result.valueForKey("email") as? NSString {
+                                println("User Email is: \(userEmail)")
+                            }
+                            
+                            let appGroupID = "group.io.github.dhsu210.Nume"
+                            if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                                defaults.setValue(userName, forKey: "userNameKey")
+                            }
+                            
+                            let userEmail : NSString = result.valueForKey("email") as! NSString
+                            println("User Email is: \(userEmail)")
+                            
+                            self.numifyUserLabel.text = "Hi, \(userName)!"
+                            self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 14)
+                        }
+                    })
+                    
+                }
+                
             }
             
         }
@@ -94,6 +166,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         println("User Logged Out")
+        if (FBSDKAccessToken.currentAccessToken() == nil) {
+            numifyUserLabel.text = "Numify"
+            self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 38)
+        }
     }
 
     func loadPage(page: Int) {

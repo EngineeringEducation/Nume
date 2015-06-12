@@ -34,26 +34,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haP-dd-L8h" userLabel="Scroll View Container">
-                                <rect key="frame" x="0.0" y="95" width="320" height="360"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="460"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-fX-vMZ">
-                                        <rect key="frame" x="0.0" y="40" width="320" height="360"/>
+                                        <rect key="frame" x="0.0" y="40" width="320" height="430"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="360" id="omH-cG-pK6"/>
+                                            <constraint firstAttribute="height" constant="430" id="omH-cG-pK6"/>
                                             <constraint firstAttribute="width" constant="320" id="qH9-S6-nRA"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" constant="40" id="0AR-59-4c5"/>
-                                    <constraint firstAttribute="height" constant="360" id="2fl-j9-WJj"/>
+                                    <constraint firstAttribute="height" constant="460" id="2fl-j9-WJj"/>
                                     <constraint firstAttribute="centerX" secondItem="7Tb-fX-vMZ" secondAttribute="centerX" id="Gh0-uT-gFu"/>
                                     <constraint firstItem="7Tb-fX-vMZ" firstAttribute="leading" secondItem="haP-dd-L8h" secondAttribute="leading" id="Wva-w7-DS9"/>
                                     <constraint firstAttribute="width" constant="320" id="ZCd-KW-D1d"/>
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-ID-w4G">
-                                <rect key="frame" x="20" y="520" width="280" height="37"/>
+                                <rect key="frame" x="20" y="570" width="280" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="DHk-iG-ep1"/>
                                     <constraint firstAttribute="width" constant="280" id="wS3-iK-5Hf"/>
@@ -62,24 +62,64 @@
                                 <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-a2-RmV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-ZK-uNs">
+                                        <rect key="frame" x="85" y="33" width="149" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="fdh-fB-Pbm"/>
+                                            <constraint firstAttribute="width" constant="149" id="lPr-xQ-kyw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUv-ME-4hd" userLabel="Profile Picture View" customClass="FBSDKProfilePictureView">
+                                        <rect key="frame" x="15" y="20" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="cYW-aj-vPR"/>
+                                            <constraint firstAttribute="width" constant="80" id="l44-Dx-a2y"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmI-PQ-G0Y">
+                                        <rect key="frame" x="236" y="24" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="1Eq-Vq-hs0"/>
+                                            <constraint firstAttribute="width" constant="64" id="A2y-73-kgq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="62"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iUv-ME-4hd" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="15" id="4OL-oC-kLo"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="33" id="5SQ-rj-RdB"/>
+                                    <constraint firstItem="iUv-ME-4hd" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="20" id="cgt-e6-oiU"/>
+                                    <constraint firstAttribute="centerX" secondItem="Cm7-ZK-uNs" secondAttribute="centerX" id="qBM-7O-dY4"/>
+                                    <constraint firstItem="cmI-PQ-G0Y" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="24" id="uyb-Ls-vAK"/>
+                                    <constraint firstAttribute="trailing" secondItem="cmI-PQ-G0Y" secondAttribute="trailing" constant="20" id="xBH-az-U8g"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Mt6-a2-RmV" firstAttribute="leading" secondItem="b3z-SQ-9Nk" secondAttribute="leadingMargin" constant="-16" id="5Zh-fi-8IL"/>
-                            <constraint firstItem="CbY-ID-w4G" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="500" id="S0h-3H-zie"/>
+                            <constraint firstItem="CbY-ID-w4G" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="550" id="S0h-3H-zie"/>
                             <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="75" id="Sur-Bt-gbB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mt6-a2-RmV" secondAttribute="trailing" constant="-16" id="bSA-Cn-v7O"/>
                             <constraint firstItem="Mt6-a2-RmV" firstAttribute="top" secondItem="b3z-SQ-9Nk" secondAttribute="topMargin" id="u6V-kP-u81"/>
-                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="bottom" id="xf3-bN-AQA"/>
+                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="bottom" constant="-10" id="xf3-bN-AQA"/>
                             <constraint firstAttribute="centerX" secondItem="CbY-ID-w4G" secondAttribute="centerX" id="yox-x4-VGW"/>
                             <constraint firstAttribute="centerX" secondItem="haP-dd-L8h" secondAttribute="centerX" id="z0V-R2-ijX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dQr-n4-eb8"/>
                     <connections>
+                        <outlet property="numifyUserLabel" destination="Cm7-ZK-uNs" id="wbs-Al-6Px"/>
                         <outlet property="pageControl" destination="CbY-ID-w4G" id="rmD-HP-GWZ"/>
+                        <outlet property="profilePic" destination="iUv-ME-4hd" id="oZU-sX-waG"/>
                         <outlet property="scrollView" destination="7Tb-fX-vMZ" id="pwO-Kj-uvQ"/>
                     </connections>
                 </viewController>
