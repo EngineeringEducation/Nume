@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     override func viewDidLoad() {
         super.viewDidLoad()
         numifyUserLabel.text = "Numify"
-        numifyUserLabel.font = UIFont(name: numifyUserLabel.font.fontName, size: 38)
+        numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
 
     }
     
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("User Email is: \(userEmail)")
                     
                     self.numifyUserLabel.text = "Hi, \(userName)!"
-                    self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 14)
+                    self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                 }
             })
             
@@ -70,7 +70,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
-        
         
         skipButton.frame = CGRectMake(28, 600, 319, 30)
         skipButton.backgroundColor = UIColor.whiteColor()
@@ -153,7 +152,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             println("User Email is: \(userEmail)")
                             
                             self.numifyUserLabel.text = "Hi, \(userName)!"
-                            self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 14)
+                            self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                         }
                     })
                     
@@ -168,7 +167,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         println("User Logged Out")
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             numifyUserLabel.text = "Numify"
-            self.numifyUserLabel.font = UIFont(name: self.numifyUserLabel.font.fontName, size: 38)
+            self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
         }
     }
 
@@ -254,5 +253,32 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         // Dispose of any resources that can be recreated.
     }
     
+    // method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData()
+    func returnUserData() {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil) {
+                // Process error
+                println("Error: \(error)")
+            } else {
+                println("fetched user: \(result)")
+                let userName : NSString = result.valueForKey("name") as! NSString
+                println("User Name is: \(userName)")
+                if let userEmail : NSString = result.valueForKey("email") as? NSString {
+                    println("User Email is: \(userEmail)")
+                }
+                
+                let appGroupID = "group.io.github.dhsu210.Nume"
+                if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                    defaults.setValue(userName, forKey: "userNameKey")
+                }
+                
+                let userEmail : NSString = result.valueForKey("email") as! NSString
+                println("User Email is: \(userEmail)")
+                
+            }
+        })
+    }
     
 }

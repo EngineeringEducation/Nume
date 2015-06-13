@@ -5,22 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Pxh-OL-LcE">
-            <objects>
-                <navigationController id="QMg-vs-dSU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOG-QZ-NSC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="XVZ-k2-Rka" kind="relationship" relationship="rootViewController" id="lhZ-3Q-CNz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GTx-9Q-fnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-863" y="678"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="o0y-La-gcO">
             <objects>
@@ -126,50 +110,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-673" y="-42"/>
-        </scene>
-        <!--Profile Picture View Controller-->
-        <scene sceneID="KDL-HK-hkt">
-            <objects>
-                <viewController id="XVZ-k2-Rka" customClass="ProfilePictureViewController" customModule="Nume" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6nt-5B-Fy6"/>
-                        <viewControllerLayoutGuide type="bottom" id="gdf-AR-x9c"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="opN-Uq-6aQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-Tf-OaK" userLabel="Profile Picture View" customClass="FBSDKProfilePictureView">
-                                <rect key="frame" x="85" y="209" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="JXl-nl-5Ds"/>
-                                    <constraint firstAttribute="height" constant="150" id="dc8-yG-Iof"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go check out your Apple Watch!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZl-mx-Vts">
-                                <rect key="frame" x="36.5" y="400" width="247" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="5cS-Tf-OaK" secondAttribute="centerX" id="31V-pt-HOw"/>
-                            <constraint firstAttribute="centerX" secondItem="WZl-mx-Vts" secondAttribute="centerX" id="JXn-uH-1n8"/>
-                            <constraint firstAttribute="centerY" secondItem="5cS-Tf-OaK" secondAttribute="centerY" id="QEo-Tr-z95"/>
-                            <constraint firstItem="WZl-mx-Vts" firstAttribute="top" secondItem="5cS-Tf-OaK" secondAttribute="bottom" constant="41" id="xrN-p4-eAZ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="sfH-wH-0FO"/>
-                    <connections>
-                        <outlet property="profilePic" destination="5cS-Tf-OaK" id="vxx-QD-uUc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gtU-Qj-6SO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-455" y="678"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
