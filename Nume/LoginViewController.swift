@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    // Model
+    var user: User!
+    
+    // Views
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -111,6 +115,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
+                
+                // Send user data to server database
+                User.postUser(userName as String, userEmail: userEmail as String)
+                
                 
             }
         })

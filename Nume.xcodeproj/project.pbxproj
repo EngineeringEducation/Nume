@@ -226,6 +226,7 @@
 			children = (
 				209307401B06C1F7003C4D80 /* Nume.entitlements */,
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
+				20C8F6B51B040FEF00FA1719 /* User.swift */,
 				CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */,
@@ -236,7 +237,6 @@
 				CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
-				20C8F6B51B040FEF00FA1719 /* User.swift */,
 			);
 			path = Nume;
 			sourceTree = "<group>";

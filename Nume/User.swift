@@ -12,7 +12,8 @@ class User: NSObject {
     var userToken: Int?
     var userNumber: Int?
     var userActivity: String?
-    var userName: String
+    var userName: String?
+    var userEmail: String?
     
     init(userToken: Int, userNumber: Int, userActivity: String, userName: String) {
         self.userToken = userToken
@@ -25,6 +26,12 @@ class User: NSObject {
     init(userToken: Int, userName: String) {
         self.userToken = userToken
         self.userName = userName
+        super.init()
+    }
+    
+    init(userName: String, userEmail: String) {
+        self.userName = userName
+        self.userEmail = userEmail
         super.init()
     }
     
@@ -56,7 +63,7 @@ class User: NSObject {
         
     }
     
-    class func postUserDetails(theUser: User, dictation: String, rating: Int) {
+    class func postUserDetails(theUser: User, dictation: String, rating: Int, completionHandler : (users: [User]?, error: NSError?) -> Void) {
                 
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest()
@@ -72,8 +79,17 @@ class User: NSObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        
-        let task = session.dataTaskWithRequest(request)
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                if let error = error {
+                    completionHandler(users: nil, error: error)
+                } else if let newUsers = self.usersFromNetworkResponseData(data) {
+                    completionHandler(users: newUsers, error: nil)
+                }
+                
+            }
+        })
         task.resume()
         
     }
@@ -114,7 +130,7 @@ class User: NSObject {
             NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
                 if let error = error {
                     completionHandler(users: nil, error: error)
-                } else if let newUsers = self.usersFromNetworkResponseData(data) {
+                } else if let newUsers = self.userDetailsFromNetworkResponseData(data) {
                     completionHandler(users: newUsers, error: nil)
                 }
             }
