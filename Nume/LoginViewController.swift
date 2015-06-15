@@ -10,7 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginButtonDelegate {
     
-
     @IBOutlet weak var numifyUserLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
@@ -63,6 +62,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             })
             
         }
+        //
+        func shouldAutorotate() -> Bool {
+            return false
+        }
+        
+        func supportedInterfaceOrientations() -> Int {
+            return UIInterfaceOrientation.Portrait.rawValue
+        }
+        //
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)

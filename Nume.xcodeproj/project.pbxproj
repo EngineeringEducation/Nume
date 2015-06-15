@@ -35,7 +35,6 @@
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
-		CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */; };
 		CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE8035F1B2AC0D600F9B783 /* transparentButton.png */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +115,6 @@
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
-		CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialPage.xib; sourceTree = "<group>"; };
 		CAE8035F1B2AC0D600F9B783 /* transparentButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,7 +224,6 @@
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
-				CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
 				20C8F6B51B040FEF00FA1719 /* User.swift */,
@@ -439,7 +436,6 @@
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
-				CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */,
 				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 				CA1DA3461B20ED5D0058C964 /* 2.png in Resources */,
