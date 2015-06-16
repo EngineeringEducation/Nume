@@ -47,7 +47,7 @@ class DictationController: WKInterfaceController {
                 if (input == nil) {
                     return
                 }
-                self.user!.userActivity = input[0] as! String
+                self.user!.userActivity = input[0] as? String
                 self.pushControllerWithName("SocialFeed", context: self.user)
         }
         

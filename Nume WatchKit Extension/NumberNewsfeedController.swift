@@ -18,6 +18,19 @@ class NumberNewsfeedController: WKInterfaceController {
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
     @IBOutlet weak var userProfilePhoto: WKInterfaceButton!
     
+    @IBOutlet weak var friend1ProfilePhoto: WKInterfaceButton!
+    @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var friend2ProfilePhoto: WKInterfaceButton!
+    @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var friend3ProfilePhoto: WKInterfaceButton!
+    @IBOutlet weak var friend3NumberResultLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var friend4ProfilePhoto: WKInterfaceButton!
+    @IBOutlet weak var friend4NumberResultLabel: WKInterfaceLabel!
+    
+    
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -29,6 +42,27 @@ class NumberNewsfeedController: WKInterfaceController {
         if let val = context as? User {
             self.numberResultLabel.setText("\(val.userNumber)")
             self.dictationResultLabel.setText("\(val.userActivity)")
+            
+            // Save user details into server database
+            User.postUserDetails(val, dictation: val.userActivity!, rating: val.userNumber!, completionHandler: { (user, error) -> Void in
+                if let error = error {
+                    println(error)
+                } else {
+                    self.user = val
+                }
+            })
+            
+            // Populate the last four users' rating numbers into the social feed view
+            User.getLastFourUsers({ (users, error) -> Void in
+                if let error = error {
+                    println(error)
+                } else {
+                    self.friend1NumberResultLabel.setText("1")
+                    self.friend2NumberResultLabel.setText("2")
+                    self.friend3NumberResultLabel.setText("3")
+                    self.friend4NumberResultLabel.setText("4")
+                }
+            })
             
 
             // Placing dictation text and number rating into NSUserDefaults
@@ -48,12 +82,12 @@ class NumberNewsfeedController: WKInterfaceController {
         
     }
     
-     override func willActivate() {
+    override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
-     override func didDeactivate() {
+    override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
@@ -62,8 +96,8 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
-    @IBAction func receiveUserDetailToSend() {
-        let defaults = NSUserDefaults.standardUserDefaults()        
+    func receiveUserDetailToSend() {
+        let defaults = NSUserDefaults.standardUserDefaults()
         let userDictionary = defaults.dictionaryRepresentation()
         
         NumberNewsfeedController.openParentApplication(userDictionary) {
@@ -74,7 +108,7 @@ class NumberNewsfeedController: WKInterfaceController {
                 responseActivity = castedResponseDictionary["userActivityKey"] as? String,
                 responseName = castedResponseDictionary["userNameKey"] as? String
             {
-                self.user!.userName = responseName
+                self.user.userName = responseName
                 println("Congratulations, \(responseName) successfully rated a \(responseNumber) with '\(responseActivity)'")
             }
             self.pushControllerWithName("UserDetail", context: self.user)

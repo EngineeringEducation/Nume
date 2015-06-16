@@ -87,28 +87,52 @@
                                 </button>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                    <fontDescription key="font" type="system" pointSize="22"/>
                                 </label>
                             </items>
                         </group>
                         <label width="121" alignment="center" text="Test Dictation" textAlignment="center" id="EQy-rd-RAF">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
-                        <group width="1" alignment="left" id="tog-fI-TAb">
+                        <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <imageView width="65" alignment="left" id="N5J-R0-Tcb"/>
-                                <imageView width="65" alignment="left" id="xdt-Fp-jl6"/>
+                                <button width="33" alignment="left" title="Button" id="tRU-wO-3bi"/>
+                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="h0L-Fu-J87">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                                <button width="33" alignment="right" title="Button" id="LpX-OQ-e0l"/>
+                                <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="vXb-aV-L9T">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="Man-Jf-fD9">
                             <items>
-                                <imageView width="65" alignment="left" id="Yk9-yv-824"/>
-                                <imageView width="65" alignment="left" id="NwF-UF-Zx4"/>
+                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="fNB-uY-vUa">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                                <button width="33" alignment="left" title="Button" id="FPm-aM-B5V"/>
+                                <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="ROB-0Y-daQ">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                                <button width="33" alignment="center" title="Button" id="7a0-Bv-kZd"/>
                             </items>
                         </group>
                     </items>
                     <connections>
                         <outlet property="dictationResultLabel" destination="EQy-rd-RAF" id="Cga-dn-SfK"/>
+                        <outlet property="friend1NumberResultLabel" destination="h0L-Fu-J87" id="FJg-qM-Iap"/>
+                        <outlet property="friend1ProfilePhoto" destination="tRU-wO-3bi" id="Onb-G5-H1D"/>
+                        <outlet property="friend2NumberResultLabel" destination="vXb-aV-L9T" id="vuJ-Ix-5he"/>
+                        <outlet property="friend2ProfilePhoto" destination="LpX-OQ-e0l" id="LGu-W0-V0m"/>
+                        <outlet property="friend3NumberResultLabel" destination="fNB-uY-vUa" id="0eV-T2-OAb"/>
+                        <outlet property="friend3ProfilePhoto" destination="FPm-aM-B5V" id="hxf-Ch-16m"/>
+                        <outlet property="friend4NumberResultLabel" destination="ROB-0Y-daQ" id="M6V-Wo-RtF"/>
+                        <outlet property="friend4ProfilePhoto" destination="7a0-Bv-kZd" id="5bB-o4-tTE"/>
                         <outlet property="numberResultLabel" destination="Xtn-R0-X2A" id="ege-2f-RiI"/>
                         <outlet property="userProfilePhoto" destination="lQ5-6g-mJu" id="zwU-Bv-Mcc"/>
                     </connections>
