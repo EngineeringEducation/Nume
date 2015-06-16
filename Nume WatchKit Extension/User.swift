@@ -15,18 +15,21 @@ class User: NSObject {
     var userName: String?
     var userEmail: String?
     
-    init(userToken: Int, userNumber: Int, userActivity: String, userName: String) {
+    init(userToken: Int, userNumber: Int?, userActivity: String?, userName: String, userEmail: String?) {
         self.userToken = userToken
         self.userNumber = userNumber
         self.userActivity = userActivity
         self.userName = userName
+        self.userEmail = userEmail
         super.init()
     }
     
-    init(userToken: Int, userName: String) {
-        self.userToken = userToken
-        self.userName = userName
-        super.init()
+    convenience init(userToken: Int, userName: String) {
+        self.init(userToken: userToken, userNumber: nil, userActivity: nil, userName: userName, userEmail: nil)
+    }
+    
+    convenience init(userToken: Int, userName: String, userEmail: String) {
+        self.init(userToken: userToken, userNumber: nil, userActivity: nil, userName: userName, userEmail: userEmail)
     }
     
     init(userName: String, userEmail: String) {
@@ -42,7 +45,7 @@ class User: NSObject {
         super.init()
     }
     
-    class func postUser(userName: String, userEmail: String) {
+    class func postUser(userName: String, userEmail: String, completionHandler : (user: User?, error: NSError?) -> Void) {
         
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest()
@@ -58,7 +61,18 @@ class User: NSObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let task = session.dataTaskWithRequest(request)
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                if let error = error {
+                    completionHandler(user: nil, error: error)
+                } else if let newUser = self.userProfileDetailsFromNetworkResponseData(data) {
+                    completionHandler(user: newUser[0], error: nil)
+                }
+                
+            }
+        })
+
         task.resume()
         
     }
@@ -90,6 +104,7 @@ class User: NSObject {
                 
             }
         })
+        
         task.resume()
         
     }
@@ -191,6 +206,33 @@ class User: NSObject {
             let userName = userAPIDictionary["name"] as! String
             
             return User(userToken: userToken, userName: userName)
+            
+        })
+        
+        return users
+    }
+    
+    class func userProfileDetailsFromNetworkResponseData(responseData : NSData) -> Array <User>? {
+        
+        var serializationError : NSError?
+        
+        let userAPIDictionaries = NSJSONSerialization.JSONObjectWithData(
+            responseData,
+            options: nil,
+            error: &serializationError
+            ) as! Array<Dictionary<String, AnyObject>>
+        
+        if let serializationError = serializationError {
+            return nil
+        }
+        
+        var users = userAPIDictionaries.map({ (userAPIDictionary) -> User in
+            
+            let userToken = userAPIDictionary["id"] as! Int
+            let userName = userAPIDictionary["name"] as! String
+            let userEmail = userAPIDictionary["email"] as! String
+            
+            return User(userToken: userToken, userName: userName, userEmail: userEmail)
             
         })
         
