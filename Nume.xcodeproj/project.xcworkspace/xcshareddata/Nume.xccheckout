@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D8517AAB-5CCA-4287-8913-39B3F7604348</string>
+	<string>96B425ED-3243-4550-8146-5F073C980AE4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Nume</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1B5120E8A2ECD17A83B77F4DAF7AB9D8EDE2B056</key>
-		<string>https://github.com/dhsu210/Nume.git</string>
+		<string>https://github.com/TradecraftEngineering/Nume.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Nume.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/dhsu210/Nume.git</string>
+	<string>https://github.com/TradecraftEngineering/Nume.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

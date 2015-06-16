@@ -27,7 +27,6 @@
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
-		CA0DCF491B1BD89300553A99 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */; };
 		CA1DA3451B20ED5D0058C964 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3411B20ED5D0058C964 /* 1.png */; };
 		CA1DA3461B20ED5D0058C964 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3421B20ED5D0058C964 /* 2.png */; };
 		CA1DA3471B20ED5D0058C964 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3431B20ED5D0058C964 /* 3.png */; };
@@ -37,8 +36,8 @@
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
-		CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */; };
-		CA56783E1B0E7E0F007268F3 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */; };
+		CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6721D31B30C49A0069A622 /* Default-568h@2x.png */; };
+		CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE8035F1B2AC0D600F9B783 /* transparentButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +107,6 @@
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
-		CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		CA1DA3411B20ED5D0058C964 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		CA1DA3421B20ED5D0058C964 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		CA1DA3431B20ED5D0058C964 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -120,8 +118,8 @@
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
-		CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialPage.xib; sourceTree = "<group>"; };
-		CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedScrollViewController.swift; path = ../PagedScrollViewController.swift; sourceTree = "<group>"; };
+		CA6721D31B30C49A0069A622 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CAE8035F1B2AC0D600F9B783 /* transparentButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +200,7 @@
 		20A552B91AE81D82005AFB27 = {
 			isa = PBXGroup;
 			children = (
+				CA6721D31B30C49A0069A622 /* Default-568h@2x.png */,
 				20A552C41AE81D82005AFB27 /* Nume */,
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
 				201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */,
@@ -226,14 +225,11 @@
 			children = (
 				209307401B06C1F7003C4D80 /* Nume.entitlements */,
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
-				CA56783D1B0E7E0F007268F3 /* PagedScrollViewController.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
-				CA0DCF481B1BD89300553A99 /* ProfilePictureViewController.swift */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
 				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
-				CA56783B1B0BEE1E007268F3 /* TutorialPage.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
 				20C8F6B51B040FEF00FA1719 /* User.swift */,
@@ -261,6 +257,7 @@
 		CA51F4A11AF9890A00BC94BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CAE8035F1B2AC0D600F9B783 /* transparentButton.png */,
 				CA1DA3411B20ED5D0058C964 /* 1.png */,
 				CA1DA3421B20ED5D0058C964 /* 2.png */,
 				CA1DA3431B20ED5D0058C964 /* 3.png */,
@@ -442,9 +439,10 @@
 			files = (
 				CA1DA3471B20ED5D0058C964 /* 3.png in Resources */,
 				CA1DA3451B20ED5D0058C964 /* 1.png in Resources */,
+				CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */,
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
-				CA56783C1B0BEE1E007268F3 /* TutorialPage.xib in Resources */,
+				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
 				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 				CA1DA3461B20ED5D0058C964 /* 2.png in Resources */,
@@ -480,8 +478,6 @@
 			files = (
 				20C8F6B61B040FEF00FA1719 /* User.swift in Sources */,
 				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
-				CA0DCF491B1BD89300553A99 /* ProfilePictureViewController.swift in Sources */,
-				CA56783E1B0E7E0F007268F3 /* PagedScrollViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
