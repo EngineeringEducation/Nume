@@ -1,9 +1,9 @@
 //
-//  FBLoginViewController.swift
-//  Nume
-//
-//  Created by Jason Eng on 4/30/15.
-//  Copyright (c) 2015 Daniel Hsu. All rights reserved.
+// FBLoginViewController.swift
+// Nume 
+// 
+// Created by Jason Eng on 4/30/15. 
+// Copyright (c) 2015 Daniel Hsu. All rights reserved. 
 //
 
 import UIKit
@@ -95,7 +95,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         
         pageControl.currentPage = 0
         pageControl.numberOfPages = pageCount
-        
         for _ in 0..<pageCount {
             pageViews.append(nil)
         }
@@ -278,5 +277,4 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             }
         })
     }
-    
 }

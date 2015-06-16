@@ -12,14 +12,15 @@ import Foundation
 class DictationController: WKInterfaceController {
 
     // Model
-    var user : User?
+    var user : User!
+    @IBOutlet weak var microphoneButton: WKInterfaceButton!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Pass in user data from previous interface controller
-        user = context as? User
+        user = context as! User
 
         
     }
@@ -39,7 +40,6 @@ class DictationController: WKInterfaceController {
     }
     
     //create microphone button image and link to dictation
-    @IBOutlet weak var microphoneButton: WKInterfaceButton!
     @IBAction func onVoiceDictationTap() {
         presentTextInputControllerWithSuggestions(nil, allowedInputMode: .Plain)
             {(input) -> Void in

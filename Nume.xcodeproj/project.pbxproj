@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019F1F81B167C0200F08FFA /* UserDetailController.swift */; };
 		201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* RateNumberController.swift */; };
 		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
 		201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00881AF1F8BA00D32F95 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
 		CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */; };
 		CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */; };
+		CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6721D31B30C49A0069A622 /* Default-568h@2x.png */; };
 		CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE8035F1B2AC0D600F9B783 /* transparentButton.png */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2019F1F81B167C0200F08FFA /* UserDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00831AF1F8BA00D32F95 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		CA51F49D1AF9884400BC94BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Nume/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CA51F49F1AF9884F00BC94BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Nume/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CA51F4A71AF98B4000BC94BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Nume/Info.plist; sourceTree = "<group>"; };
+		CA6721D31B30C49A0069A622 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CAE8035F1B2AC0D600F9B783 /* transparentButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparentButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +156,7 @@
 				201D00841AF1F8BA00D32F95 /* RateNumberController.swift */,
 				20C8F6B11B02C71100FA1719 /* DictationController.swift */,
 				20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */,
+				2019F1F81B167C0200F08FFA /* UserDetailController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
 				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
@@ -195,6 +200,7 @@
 		20A552B91AE81D82005AFB27 = {
 			isa = PBXGroup;
 			children = (
+				CA6721D31B30C49A0069A622 /* Default-568h@2x.png */,
 				20A552C41AE81D82005AFB27 /* Nume */,
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
 				201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */,
@@ -433,6 +439,7 @@
 			files = (
 				CA1DA3471B20ED5D0058C964 /* 3.png in Resources */,
 				CA1DA3451B20ED5D0058C964 /* 1.png in Resources */,
+				CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */,
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
@@ -459,6 +466,7 @@
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
 				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
 				20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */,
+				2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */,
 				20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */,
 				20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */,
 			);
