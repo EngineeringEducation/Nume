@@ -21,12 +21,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        numifyUserLabel.text = "Numify"
-        numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
-
     }
     
     override func viewWillAppear(animated: Bool) {
+        numifyUserLabel.text = "Numify"
+        numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
         
         self.profilePic!.layer.cornerRadius = 40
         self.profilePic!.clipsToBounds = true
@@ -62,15 +61,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             })
             
         }
-        //
-        func shouldAutorotate() -> Bool {
-            return false
-        }
-        
-        func supportedInterfaceOrientations() -> Int {
-            return UIInterfaceOrientation.Portrait.rawValue
-        }
-        //
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
