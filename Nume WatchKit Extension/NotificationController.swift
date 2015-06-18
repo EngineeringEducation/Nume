@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import NumeKit
 import Foundation
 
 

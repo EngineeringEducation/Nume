@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NumeKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginButtonDelegate {
     
@@ -277,10 +278,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                 
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")
-                
-                // Send user data to server database
-                User.postUser(userName as String, userEmail: userEmail as String)
-                
                 
             }
         })

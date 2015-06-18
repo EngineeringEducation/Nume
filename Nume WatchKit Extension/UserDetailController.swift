@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NumeKit
 import WatchKit
 
 class UserDetailController: WKInterfaceController {

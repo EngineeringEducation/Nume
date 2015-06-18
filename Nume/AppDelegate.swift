@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NumeKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
