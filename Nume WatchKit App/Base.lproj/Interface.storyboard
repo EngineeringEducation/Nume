@@ -82,7 +82,7 @@
                             <items>
                                 <button width="60" alignment="left" title="Button" id="lQ5-6g-mJu">
                                     <connections>
-                                        <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="kDK-Nn-jcN"/>
+                                        <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
                                     </connections>
                                 </button>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">

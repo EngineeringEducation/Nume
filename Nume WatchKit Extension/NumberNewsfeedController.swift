@@ -97,7 +97,7 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
-    func receiveUserDetailToSend() {
+    @IBAction func receiveUserDetailToSend() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let userDictionary = defaults.dictionaryRepresentation()
         

@@ -11,6 +11,9 @@ import NumeKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginButtonDelegate {
     
+    // Model
+    var user: User!
+    
     @IBOutlet weak var numifyUserLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
@@ -19,9 +22,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
     let skipButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-    
-    // Model
-    var user: User!
     
     // Views
     override func viewDidLoad() {
@@ -48,17 +48,13 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("fetched user: \(result)")
                     let userName : NSString = result.valueForKey("name") as! NSString
                     println("User Name is: \(userName)")
-                    if let userEmail : NSString = result.valueForKey("email") as? NSString {
-                        println("User Email is: \(userEmail)")
-                    }
+                    let userEmail : NSString = result.valueForKey("email") as! NSString
+                    println("User Email is: \(userEmail)")
                     
                     let appGroupID = "group.io.github.dhsu210.Nume"
                     if let defaults = NSUserDefaults(suiteName: appGroupID) {
                         defaults.setValue(userName, forKey: "userNameKey")
                     }
-                    
-                    let userEmail : NSString = result.valueForKey("email") as! NSString
-                    println("User Email is: \(userEmail)")
                     
                     self.numifyUserLabel.text = "Hi, \(userName)!"
                     self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
@@ -141,18 +137,30 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             println("fetched user: \(result)")
                             let userName : NSString = result.valueForKey("name") as! NSString
                             println("User Name is: \(userName)")
-                            if let userEmail : NSString = result.valueForKey("email") as? NSString {
-                                println("User Email is: \(userEmail)")
-                            }
+                            let userEmail : NSString = result.valueForKey("email") as! NSString
+                            println("User Email is: \(userEmail)")
+
+                            // Saves FB login user details into server
+                            User.postUser(userName as String, userEmail: userEmail as String, completionHandler: { (user, error) -> Void in
+                                if let error = error {
+                                    println(error)
+                                } else {
+                                    user!.userName = userName as String
+                                    user!.userEmail = userEmail as String
+                                }
+                            })
                             
+                           
                             let appGroupID = "group.io.github.dhsu210.Nume"
                             if let defaults = NSUserDefaults(suiteName: appGroupID) {
                                 defaults.setValue(userName, forKey: "userNameKey")
+                                defaults.setInteger(userToken, forKey: "userTokenKey")
                             }
                             
-                            let userEmail : NSString = result.valueForKey("email") as! NSString
-                            println("User Email is: \(userEmail)")
                             
+                            
+                            
+                            // Updates top of login controller with user details after FB login
                             self.numifyUserLabel.text = "Hi, \(userName)!"
                             self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                         }
