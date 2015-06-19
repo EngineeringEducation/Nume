@@ -40,18 +40,22 @@ class NumberNewsfeedController: WKInterfaceController {
         user = context as! User
         
         // Make sure data was passed properly and update the label accordingly
-        if let val = context as? User {
-            self.numberResultLabel.setText("\(val.userNumber)")
-            self.dictationResultLabel.setText("\(val.userActivity)")
+        if let val = user {
+            self.numberResultLabel.setText("\(val.userNumber!)")
+            self.dictationResultLabel.setText("\(val.userActivity!)")
+            
+            
+            // Placing dictation text and number rating into NSUserDefaults
+            // Placing pulling user's FB profile picture image from NSUserDefaults
+            let appGroupID = "group.io.github.dhsu210.Nume"
+            if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                defaults.setValue(val.userNumber, forKey: "userNumberKey")
+                defaults.setValue(val.userActivity, forKey: "userActivityKey")
+//            self.userProfilePhoto.setBackgroundImage((defaults.objectForKey("userProfilePhotoKey") as! UIImage))
+            }
             
             // Save user details into server database
-            User.postUserDetails(val, dictation: val.userActivity!, rating: val.userNumber!, completionHandler: { (user, error) -> Void in
-                if let error = error {
-                    println(error)
-                } else {
-                    self.user = val
-                }
-            })
+            User.postUserDetails(val, dictation: val.userActivity!, rating: val.userNumber!)
             
             // Populate the last four users' rating numbers into the social feed view
             User.getLastFourUsers({ (users, error) -> Void in
@@ -64,16 +68,6 @@ class NumberNewsfeedController: WKInterfaceController {
                     self.friend4NumberResultLabel.setText("4")
                 }
             })
-            
-
-            // Placing dictation text and number rating into NSUserDefaults
-            // Placing pulling user's FB profile picture image from NSUserDefaults
-            let appGroupID = "group.io.github.dhsu210.Nume"
-            if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                defaults.setValue(val.userNumber, forKey: "userNumberKey")
-                defaults.setValue(val.userActivity, forKey: "userActivityKey")
-//            self.userProfilePhoto.setBackgroundImage((defaults.objectForKey("userProfilePhotoKey") as! UIImage))
-            }
             
             
         } else {

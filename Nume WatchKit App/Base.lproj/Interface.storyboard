@@ -148,7 +148,7 @@
                         <group width="1" alignment="left" id="hpO-cH-xJm">
                             <items>
                                 <imageView width="67" alignment="left" id="NRy-C9-Mla"/>
-                                <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
+                                <label width="67" height="40" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>

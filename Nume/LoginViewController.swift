@@ -145,17 +145,19 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                                 if let error = error {
                                     println(error)
                                 } else {
-                                    user!.userName = userName as String
-                                    user!.userEmail = userEmail as String
+                                    let userToken : Int = user!.userToken!
+                                    
+                                    let appGroupID = "group.io.github.dhsu210.Nume"
+                                    if let defaults = NSUserDefaults(suiteName: appGroupID) {
+                                        defaults.setValue(userName, forKey: "userNameKey")
+                                        defaults.setInteger(userToken, forKey: "userTokenKey")
+                                    }
+                                    
                                 }
                             })
                             
                            
-                            let appGroupID = "group.io.github.dhsu210.Nume"
-                            if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                                defaults.setValue(userName, forKey: "userNameKey")
-                                defaults.setInteger(userToken, forKey: "userTokenKey")
-                            }
+                            
                             
                             
                             

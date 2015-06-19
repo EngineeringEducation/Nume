@@ -25,9 +25,9 @@ class UserDetailController: WKInterfaceController {
         
         // Make sure data was passed properly and update the label accordingly
         if let val = context as? User {
-            self.numberResultLabel.setText("\(val.userNumber)")
-            self.dictationResultLabel.setText("\(val.userActivity)")
-            self.userNameLabel.setText("\(val.userName)")
+            self.numberResultLabel.setText("\(val.userNumber!)")
+            self.dictationResultLabel.setText("\(val.userActivity!)")
+            self.userNameLabel.setText("\(val.userName!)")
         } else {
             self.numberResultLabel.setText("")
         }
