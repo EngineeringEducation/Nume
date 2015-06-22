@@ -59,10 +59,18 @@ class NumberNewsfeedController: WKInterfaceController {
                 if let error = error {
                     println(error)
                 } else {
-                    self.friend1NumberResultLabel.setText("1")
-                    self.friend2NumberResultLabel.setText("2")
-                    self.friend3NumberResultLabel.setText("3")
-                    self.friend4NumberResultLabel.setText("4")
+                    
+                    let ratingOne = users![0].userNumber!
+                    self.friend1NumberResultLabel.setText("\(ratingOne)")
+                    
+                    let ratingTwo = users![1].userNumber!
+                    self.friend2NumberResultLabel.setText("\(ratingTwo)")
+                    
+                    let ratingThree = users![2].userNumber!
+                    self.friend3NumberResultLabel.setText("\(ratingThree)")
+                    
+                    let ratingFour = users![3].userNumber!
+                    self.friend4NumberResultLabel.setText("\(ratingFour)")
                 }
             })
             
@@ -88,6 +96,54 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
+    @IBAction func receiveFriendOneDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                self.user.userName = users![0].userName!
+                self.user.userNumber = users![0].userNumber!
+                self.user.userActivity = users![0].userActivity!
+            }
+        }
+        self.pushControllerWithName("UserDetail", context: self.user )
+    }
+    @IBAction func receiveFriendTwoDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                self.user.userName = users![1].userName!
+                self.user.userNumber = users![1].userNumber!
+                self.user.userActivity = users![1].userActivity!
+            }
+        }
+        self.pushControllerWithName("UserDetail", context: self.user )
+    }
+    @IBAction func receiveFriendThreeDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                self.user.userName = users![2].userName!
+                self.user.userNumber = users![2].userNumber!
+                self.user.userActivity = users![2].userActivity!
+            }
+        }
+        self.pushControllerWithName("UserDetail", context: self.user )
+    }
+    @IBAction func receiveFriendFourDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                self.user.userName = users![3].userName!
+                self.user.userNumber = users![3].userNumber!
+                self.user.userActivity = users![3].userActivity!
+            }
+        }
+        self.pushControllerWithName("UserDetail", context: self.user )
+    }
     @IBAction func receiveUserDetailToSend() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let userDictionary = defaults.dictionaryRepresentation()

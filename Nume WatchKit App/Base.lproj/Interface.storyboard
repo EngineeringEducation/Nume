@@ -96,12 +96,20 @@
                         </label>
                         <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <button width="33" alignment="left" title="Button" id="tRU-wO-3bi"/>
+                                <button width="33" alignment="left" title="Button" id="tRU-wO-3bi">
+                                    <connections>
+                                        <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="NMm-Bt-PAg"/>
+                                    </connections>
+                                </button>
                                 <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="h0L-Fu-J87">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="right" title="Button" id="LpX-OQ-e0l"/>
+                                <button width="33" alignment="right" title="Button" id="LpX-OQ-e0l">
+                                    <connections>
+                                        <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="gBG-4q-UPT"/>
+                                    </connections>
+                                </button>
                                 <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="vXb-aV-L9T">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
@@ -114,12 +122,20 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="left" title="Button" id="FPm-aM-B5V"/>
+                                <button width="33" alignment="left" title="Button" id="FPm-aM-B5V">
+                                    <connections>
+                                        <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="0rC-L6-DLY"/>
+                                    </connections>
+                                </button>
                                 <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="ROB-0Y-daQ">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="center" title="Button" id="7a0-Bv-kZd"/>
+                                <button width="33" alignment="center" title="Button" id="7a0-Bv-kZd">
+                                    <connections>
+                                        <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="HLv-JC-cHe"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
