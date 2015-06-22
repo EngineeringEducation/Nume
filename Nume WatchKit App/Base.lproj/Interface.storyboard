@@ -80,15 +80,15 @@
                     <items>
                         <group width="1" alignment="left" id="DWW-mr-Y3q">
                             <items>
+                                <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="22"/>
+                                </label>
                                 <button width="60" alignment="left" title="Button" id="lQ5-6g-mJu">
                                     <connections>
                                         <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
                                     </connections>
                                 </button>
-                                <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="22"/>
-                                </label>
                             </items>
                         </group>
                         <label width="121" alignment="center" text="Test Dictation" textAlignment="center" id="EQy-rd-RAF">
