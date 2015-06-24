@@ -18,6 +18,7 @@ class NumberNewsfeedController: WKInterfaceController {
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
     @IBOutlet weak var userProfilePhoto: WKInterfaceButton!
+    @IBOutlet weak var userProfileImage: WKInterfaceImage!
     
     @IBOutlet weak var friend1ProfilePhoto: WKInterfaceButton!
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
@@ -43,6 +44,15 @@ class NumberNewsfeedController: WKInterfaceController {
         if let val = user {
             self.numberResultLabel.setText("\(val.userNumber!)")
             self.dictationResultLabel.setText("\(val.userActivity!)")
+            
+            // Load user FB profile pic
+            let appGroupID = "group.io.github.dhsu210.Nume"
+            let defaults = NSUserDefaults(suiteName: appGroupID)
+            self.user.userFacebookID = defaults!.stringForKey("userFBProfilePicIDKey")
+            let profileURL = "http://graph.facebook.com/\(self.user.userFacebookID!)/picture?width=40&height=40"
+            loadImage(profileURL, forImageView: userProfileImage)
+            
+
             
             // Populate the last four users' rating numbers into the social feed view
             User.getLastFourUsers({ (users, error) -> Void in
@@ -85,6 +95,22 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
+    func loadImage(url:String, forImageView: WKInterfaceImage) {
+        // load image
+        let image_url:String = url
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let url:NSURL = NSURL(string:image_url)!
+            var data:NSData = NSData(contentsOfURL: url)!
+            var placeholder = UIImage(data: data)!
+            
+            // update ui
+            dispatch_async(dispatch_get_main_queue()) {
+                forImageView.setImage(placeholder)
+            }
+        }
+        
+    }
+    
     // Actions to reveal further user details
     func insertUserDetailsIntoUser(index: Int) {
         User.getLastFourUsers { (users, error) -> Void in
@@ -115,7 +141,7 @@ class NumberNewsfeedController: WKInterfaceController {
         self.pushControllerWithName("UserDetail", context: self.user )
     }
     @IBAction func receiveUserDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.user)
+        self.pushControllerWithName("UserDetail", context: self.user )
     }
    
 }

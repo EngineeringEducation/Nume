@@ -50,10 +50,13 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("User Name is: \(userName)")
                     let userEmail : NSString = result.valueForKey("email") as! NSString
                     println("User Email is: \(userEmail)")
+                    let userFacebookID : NSString = result.valueForKey("id") as! NSString
+                    println("User Facebook ID is: \(userFacebookID)")
                     
                     let appGroupID = "group.io.github.dhsu210.Nume"
                     if let defaults = NSUserDefaults(suiteName: appGroupID) {
                         defaults.setValue(userName, forKey: "userNameKey")
+                        defaults.setValue(userFacebookID, forKey: "userFBProfilePicIDKey")
                     }
                     
                     self.numifyUserLabel.text = "Hi, \(userName)!"

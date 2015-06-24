@@ -86,11 +86,12 @@
                     <items>
                         <group width="1" alignment="left" id="DWW-mr-Y3q">
                             <items>
+                                <imageView width="40" height="40" alignment="left" id="M5W-Mf-0DV"/>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="22"/>
                                 </label>
-                                <button width="60" alignment="left" title="Button" id="lQ5-6g-mJu">
+                                <button width="34" alignment="left" title="Button" id="lQ5-6g-mJu">
                                     <connections>
                                         <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
                                     </connections>
@@ -156,11 +157,12 @@
                         <outlet property="friend4NumberResultLabel" destination="ROB-0Y-daQ" id="M6V-Wo-RtF"/>
                         <outlet property="friend4ProfilePhoto" destination="7a0-Bv-kZd" id="5bB-o4-tTE"/>
                         <outlet property="numberResultLabel" destination="Xtn-R0-X2A" id="ege-2f-RiI"/>
+                        <outlet property="userProfileImage" destination="M5W-Mf-0DV" id="csG-yh-djY"/>
                         <outlet property="userProfilePhoto" destination="lQ5-6g-mJu" id="zwU-Bv-Mcc"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="658" y="302"/>
+            <point key="canvasLocation" x="658" y="301.5"/>
         </scene>
         <!--UserDetail-->
         <scene sceneID="HB6-QI-lJM">
