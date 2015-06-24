@@ -44,16 +44,6 @@ class NumberNewsfeedController: WKInterfaceController {
             self.numberResultLabel.setText("\(val.userNumber!)")
             self.dictationResultLabel.setText("\(val.userActivity!)")
             
-            
-            // Placing dictation text and number rating into NSUserDefaults
-            // Placing pulling user's FB profile picture image from NSUserDefaults
-            let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)
-            defaults!.setValue(val.userNumber, forKey: "userNumberKey")
-            defaults!.setValue(val.userActivity, forKey: "userActivityKey")
-            self.user.userToken = defaults!.integerForKey("userTokenKey")
-            
-            
             // Populate the last four users' rating numbers into the social feed view
             User.getLastFourUsers({ (users, error) -> Void in
                 if let error = error {
@@ -73,7 +63,6 @@ class NumberNewsfeedController: WKInterfaceController {
                     self.friend4NumberResultLabel.setText("\(ratingFour)")
                 }
             })
-            
             
         } else {
             self.numberResultLabel.setText("")
@@ -96,71 +85,37 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
-    @IBAction func receiveFriendOneDetailToSend() {
+    // Actions to reveal further user details
+    func insertUserDetailsIntoUser(index: Int) {
         User.getLastFourUsers { (users, error) -> Void in
             if let error = error {
                 println(error)
             } else {
-                self.user.userName = users![0].userName!
-                self.user.userNumber = users![0].userNumber!
-                self.user.userActivity = users![0].userActivity!
+                self.user.userName = users![index].userName!
+                self.user.userNumber = users![index].userNumber!
+                self.user.userActivity = users![index].userActivity!
             }
         }
+    }
+    
+    @IBAction func receiveFriendOneDetailToSend() {
+        self.insertUserDetailsIntoUser(0)
         self.pushControllerWithName("UserDetail", context: self.user )
     }
     @IBAction func receiveFriendTwoDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                self.user.userName = users![1].userName!
-                self.user.userNumber = users![1].userNumber!
-                self.user.userActivity = users![1].userActivity!
-            }
-        }
+        self.insertUserDetailsIntoUser(1)
         self.pushControllerWithName("UserDetail", context: self.user )
     }
     @IBAction func receiveFriendThreeDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                self.user.userName = users![2].userName!
-                self.user.userNumber = users![2].userNumber!
-                self.user.userActivity = users![2].userActivity!
-            }
-        }
+        self.insertUserDetailsIntoUser(2)
         self.pushControllerWithName("UserDetail", context: self.user )
     }
     @IBAction func receiveFriendFourDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                self.user.userName = users![3].userName!
-                self.user.userNumber = users![3].userNumber!
-                self.user.userActivity = users![3].userActivity!
-            }
-        }
+        self.insertUserDetailsIntoUser(3)
         self.pushControllerWithName("UserDetail", context: self.user )
     }
     @IBAction func receiveUserDetailToSend() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userDictionary = defaults.dictionaryRepresentation()
-        
-        NumberNewsfeedController.openParentApplication(userDictionary) {
-            (replyDictionary, error) -> Void in
-            
-            if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
-                responseNumber = castedResponseDictionary["userNumberKey"] as? Int,
-                responseActivity = castedResponseDictionary["userActivityKey"] as? String,
-                responseName = castedResponseDictionary["userNameKey"] as? String
-            {
-                self.user.userName = responseName
-                println("Congratulations, \(responseName) successfully rated a \(responseNumber) with '\(responseActivity)'")
-            }
-            self.pushControllerWithName("UserDetail", context: self.user)
-        }
+        self.pushControllerWithName("UserDetail", context: self.user)
     }
    
 }

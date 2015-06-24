@@ -64,18 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         reply(userDictionary)
         User.postUserDetails(defaults!.integerForKey("userTokenKey"), dictation: userDictionary["userActivityKey"] as! String, rating: userDictionary["userNumberKey"] as! Int)
-        
-//        User.getLastFourUsers { (users, error) -> Void in
-//            if let error = error {
-//                println(error)
-//            } else {
-//                println(users)
-//                defaults!.setObject(users, forKey: "lastFourUsersKey")
-//                
-//                
-//            }
-//
-//        }
 
         
     }

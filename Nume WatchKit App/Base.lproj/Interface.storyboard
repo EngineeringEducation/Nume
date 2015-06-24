@@ -15,7 +15,7 @@
                         </label>
                         <group width="1" alignment="left" verticalAlignment="center" id="IBt-un-Nnk">
                             <items>
-                                <button width="31" height="31" alignment="left" verticalAlignment="center" backgroundImage="left-arrow.png" id="C1L-Da-snV">
+                                <button width="31" height="31" alignment="left" verticalAlignment="center" title="—" id="C1L-Da-snV">
                                     <connections>
                                         <action selector="decreaseRating" destination="AgC-eL-Hgc" id="kdS-8C-DJ5"/>
                                     </connections>
@@ -24,7 +24,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="light" pointSize="31"/>
                                 </label>
-                                <button width="32" height="32" alignment="right" verticalAlignment="center" backgroundImage="right-arrow.png" id="IDt-Hl-aSO">
+                                <button width="32" height="32" alignment="right" verticalAlignment="center" title="+" id="IDt-Hl-aSO">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" type="system" pointSize="31"/>
                                     <connections>
@@ -36,7 +36,7 @@
                         <button width="1" height="20" alignment="left" verticalAlignment="center" id="8Hz-GB-KgI">
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </button>
-                        <button width="119" height="35" alignment="center" verticalAlignment="center" alpha="0.94999999999999996" backgroundImage="next-button.png" id="aoJ-LH-DLU">
+                        <button width="119" height="35" alignment="center" verticalAlignment="center" alpha="0.94999999999999996" title="Next" id="aoJ-LH-DLU">
                             <color key="titleColor" red="0.97647058823529409" green="0.792156862745098" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="font" type="system" pointSize="15"/>
