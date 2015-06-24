@@ -151,7 +151,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                                     let defaults = NSUserDefaults(suiteName: appGroupID)
                                     defaults!.setValue(userName, forKey: "userNameKey")
                                     defaults!.setInteger(userToken, forKey: "userTokenKey")
-                                    println(userToken)
+                                    println("User ID is \(userToken)")
                                     
                                     
                                 }
