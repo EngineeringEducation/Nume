@@ -86,16 +86,21 @@
                     <items>
                         <group width="1" alignment="left" id="DWW-mr-Y3q">
                             <items>
-                                <imageView width="40" height="40" alignment="left" id="M5W-Mf-0DV"/>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="22"/>
                                 </label>
-                                <button width="34" alignment="left" title="Button" id="lQ5-6g-mJu">
-                                    <connections>
-                                        <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
-                                    </connections>
-                                </button>
+                                <group width="40" height="40" alignment="left" id="C7D-9W-Cep" userLabel="User">
+                                    <items>
+                                        <button width="40" alignment="left" id="lQ5-6g-mJu">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </group>
                             </items>
                         </group>
                         <label width="121" alignment="center" text="Test Dictation" textAlignment="center" id="EQy-rd-RAF">
@@ -103,21 +108,32 @@
                         </label>
                         <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <button width="33" alignment="left" title="Button" id="tRU-wO-3bi">
-                                    <connections>
-                                        <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="NMm-Bt-PAg"/>
-                                    </connections>
-                                </button>
-                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="h0L-Fu-J87">
+                                <group width="40" height="40" alignment="left" id="IYl-bz-Lta" userLabel="Friend 1">
+                                    <items>
+                                        <button width="40" alignment="left" id="tRU-wO-3bi">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="NMm-Bt-PAg"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </group>
+                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="h0L-Fu-J87">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="right" title="Button" id="LpX-OQ-e0l">
-                                    <connections>
-                                        <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="gBG-4q-UPT"/>
-                                    </connections>
-                                </button>
-                                <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="vXb-aV-L9T">
+                                <group width="40" height="40" alignment="left" id="qQT-Oo-Sdn" userLabel="Friend 2">
+                                    <items>
+                                        <button width="40" alignment="right" id="LpX-OQ-e0l">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="gBG-4q-UPT"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="vXb-aV-L9T">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
@@ -125,44 +141,59 @@
                         </group>
                         <group width="1" alignment="left" id="Man-Jf-fD9">
                             <items>
-                                <label width="30" height="40" alignment="center" text="0" textAlignment="center" id="fNB-uY-vUa">
+                                <group width="40" height="40" alignment="left" id="YlY-GD-8Uq" userLabel="Friend 3">
+                                    <items>
+                                        <button width="40" alignment="left" id="FPm-aM-B5V">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="0rC-L6-DLY"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="ROB-0Y-daQ">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="left" title="Button" id="FPm-aM-B5V">
-                                    <connections>
-                                        <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="0rC-L6-DLY"/>
-                                    </connections>
-                                </button>
-                                <label width="31" height="40" alignment="right" text="0" textAlignment="center" id="ROB-0Y-daQ">
+                                <group width="40" alignment="left" id="5g5-fk-EfC" userLabel="Friend 4">
+                                    <items>
+                                        <button width="40" alignment="left" id="7a0-Bv-kZd">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="HLv-JC-cHe"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </group>
+                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="fNB-uY-vUa">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <button width="33" alignment="center" title="Button" id="7a0-Bv-kZd">
-                                    <connections>
-                                        <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="HLv-JC-cHe"/>
-                                    </connections>
-                                </button>
                             </items>
                         </group>
                     </items>
                     <connections>
                         <outlet property="dictationResultLabel" destination="EQy-rd-RAF" id="Cga-dn-SfK"/>
                         <outlet property="friend1NumberResultLabel" destination="h0L-Fu-J87" id="FJg-qM-Iap"/>
-                        <outlet property="friend1ProfilePhoto" destination="tRU-wO-3bi" id="Onb-G5-H1D"/>
+                        <outlet property="friend1ProfileButton" destination="tRU-wO-3bi" id="dVn-sp-Agb"/>
+                        <outlet property="friend1ProfileImageBG" destination="IYl-bz-Lta" id="o5a-zs-65e"/>
                         <outlet property="friend2NumberResultLabel" destination="vXb-aV-L9T" id="vuJ-Ix-5he"/>
-                        <outlet property="friend2ProfilePhoto" destination="LpX-OQ-e0l" id="LGu-W0-V0m"/>
-                        <outlet property="friend3NumberResultLabel" destination="fNB-uY-vUa" id="0eV-T2-OAb"/>
-                        <outlet property="friend3ProfilePhoto" destination="FPm-aM-B5V" id="hxf-Ch-16m"/>
-                        <outlet property="friend4NumberResultLabel" destination="ROB-0Y-daQ" id="M6V-Wo-RtF"/>
-                        <outlet property="friend4ProfilePhoto" destination="7a0-Bv-kZd" id="5bB-o4-tTE"/>
+                        <outlet property="friend2ProfileButton" destination="LpX-OQ-e0l" id="Afd-QP-OHw"/>
+                        <outlet property="friend2ProfileImageBG" destination="qQT-Oo-Sdn" id="aCT-7R-XtU"/>
+                        <outlet property="friend3NumberResultLabel" destination="ROB-0Y-daQ" id="oGH-M0-Iox"/>
+                        <outlet property="friend3ProfileButton" destination="FPm-aM-B5V" id="gqr-V0-14B"/>
+                        <outlet property="friend3ProfileImageBG" destination="YlY-GD-8Uq" id="eNS-f0-aOP"/>
+                        <outlet property="friend4NumberResultLabel" destination="fNB-uY-vUa" id="ZLf-fD-5Yd"/>
+                        <outlet property="friend4ProfileButton" destination="7a0-Bv-kZd" id="0oa-33-nkW"/>
+                        <outlet property="friend4ProfileImageBG" destination="5g5-fk-EfC" id="nKk-jD-pnd"/>
                         <outlet property="numberResultLabel" destination="Xtn-R0-X2A" id="ege-2f-RiI"/>
-                        <outlet property="userProfileImage" destination="M5W-Mf-0DV" id="csG-yh-djY"/>
-                        <outlet property="userProfilePhoto" destination="lQ5-6g-mJu" id="zwU-Bv-Mcc"/>
+                        <outlet property="userProfileButton" destination="lQ5-6g-mJu" id="NT3-PD-xZ8"/>
+                        <outlet property="userProfileImageBG" destination="C7D-9W-Cep" id="7ad-SB-cVq"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="658" y="301.5"/>
+            <point key="canvasLocation" x="658" y="301"/>
         </scene>
         <!--UserDetail-->
         <scene sceneID="HB6-QI-lJM">
@@ -171,8 +202,8 @@
                     <items>
                         <group width="1" alignment="left" id="hpO-cH-xJm">
                             <items>
-                                <imageView width="67" alignment="left" id="NRy-C9-Mla"/>
-                                <label width="67" height="40" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
+                                <group width="70" height="70" alignment="left" id="0vW-7r-qH3"/>
+                                <label width="67" height="70" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
@@ -190,6 +221,7 @@
                         <outlet property="dictationResultLabel" destination="ycI-XS-Bya" id="IG6-YX-xBb"/>
                         <outlet property="numberResultLabel" destination="DCN-uI-eNS" id="WmV-ou-UxC"/>
                         <outlet property="userNameLabel" destination="sPP-60-ass" id="rH4-H3-UdA"/>
+                        <outlet property="userProfileImageBG" destination="0vW-7r-qH3" id="rpC-eG-cGn"/>
                     </connections>
                 </controller>
             </objects>

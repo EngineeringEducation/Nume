@@ -142,9 +142,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             println("User Name is: \(userName)")
                             let userEmail : NSString = result.valueForKey("email") as! NSString
                             println("User Email is: \(userEmail)")
+                            let userFacebookID : NSString = result.valueForKey("id") as! NSString
+                            println("User Facebook ID is: \(userFacebookID)")
 
                             // Saves FB login user details into server
-                            User.postUser(userName as String, userEmail: userEmail as String, completionHandler: { (user, error) -> Void in
+                            User.postUser(userName as String, userEmail: userEmail as String, userFacebookID: userFacebookID as String, completionHandler: { (user, error) -> Void in
                                 if let error = error {
                                     println(error)
                                 } else {

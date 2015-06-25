@@ -17,21 +17,24 @@ class NumberNewsfeedController: WKInterfaceController {
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
-    @IBOutlet weak var userProfilePhoto: WKInterfaceButton!
-    @IBOutlet weak var userProfileImage: WKInterfaceImage!
+    @IBOutlet weak var userProfileButton: WKInterfaceButton!
+    @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
     
-    @IBOutlet weak var friend1ProfilePhoto: WKInterfaceButton!
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var friend1ProfileButton: WKInterfaceButton!
+    @IBOutlet weak var friend1ProfileImageBG: WKInterfaceGroup!
     
-    @IBOutlet weak var friend2ProfilePhoto: WKInterfaceButton!
     @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var friend2ProfileButton: WKInterfaceButton!
+    @IBOutlet weak var friend2ProfileImageBG: WKInterfaceGroup!
     
-    @IBOutlet weak var friend3ProfilePhoto: WKInterfaceButton!
     @IBOutlet weak var friend3NumberResultLabel: WKInterfaceLabel!
+    @IBOutlet weak var friend3ProfileButton: WKInterfaceButton!
+    @IBOutlet weak var friend3ProfileImageBG: WKInterfaceGroup!
     
-    @IBOutlet weak var friend4ProfilePhoto: WKInterfaceButton!
     @IBOutlet weak var friend4NumberResultLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var friend4ProfileButton: WKInterfaceButton!
+    @IBOutlet weak var friend4ProfileImageBG: WKInterfaceGroup!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
@@ -46,13 +49,7 @@ class NumberNewsfeedController: WKInterfaceController {
             self.dictationResultLabel.setText("\(val.userActivity!)")
             
             // Load user FB profile pic
-            let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)
-            self.user.userFacebookID = defaults!.stringForKey("userFBProfilePicIDKey")
-            let profileURL = "http://graph.facebook.com/\(self.user.userFacebookID!)/picture?width=40&height=40"
-            loadImage(profileURL, forImageView: userProfileImage)
-            
-
+            loadProfileImage(userProfileImageBG)
             
             // Populate the last four users' rating numbers into the social feed view
             User.getLastFourUsers({ (users, error) -> Void in
@@ -62,15 +59,20 @@ class NumberNewsfeedController: WKInterfaceController {
                     
                     let ratingOne = users![0].userNumber!
                     self.friend1NumberResultLabel.setText("\(ratingOne)")
+                    self.loadProfileImage(self.friend1ProfileImageBG)
                     
                     let ratingTwo = users![1].userNumber!
                     self.friend2NumberResultLabel.setText("\(ratingTwo)")
+                    self.loadProfileImage(self.friend2ProfileImageBG)
                     
                     let ratingThree = users![2].userNumber!
                     self.friend3NumberResultLabel.setText("\(ratingThree)")
-                    
+                    self.loadProfileImage(self.friend3ProfileImageBG)
+
                     let ratingFour = users![3].userNumber!
                     self.friend4NumberResultLabel.setText("\(ratingFour)")
+                    self.loadProfileImage(self.friend4ProfileImageBG)
+
                 }
             })
             
@@ -95,21 +97,32 @@ class NumberNewsfeedController: WKInterfaceController {
         return self.user
     }
     
-    func loadImage(url:String, forImageView: WKInterfaceImage) {
-        // load image
-        let image_url:String = url
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let url:NSURL = NSURL(string:image_url)!
-            var data:NSData = NSData(contentsOfURL: url)!
-            var placeholder = UIImage(data: data)!
-            
-            // update ui
-            dispatch_async(dispatch_get_main_queue()) {
-                forImageView.setImage(placeholder)
-            }
-        }
-        
+    func loadProfileImage(profileImage : WKInterfaceGroup) {
+        let appGroupID = "group.io.github.dhsu210.Nume"
+        let defaults = NSUserDefaults(suiteName: appGroupID)
+        self.user.userFacebookID! = defaults!.stringForKey("userFBProfilePicIDKey")!
+        let profileURL = "http://graph.facebook.com/\(self.user.userFacebookID!)/picture?width=40&height=40" as NSString
+        let url: NSURL = NSURL(string: profileURL as String)!
+        var data: NSData = NSData(contentsOfURL: url)!
+        profileImage.setBackgroundImageData(data)
     }
+
+    // Note to fix: should I be including async dispatching to quicken the image load times as below?
+//    func loadImage(url:String, forImageView: WKInterfaceImage) {
+//        // load image
+//        let image_url:String = url
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+//            let url:NSURL = NSURL(string:image_url)!
+//            var data:NSData = NSData(contentsOfURL: url)!
+//            var placeholder = UIImage(data: data)!
+//            
+//            // update ui
+//            dispatch_async(dispatch_get_main_queue()) {
+//                forImageView.setImage(placeholder)
+//            }
+//        }
+//        
+//    }
     
     // Actions to reveal further user details
     func insertUserDetailsIntoUser(index: Int) {
@@ -120,6 +133,7 @@ class NumberNewsfeedController: WKInterfaceController {
                 self.user.userName = users![index].userName!
                 self.user.userNumber = users![index].userNumber!
                 self.user.userActivity = users![index].userActivity!
+                self.user.userFacebookID = users![index].userFacebookID!
             }
         }
     }
