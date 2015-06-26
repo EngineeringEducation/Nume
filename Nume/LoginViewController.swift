@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import NumeKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginButtonDelegate {
+    
+    // Model
+    var user: User!
     
     @IBOutlet weak var numifyUserLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
@@ -19,6 +23,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     var pageViews: [UIImageView?] = []
     let skipButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
     
+    // Views
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -43,17 +48,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("fetched user: \(result)")
                     let userName : NSString = result.valueForKey("name") as! NSString
                     println("User Name is: \(userName)")
-                    if let userEmail : NSString = result.valueForKey("email") as? NSString {
-                        println("User Email is: \(userEmail)")
-                    }
-                    
-                    let appGroupID = "group.io.github.dhsu210.Nume"
-                    if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                        defaults.setValue(userName, forKey: "userNameKey")
-                    }
-                    
                     let userEmail : NSString = result.valueForKey("email") as! NSString
                     println("User Email is: \(userEmail)")
+                    let userFacebookID : NSString = result.valueForKey("id") as! NSString
+                    println("User Facebook ID is: \(userFacebookID)")
+                    
+                    let appGroupID = "group.io.github.dhsu210.Nume"
+                    let defaults = NSUserDefaults(suiteName: appGroupID)
+                    defaults!.setValue(userName, forKey: "userNameKey")
+                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
                     
                     self.numifyUserLabel.text = "Hi, \(userName)!"
                     self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
@@ -136,18 +139,29 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             println("fetched user: \(result)")
                             let userName : NSString = result.valueForKey("name") as! NSString
                             println("User Name is: \(userName)")
-                            if let userEmail : NSString = result.valueForKey("email") as? NSString {
-                                println("User Email is: \(userEmail)")
-                            }
-                            
-                            let appGroupID = "group.io.github.dhsu210.Nume"
-                            if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                                defaults.setValue(userName, forKey: "userNameKey")
-                            }
-                            
                             let userEmail : NSString = result.valueForKey("email") as! NSString
                             println("User Email is: \(userEmail)")
+                            let userFacebookID : NSString = result.valueForKey("id") as! NSString
+                            println("User Facebook ID is: \(userFacebookID)")
                             
+                            
+                            // Saves FB login user details into server
+                            User.postUser(userName as String, userEmail: userEmail as String, userFacebookID: userFacebookID as String, completionHandler: { (user, error) -> Void in
+                                if let error = error {
+                                    println(error)
+                                } else {
+                                    let userToken : Int = user!.userToken!
+
+                                    let appGroupID = "group.io.github.dhsu210.Nume"
+                                    let defaults = NSUserDefaults(suiteName: appGroupID)
+                                    defaults!.setValue(userName, forKey: "userNameKey")
+                                    defaults!.setInteger(userToken, forKey: "userTokenKey")
+                                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
+                                }
+                            })
+                            
+                            
+                            // Updates top of login controller with user details after FB login
                             self.numifyUserLabel.text = "Hi, \(userName)!"
                             self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                         }

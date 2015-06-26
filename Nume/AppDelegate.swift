@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import NumeKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    var user : User!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -58,9 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Prepare and send dictionary with NSUserDefaults data
         let appGroupID = "group.io.github.dhsu210.Nume"
         let defaults = NSUserDefaults(suiteName: appGroupID)
-        
+
         let userDictionary = defaults!.dictionaryRepresentation()
         
         reply(userDictionary)
+        User.postUserDetails(defaults!.integerForKey("userTokenKey"), dictation: userDictionary["userActivityKey"] as! String, rating: userDictionary["userNumberKey"] as! Int)
+
+        
     }
 }
