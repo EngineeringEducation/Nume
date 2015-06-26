@@ -8,44 +8,33 @@
 
 import Foundation
 
-class User: NSObject {
-    var userToken: Int?
-    var userNumber: Int?
-    var userActivity: String?
-    var userName: String?
-    var userEmail: String?
+public class User: NSObject {
+    public var userToken: Int?
+    public var userNumber: Int?
+    public var userActivity: String?
+    public var userName: String?
+    public var userEmail: String?
+    public var userFacebookID: String?
     
-    init(userToken: Int, userNumber: Int?, userActivity: String?, userName: String, userEmail: String?) {
+    public init(userToken: Int?, userNumber: Int?, userActivity: String?, userName: String, userEmail: String?, userFacebookID : String) {
         self.userToken = userToken
         self.userNumber = userNumber
         self.userActivity = userActivity
         self.userName = userName
         self.userEmail = userEmail
+        self.userFacebookID = userFacebookID
         super.init()
     }
     
-    convenience init(userToken: Int, userName: String) {
-        self.init(userToken: userToken, userNumber: nil, userActivity: nil, userName: userName, userEmail: nil)
+    public convenience init(userToken: Int, userName: String, userEmail: String, userFacebookID: String) {
+        self.init(userToken: userToken, userNumber: nil, userActivity: nil, userName: userName, userEmail: userEmail, userFacebookID: userFacebookID)
     }
     
-    convenience init(userToken: Int, userName: String, userEmail: String) {
-        self.init(userToken: userToken, userNumber: nil, userActivity: nil, userName: userName, userEmail: userEmail)
+    public convenience init(userNumber: Int, userActivity: String, userName: String, userFacebookID: String) {
+        self.init(userToken: nil, userNumber: userNumber, userActivity: userActivity, userName: userName, userEmail: nil, userFacebookID: userFacebookID)
     }
     
-    init(userName: String, userEmail: String) {
-        self.userName = userName
-        self.userEmail = userEmail
-        super.init()
-    }
-    
-    init(userNumber: Int, userActivity: String, userName: String) {
-        self.userNumber = userNumber
-        self.userActivity = userActivity
-        self.userName = userName
-        super.init()
-    }
-    
-    class func postUser(userName: String, userEmail: String, completionHandler : (user: User?, error: NSError?) -> Void) {
+    public class func postUser(userName: String, userEmail: String, userFacebookID: String, completionHandler : (user: User?, error: NSError?) -> Void) {
         
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest()
@@ -54,7 +43,7 @@ class User: NSObject {
         request.HTTPMethod = "POST"
         request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users")
         
-        var params = ["name": userName, "email": userEmail] as Dictionary<String, String>
+        var params = ["name": userName, "email": userEmail, "user_fb_id": userFacebookID] as Dictionary<String, String>
         var err: NSError?
         
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -67,7 +56,7 @@ class User: NSObject {
                 if let error = error {
                     completionHandler(user: nil, error: error)
                 } else if let newUser = self.userProfileDetailsFromNetworkResponseData(data) {
-                    completionHandler(user: newUser[0], error: nil)
+                    completionHandler(user: newUser, error: nil)
                 }
                 
             }
@@ -77,14 +66,14 @@ class User: NSObject {
         
     }
     
-    class func postUserDetails(theUser: User, dictation: String, rating: Int, completionHandler : (user: User?, error: NSError?) -> Void) {
+    public class func postUserDetails(token: Int, dictation: String, rating: Int) {
         
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest()
         
         //POST the user's new dictation and number rating to the server
         request.HTTPMethod = "POST"
-        request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users/\(theUser.userToken)")
+        request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users/\(token)")
         
         var params = ["message": dictation, "rating": rating] as Dictionary<String, AnyObject>
         var err: NSError?
@@ -93,47 +82,13 @@ class User: NSObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-                if let error = error {
-                    completionHandler(user: nil, error: error)
-                } else if let newUser = self.usersFromNetworkResponseData(data) {
-                    completionHandler(user: newUser[0], error: nil)
-                }
-                
-            }
-        })
+        let task = session.dataTaskWithRequest(request)
         
         task.resume()
         
     }
     
-    
-    // This function does everything necessary to get users from the server and update both our models and our views when they arrive.
-    class func getOneUser(theUser: User, completionHandler : (users: [User]?, error: NSError?) -> Void) {
-        
-        let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest()
-        request.HTTPMethod = "GET"
-        request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users/\(theUser.userToken)")
-        
-        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-                if let error = error {
-                    completionHandler(users: nil, error: error)
-                } else if let newUsers = self.userDetailsFromNetworkResponseData(data) {
-                    completionHandler(users: newUsers, error: nil)
-                }
-                
-            }
-        })
-        
-        task.resume()
-    }
-    
-    class func getLastFourUsers(completionHandler : (users: [User]?, error: NSError?) -> Void) {
+    public class func getLastFourUsers(completionHandler : (users: [User]?, error: NSError?) -> Void) {
         
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest()
@@ -157,7 +112,7 @@ class User: NSObject {
     
     // This function gives you an array of dictation + ratings for one User built out of data received from the server.
     
-    class func userDetailsFromNetworkResponseData(responseData : NSData) -> Array <User>? {
+    public class func userDetailsFromNetworkResponseData(responseData : NSData) -> Array <User>? {
         
         var serializationError : NSError?
         
@@ -176,17 +131,18 @@ class User: NSObject {
             let userName = userAPIDictionary["name"] as! String
             let dictationText = userAPIDictionary["message"] as! String
             let ratingNumber = userAPIDictionary["rating"] as! Int
+            let userProfileID = userAPIDictionary["user_fb_id"] as! String
             
-            return User(userNumber: ratingNumber, userActivity: dictationText, userName: userName)
+            return User(userNumber: ratingNumber, userActivity: dictationText, userName: userName, userFacebookID: userProfileID)
             
         })
         
         return users
     }
     
-    // This function gives you an array of Users built out of data received from the server.
+    // This function returns a User with its id, name, and email after being posted into the server
     
-    class func usersFromNetworkResponseData(responseData : NSData) -> Array <User>? {
+    class func userProfileDetailsFromNetworkResponseData(responseData : NSData) -> User? {
         
         var serializationError : NSError?
         
@@ -194,48 +150,18 @@ class User: NSObject {
             responseData,
             options: nil,
             error: &serializationError
-            ) as! Array<Dictionary<String, AnyObject>>
+            ) as! Dictionary<String, AnyObject>
         
         if let serializationError = serializationError {
             return nil
         }
         
-        var users = userAPIDictionaries.map({ (userAPIDictionary) -> User in
+        let userToken = userAPIDictionaries["id"] as! Int
+        let userName = userAPIDictionaries["name"] as! String
+        let userEmail = userAPIDictionaries["email"] as! String
+        let userProfileID = userAPIDictionaries["user_fb_id"] as! String
             
-            let userToken = userAPIDictionary["id"] as! Int
-            let userName = userAPIDictionary["name"] as! String
-            
-            return User(userToken: userToken, userName: userName)
-            
-        })
+        return User(userToken: userToken, userName: userName, userEmail: userEmail, userFacebookID: userProfileID)
         
-        return users
-    }
-    
-    class func userProfileDetailsFromNetworkResponseData(responseData : NSData) -> Array <User>? {
-        
-        var serializationError : NSError?
-        
-        let userAPIDictionaries = NSJSONSerialization.JSONObjectWithData(
-            responseData,
-            options: nil,
-            error: &serializationError
-            ) as! Array<Dictionary<String, AnyObject>>
-        
-        if let serializationError = serializationError {
-            return nil
-        }
-        
-        var users = userAPIDictionaries.map({ (userAPIDictionary) -> User in
-            
-            let userToken = userAPIDictionary["id"] as! Int
-            let userName = userAPIDictionary["name"] as! String
-            let userEmail = userAPIDictionary["email"] as! String
-            
-            return User(userToken: userToken, userName: userName, userEmail: userEmail)
-            
-        })
-        
-        return users
     }
 }
