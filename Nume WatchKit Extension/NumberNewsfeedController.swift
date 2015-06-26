@@ -50,8 +50,8 @@ class NumberNewsfeedController: WKInterfaceController {
             
             // Load user FB profile pic
             let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)
-            let userFacebookID = defaults!.valueForKey("userFacebookIDKey") as! String
+            let defaults = NSUserDefaults(suiteName: appGroupID)!
+            let userFacebookID = defaults.valueForKey("userFacebookIDKey") as! String
             loadProfileImage(userProfileImageBG, userID: userFacebookID)
             
             // Load four friends' profile pics and rating numbers
@@ -61,14 +61,12 @@ class NumberNewsfeedController: WKInterfaceController {
                 } else {
                     
                     let friend1Rating = users![0].userNumber
-                    println(friend1Rating)
                     let friend1FacebookID = users![0].userFacebookID
     
                     self.friend1NumberResultLabel.setText("\(friend1Rating!)")
                     self.loadProfileImage(self.friend1ProfileImageBG, userID: friend1FacebookID!)
     
                     let friend2Rating = users![1].userNumber
-                    println(friend2Rating)
                     let friend2FacebookID = users![1].userFacebookID
     
                     self.friend2NumberResultLabel.setText("\(friend2Rating!)")
@@ -186,12 +184,12 @@ class NumberNewsfeedController: WKInterfaceController {
     
     @IBAction func receiveUserDetailToSend() {
         let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
+        let defaultGroup = NSUserDefaults(suiteName: appGroupID)!
         
-        let rating = defaultGroup!.valueForKey("userNumberKey") as! Int
-        let activity = defaultGroup!.valueForKey("userActivityKey") as! String
-        let name = defaultGroup!.valueForKey("userNameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("userFacebookIDKey") as! String
+        let rating = defaultGroup.valueForKey("userNumberKey") as! Int
+        let activity = defaultGroup.valueForKey("userActivityKey") as! String
+        let name = defaultGroup.valueForKey("userNameKey") as! String
+        let facebookID = defaultGroup.valueForKey("userFacebookIDKey") as! String
         
         var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
         self.pushControllerWithName("UserDetail", context: thisUser)

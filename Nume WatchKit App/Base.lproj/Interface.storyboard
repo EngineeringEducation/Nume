@@ -90,7 +90,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="22"/>
                                 </label>
-                                <group width="40" height="40" alignment="left" id="C7D-9W-Cep" userLabel="User">
+                                <group width="40" height="40" alignment="left" radius="22" id="C7D-9W-Cep" userLabel="User">
                                     <items>
                                         <button width="40" alignment="left" id="lQ5-6g-mJu">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -108,7 +108,7 @@
                         </label>
                         <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <group width="40" height="40" alignment="left" id="IYl-bz-Lta" userLabel="Friend 1">
+                                <group width="40" height="40" alignment="left" radius="22" id="IYl-bz-Lta" userLabel="Friend 1">
                                     <items>
                                         <button width="40" alignment="left" id="tRU-wO-3bi">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -123,7 +123,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <group width="40" height="40" alignment="left" id="qQT-Oo-Sdn" userLabel="Friend 2">
+                                <group width="40" height="40" alignment="left" radius="22" id="qQT-Oo-Sdn" userLabel="Friend 2">
                                     <items>
                                         <button width="40" alignment="right" id="LpX-OQ-e0l">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -141,7 +141,7 @@
                         </group>
                         <group width="1" alignment="left" id="Man-Jf-fD9">
                             <items>
-                                <group width="40" height="40" alignment="left" id="YlY-GD-8Uq" userLabel="Friend 3">
+                                <group width="40" height="40" alignment="left" radius="22" id="YlY-GD-8Uq" userLabel="Friend 3">
                                     <items>
                                         <button width="40" alignment="left" id="FPm-aM-B5V">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -155,7 +155,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="17"/>
                                 </label>
-                                <group width="40" alignment="left" id="5g5-fk-EfC" userLabel="Friend 4">
+                                <group width="40" alignment="left" radius="22" id="5g5-fk-EfC" userLabel="Friend 4">
                                     <items>
                                         <button width="40" alignment="left" id="7a0-Bv-kZd">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -202,7 +202,7 @@
                     <items>
                         <group width="1" alignment="left" id="hpO-cH-xJm">
                             <items>
-                                <group width="70" height="70" alignment="left" id="0vW-7r-qH3"/>
+                                <group width="70" height="70" alignment="left" radius="35" id="0vW-7r-qH3"/>
                                 <label width="67" height="70" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="35"/>

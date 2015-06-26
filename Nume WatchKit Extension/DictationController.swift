@@ -52,9 +52,9 @@ class DictationController: WKInterfaceController {
                 
                 // Placing dictation text and number rating into NSUserDefaults
                 let appGroupID = "group.io.github.dhsu210.Nume"
-                let defaults = NSUserDefaults(suiteName: appGroupID)
-                defaults!.setValue(self.user!.userNumber, forKey: "userNumberKey")
-                defaults!.setValue(self.user!.userActivity, forKey: "userActivityKey")
+                let defaults = NSUserDefaults(suiteName: appGroupID)!
+                defaults.setValue(self.user!.userNumber, forKey: "userNumberKey")
+                defaults.setValue(self.user!.userActivity, forKey: "userActivityKey")
                 
                 // Pulls username from logged in FB account on iPhone and sends userRating and userActivity to be posted via iPhone to server
                 let defaultConnect = NSUserDefaults.standardUserDefaults()
