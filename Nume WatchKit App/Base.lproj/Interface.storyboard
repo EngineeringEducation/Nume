@@ -95,7 +95,7 @@
                                         <button width="40" alignment="left" id="lQ5-6g-mJu">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="JSo-vD-lV9"/>
+                                                <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="AAV-kv-POa"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -128,7 +128,7 @@
                                         <button width="40" alignment="right" id="LpX-OQ-e0l">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="gBG-4q-UPT"/>
+                                                <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="50v-kV-ozE"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -146,7 +146,7 @@
                                         <button width="40" alignment="left" id="FPm-aM-B5V">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="0rC-L6-DLY"/>
+                                                <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="rxD-fN-D9A"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -160,7 +160,7 @@
                                         <button width="40" alignment="left" id="7a0-Bv-kZd">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="HLv-JC-cHe"/>
+                                                <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="X6z-ko-y6t"/>
                                             </connections>
                                         </button>
                                     </items>

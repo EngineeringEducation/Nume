@@ -55,80 +55,46 @@ class NumberNewsfeedController: WKInterfaceController {
             loadProfileImage(userProfileImageBG, userID: userFacebookID)
             
             // Load four friends' profile pics and rating numbers
-            loadFriendsDetailsFromPhone()
+            User.getLastFourUsers { (users, error) -> Void in
+                if let error = error {
+                    println(error)
+                } else {
+                    
+                    let friend1Rating = users![0].userNumber
+                    println(friend1Rating)
+                    let friend1FacebookID = users![0].userFacebookID
+    
+                    self.friend1NumberResultLabel.setText("\(friend1Rating!)")
+                    self.loadProfileImage(self.friend1ProfileImageBG, userID: friend1FacebookID!)
+    
+                    let friend2Rating = users![1].userNumber
+                    println(friend2Rating)
+                    let friend2FacebookID = users![1].userFacebookID
+    
+                    self.friend2NumberResultLabel.setText("\(friend2Rating!)")
+                    self.loadProfileImage(self.friend2ProfileImageBG, userID: friend2FacebookID!)
+    
+                    let friend3Rating = users![2].userNumber
+                    let friend3FacebookID = users![2].userFacebookID
+    
+                    self.friend3NumberResultLabel.setText("\(friend3Rating!)")
+                    self.loadProfileImage(self.friend3ProfileImageBG, userID: friend3FacebookID!)
+    
+                    let friend4Rating = users![3].userNumber
+                    let friend4FacebookID = users![3].userFacebookID
+                    
+                    self.friend4NumberResultLabel.setText("\(friend4Rating!)")
+                    self.loadProfileImage(self.friend4ProfileImageBG, userID: friend4FacebookID!)
+                    
+                }
+            }
+
             
         } else {
             self.numberResultLabel.setText("")
         }
     }
     
-    func loadFriendsDetailsFromPhone() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userDictionary = defaults.dictionaryRepresentation()
-        
-        NumberNewsfeedController.openParentApplication(userDictionary) {
-            (replyDictionary, error) -> Void in
-            
-            if let castedResponseDictionary = replyDictionary as? [String: AnyObject] {
-                
-                let friend1Name = castedResponseDictionary["friend1NameKey"] as! String
-                let friend1Rating = castedResponseDictionary["friend1RatingKey"] as! Int
-                let friend1Activity = castedResponseDictionary["friend1ActivityKey"] as! String
-                let friend1FacebookID = castedResponseDictionary["friend1FacebookIDKey"] as! String
-                
-                self.friend1NumberResultLabel.setText("\(friend1Rating)")
-                self.loadProfileImage(self.friend1ProfileImageBG, userID: friend1FacebookID)
-                
-                let friend2Name = castedResponseDictionary["friend2NameKey"] as! String
-                let friend2Rating = castedResponseDictionary["friend2RatingKey"] as! Int
-                let friend2Activity = castedResponseDictionary["friend2ActivityKey"] as! String
-                let friend2FacebookID = castedResponseDictionary["friend2FacebookIDKey"] as! String
-                
-                self.friend2NumberResultLabel.setText("\(friend2Rating)")
-                self.loadProfileImage(self.friend2ProfileImageBG, userID: friend2FacebookID)
-                
-                let friend3Name = castedResponseDictionary["friend3NameKey"] as! String
-                let friend3Rating = castedResponseDictionary["friend3RatingKey"] as! Int
-                let friend3Activity = castedResponseDictionary["friend3ActivityKey"] as! String
-                let friend3FacebookID = castedResponseDictionary["friend3FacebookIDKey"] as! String
-                
-                self.friend3NumberResultLabel.setText("\(friend3Rating)")
-                self.loadProfileImage(self.friend3ProfileImageBG, userID: friend3FacebookID)
-                
-                let friend4Name = castedResponseDictionary["friend4NameKey"] as! String
-                let friend4Rating = castedResponseDictionary["friend4RatingKey"] as! Int
-                let friend4Activity = castedResponseDictionary["friend4ActivityKey"] as! String
-                let friend4FacebookID = castedResponseDictionary["friend4FacebookIDKey"] as! String
-                
-                self.friend4NumberResultLabel.setText("\(friend4Rating)")
-                self.loadProfileImage(self.friend4ProfileImageBG, userID: friend4FacebookID)
-                
-                // Insert friends data into App Group
-                let appGroupID = "group.io.github.dhsu210.Nume"
-                let defaultGroup = NSUserDefaults(suiteName: appGroupID)
-                
-                defaultGroup!.setValue(friend1Name, forKey: "friend1NameKey")
-                defaultGroup!.setValue(friend1Rating, forKey: "friend1RatingKey")
-                defaultGroup!.setValue(friend1Activity, forKey: "friend1ActivityKey")
-                defaultGroup!.setValue(friend1FacebookID, forKey: "friend1FacebookIDKey")
-                
-                defaultGroup!.setValue(friend2Name, forKey: "friend2NameKey")
-                defaultGroup!.setValue(friend2Rating, forKey: "friend2RatingKey")
-                defaultGroup!.setValue(friend2Activity, forKey: "friend2ActivityKey")
-                defaultGroup!.setValue(friend2FacebookID, forKey: "friend2FacebookIDKey")
-                
-                defaultGroup!.setValue(friend3Name, forKey: "friend3NameKey")
-                defaultGroup!.setValue(friend3Rating, forKey: "friend3RatingKey")
-                defaultGroup!.setValue(friend3Activity, forKey: "friend3ActivityKey")
-                defaultGroup!.setValue(friend3FacebookID, forKey: "friend3FacebookIDKey")
-                
-                defaultGroup!.setValue(friend4Name, forKey: "friend4NameKey")
-                defaultGroup!.setValue(friend4Rating, forKey: "friend4RatingKey")
-                defaultGroup!.setValue(friend4Activity, forKey: "friend4ActivityKey")
-                defaultGroup!.setValue(friend4FacebookID, forKey: "friend4FacebookIDKey")
-            }
-        }
-    }
     
     func loadProfileImage(profileImage : WKInterfaceGroup, userID : String) {
         let profileURL = "http://graph.facebook.com/\(userID)/picture?width=40&height=40" as NSString
@@ -169,54 +135,55 @@ class NumberNewsfeedController: WKInterfaceController {
     }
     
     
-    @IBAction func receiveFriendOneDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
+    @IBAction func receiveFriendFourDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                
+                self.user.userNumber = users![3].userNumber
+                self.user.userActivity = users![3].userActivity
+                self.user.userName = users![3].userName
+                self.user.userFacebookID = users![3].userFacebookID
+            }
+            
+        }
         
-        let rating = defaultGroup!.valueForKey("friend1RatingKey") as! Int
-        let activity = defaultGroup!.valueForKey("friend1ActivityKey") as! String
-        let name = defaultGroup!.valueForKey("friend1NameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("friend1FacebookIDKey") as! String
-        
-        var friendOne : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: friendOne)
-    }
-    @IBAction func receiveFriendTwoDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
-        
-        let rating = defaultGroup!.valueForKey("friend2RatingKey") as! Int
-        let activity = defaultGroup!.valueForKey("friend2ActivityKey") as! String
-        let name = defaultGroup!.valueForKey("friend2NameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("friend2FacebookIDKey") as! String
-        
-        var friendTwo : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: friendTwo)
+        self.pushControllerWithName("UserDetail", context: self.user)
     }
     @IBAction func receiveFriendThreeDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
-        
-        let rating = defaultGroup!.valueForKey("friend3RatingKey") as! Int
-        let activity = defaultGroup!.valueForKey("friend3ActivityKey") as! String
-        let name = defaultGroup!.valueForKey("friend3NameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("friend3FacebookIDKey") as! String
-        
-        var friendThree : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: friendThree)
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                
+                self.user.userNumber = users![2].userNumber
+                self.user.userActivity = users![2].userActivity
+                self.user.userName = users![2].userName
+                self.user.userFacebookID = users![2].userFacebookID
+            }
+            
+        }
+        self.pushControllerWithName("UserDetail", context: self.user)
     }
-    @IBAction func receiveFriendFourDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
+    @IBAction func receiveFriendTwoDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                
+                self.user.userNumber = users![1].userNumber
+                self.user.userActivity = users![1].userActivity
+                self.user.userName = users![1].userName
+                self.user.userFacebookID = users![1].userFacebookID
+                
+            }
+            
+        }
         
-        let rating = defaultGroup!.valueForKey("friend4RatingKey") as! Int
-        let activity = defaultGroup!.valueForKey("friend4ActivityKey") as! String
-        let name = defaultGroup!.valueForKey("friend4NameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("friend4FacebookIDKey") as! String
-        
-        var friendFour : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: friendFour)
+        self.pushControllerWithName("UserDetail", context: self.user)
     }
+    
     @IBAction func receiveUserDetailToSend() {
         let appGroupID = "group.io.github.dhsu210.Nume"
         let defaultGroup = NSUserDefaults(suiteName: appGroupID)
@@ -229,5 +196,23 @@ class NumberNewsfeedController: WKInterfaceController {
         var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
         self.pushControllerWithName("UserDetail", context: thisUser)
     }
+    
+    @IBAction func receiveFriendOneDetailToSend() {
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                
+                self.user.userNumber = users![0].userNumber
+                self.user.userActivity = users![0].userActivity
+                self.user.userName = users![0].userName
+                self.user.userFacebookID = users![0].userFacebookID
+                
+            }
+            
+        self.pushControllerWithName("UserDetail", context: self.user)
+    }
+    
    
+    }
 }

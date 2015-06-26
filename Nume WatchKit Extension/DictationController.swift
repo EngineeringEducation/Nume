@@ -49,17 +49,14 @@ class DictationController: WKInterfaceController {
                     return
                 }
                 self.user!.userActivity! = input[0] as! String
-
                 
                 // Placing dictation text and number rating into NSUserDefaults
                 let appGroupID = "group.io.github.dhsu210.Nume"
                 let defaults = NSUserDefaults(suiteName: appGroupID)
                 defaults!.setValue(self.user!.userNumber, forKey: "userNumberKey")
                 defaults!.setValue(self.user!.userActivity, forKey: "userActivityKey")
-                self.user.userToken = defaults!.integerForKey("userTokenKey") as Int
-
                 
-                // Pulls username from logged in FB account on iPhone
+                // Pulls username from logged in FB account on iPhone and sends userRating and userActivity to be posted via iPhone to server
                 let defaultConnect = NSUserDefaults.standardUserDefaults()
                 let userDictionary = defaultConnect.dictionaryRepresentation()
                 NumberNewsfeedController.openParentApplication(userDictionary) {
@@ -72,6 +69,7 @@ class DictationController: WKInterfaceController {
                         println("Congratulations, \(responseName) successfully rated a \(self.user!.userNumber!) with '\(self.user!.userActivity!)'")
                     }
                 }
+
                 
                 self.pushControllerWithName("SocialFeed", context: self.user)
         }
