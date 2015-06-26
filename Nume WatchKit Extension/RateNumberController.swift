@@ -7,13 +7,14 @@
 //
 
 import WatchKit
+import NumeKit
 import Foundation
 
 
 class RateNumberController: WKInterfaceController {
     
     // Model
-    var user = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Daniel") //dummy data for testing now
+    var user = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Daniel", userEmail: "daniel@tradecrafted.com", userFacebookID: "12345") //dummy data for testing now
     
     // Views
     override func awakeWithContext(context: AnyObject?) {

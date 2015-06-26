@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import NumeKit
 import Foundation
 
 class DictationController: WKInterfaceController {
@@ -47,7 +48,29 @@ class DictationController: WKInterfaceController {
                 if (input == nil) {
                     return
                 }
-                self.user!.userActivity = input[0] as! String
+                self.user!.userActivity! = input[0] as! String
+                
+                // Placing dictation text and number rating into NSUserDefaults
+                let appGroupID = "group.io.github.dhsu210.Nume"
+                let defaults = NSUserDefaults(suiteName: appGroupID)
+                defaults!.setValue(self.user!.userNumber, forKey: "userNumberKey")
+                defaults!.setValue(self.user!.userActivity, forKey: "userActivityKey")
+                
+                // Pulls username from logged in FB account on iPhone and sends userRating and userActivity to be posted via iPhone to server
+                let defaultConnect = NSUserDefaults.standardUserDefaults()
+                let userDictionary = defaultConnect.dictionaryRepresentation()
+                NumberNewsfeedController.openParentApplication(userDictionary) {
+                    (replyDictionary, error) -> Void in
+                    
+                    if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
+                        responseName = castedResponseDictionary["userNameKey"] as? String
+                    {
+                        self.user.userName = responseName
+                        println("Congratulations, \(responseName) successfully rated a \(self.user!.userNumber!) with '\(self.user!.userActivity!)'")
+                    }
+                }
+
+                
                 self.pushControllerWithName("SocialFeed", context: self.user)
         }
         
