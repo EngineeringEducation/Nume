@@ -60,11 +60,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appGroupID = "group.io.github.dhsu210.Nume"
         let defaults = NSUserDefaults(suiteName: appGroupID)
         
+        User.getLastFourUsers { (users, error) -> Void in
+            if let error = error {
+                println(error)
+            } else {
+                self.insertUserDetails(0, user: users)
+                self.insertUserDetails(1, user: users)
+                self.insertUserDetails(2, user: users)
+                self.insertUserDetails(3, user: users)
+            }
+        }
+
         let userDictionary = defaults!.dictionaryRepresentation()
         
-        reply(userDictionary)
         User.postUserDetails(defaults!.integerForKey("userTokenKey"), dictation: userDictionary["userActivityKey"] as! String, rating: userDictionary["userNumberKey"] as! Int)
-
         
+        reply(userDictionary)
+        
+    }
+    
+    func insertUserDetails (index: Int, user: [User]?) {
+        
+        let appGroupID = "group.io.github.dhsu210.Nume"
+        let defaults = NSUserDefaults(suiteName: appGroupID)
+        let friendValue = index + 1
+        defaults!.setValue(user![index].userName!, forKey: "friend\(friendValue)NameKey")
+        defaults!.setValue(user![index].userNumber!, forKey: "friend\(friendValue)RatingKey")
+        defaults!.setValue(user![index].userActivity!, forKey: "friend\(friendValue)ActivityKey")
+        defaults!.setValue(user![index].userFacebookID!, forKey: "friend\(friendValue)FacebookID")
+        
+        println(defaults!.valueForKey("friend1NameKey"))
     }
 }
