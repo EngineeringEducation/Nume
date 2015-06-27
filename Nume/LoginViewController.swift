@@ -53,10 +53,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     let userFacebookID : NSString = result.valueForKey("id") as! NSString
                     println("User Facebook ID is: \(userFacebookID)")
                     
-                    let appGroupID = "group.io.github.dhsu210.Nume"
-                    let defaults = NSUserDefaults(suiteName: appGroupID)
-                    defaults!.setValue(userName, forKey: "userNameKey")
-                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
+                    Information.storeName(userName as String)
+                    Information.storeFacebookID(userFacebookID as String)
                     
                     self.numifyUserLabel.text = "Hi, \(userName)!"
                     self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
@@ -151,12 +149,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                                     println(error)
                                 } else {
                                     let userToken : Int = user!.userToken!
-
-                                    let appGroupID = "group.io.github.dhsu210.Nume"
-                                    let defaults = NSUserDefaults(suiteName: appGroupID)
-                                    defaults!.setValue(userName, forKey: "userNameKey")
-                                    defaults!.setInteger(userToken, forKey: "userTokenKey")
-                                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
+                                    
+                                    Information.storeName(userName as String)
+                                    Information.storeUniqueID(userToken as Int)
+                                    Information.storeFacebookID(userFacebookID as String)
+                                  
                                 }
                             })
                             
@@ -280,10 +277,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("User Email is: \(userEmail)")
                 }
                 
-                let appGroupID = "group.io.github.dhsu210.Nume"
-                if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                    defaults.setValue(userName, forKey: "userNameKey")
-                }
+                Information.storeName(userName as String)
                 
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")

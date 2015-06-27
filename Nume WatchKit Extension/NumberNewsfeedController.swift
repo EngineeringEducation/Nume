@@ -49,9 +49,7 @@ class NumberNewsfeedController: WKInterfaceController {
             self.dictationResultLabel.setText("\(val.userActivity!)")
             
             // Load user FB profile pic
-            let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)!
-            let userFacebookID = defaults.valueForKey("userFacebookIDKey") as! String
+            let userFacebookID = Information.getFacebookID()
             loadProfileImage(userProfileImageBG, userID: userFacebookID)
             
             // Load four friends' profile pics and rating numbers
@@ -183,13 +181,11 @@ class NumberNewsfeedController: WKInterfaceController {
     }
     
     @IBAction func receiveUserDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)!
         
-        let rating = defaultGroup.valueForKey("userNumberKey") as! Int
-        let activity = defaultGroup.valueForKey("userActivityKey") as! String
-        let name = defaultGroup.valueForKey("userNameKey") as! String
-        let facebookID = defaultGroup.valueForKey("userFacebookIDKey") as! String
+        let rating = Information.getRating()
+        let activity = Information.getActivity()
+        let name = Information.getName()
+        let facebookID = Information.getFacebookID()
         
         var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
         self.pushControllerWithName("UserDetail", context: thisUser)

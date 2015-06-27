@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2008FDBA1B3E11DD00006533 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008FDB91B3E11DD00006533 /* Information.swift */; };
 		2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019F1F81B167C0200F08FFA /* UserDetailController.swift */; };
 		201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* RateNumberController.swift */; };
 		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
@@ -119,6 +120,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2008FDB91B3E11DD00006533 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		2019F1F81B167C0200F08FFA /* UserDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
+				2008FDB91B3E11DD00006533 /* Information.swift */,
 				206EC9F51B30BAC900F6B76E /* NumeKit.h */,
 				206EC9F31B30BAC900F6B76E /* Supporting Files */,
 			);
@@ -638,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2008FDBA1B3E11DD00006533 /* Information.swift in Sources */,
 				206ECA111B30BAF900F6B76E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
