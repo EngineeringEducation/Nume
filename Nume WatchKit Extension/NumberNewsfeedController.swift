@@ -58,29 +58,24 @@ class NumberNewsfeedController: WKInterfaceController {
                     println(error)
                 } else {
                     
-                    let friend1Rating = users![0].userNumber
-                    let friend1FacebookID = users![0].userFacebookID
-    
-                    self.friend1NumberResultLabel.setText("\(friend1Rating!)")
-                    self.loadProfileImage(self.friend1ProfileImageBG, userID: friend1FacebookID!)
-    
-                    let friend2Rating = users![1].userNumber
-                    let friend2FacebookID = users![1].userFacebookID
-    
-                    self.friend2NumberResultLabel.setText("\(friend2Rating!)")
-                    self.loadProfileImage(self.friend2ProfileImageBG, userID: friend2FacebookID!)
-    
-                    let friend3Rating = users![2].userNumber
-                    let friend3FacebookID = users![2].userFacebookID
-    
-                    self.friend3NumberResultLabel.setText("\(friend3Rating!)")
-                    self.loadProfileImage(self.friend3ProfileImageBG, userID: friend3FacebookID!)
-    
-                    let friend4Rating = users![3].userNumber
-                    let friend4FacebookID = users![3].userFacebookID
-                    
-                    self.friend4NumberResultLabel.setText("\(friend4Rating!)")
-                    self.loadProfileImage(self.friend4ProfileImageBG, userID: friend4FacebookID!)
+                    for index in 0...3 {
+                        let friendRating = users![index].userNumber!
+                        let friendFacebookID = users![index].userFacebookID!
+                        
+                        if index == 0 {
+                            self.friend1NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend1ProfileImageBG, userID: friendFacebookID)
+                        } else if index == 1 {
+                            self.friend2NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend2ProfileImageBG, userID: friendFacebookID)
+                        } else if index == 2 {
+                            self.friend3NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend3ProfileImageBG, userID: friendFacebookID)
+                        } else if index == 3 {
+                            self.friend4NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend4ProfileImageBG, userID: friendFacebookID)
+                        }
+                    }
                     
                 }
             }
@@ -98,23 +93,6 @@ class NumberNewsfeedController: WKInterfaceController {
         var data: NSData = NSData(contentsOfURL: url)!
         profileImage.setBackgroundImageData(data)
     }
-    
-    // Note to fix: should I be including async dispatching to quicken the image load times as below?
-    //    func loadImage(url:String, forImageView: WKInterfaceImage) {
-    //        // load image
-    //        let image_url:String = url
-    //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-    //            let url:NSURL = NSURL(string:image_url)!
-    //            var data:NSData = NSData(contentsOfURL: url)!
-    //            var placeholder = UIImage(data: data)!
-    //
-    //            // update ui
-    //            dispatch_async(dispatch_get_main_queue()) {
-    //                forImageView.setImage(placeholder)
-    //            }
-    //        }
-    //        
-    //    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
