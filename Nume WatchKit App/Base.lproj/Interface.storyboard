@@ -113,7 +113,7 @@
                                         <button width="40" alignment="left" id="tRU-wO-3bi">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="NMm-Bt-PAg"/>
+                                                <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="IpO-pI-HOs"/>
                                             </connections>
                                         </button>
                                     </items>

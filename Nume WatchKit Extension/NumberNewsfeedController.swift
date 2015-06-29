@@ -14,6 +14,10 @@ class NumberNewsfeedController: WKInterfaceController {
     
     // Model
     var user : User!
+    var friend1 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend2 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend3 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend4 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
@@ -21,7 +25,7 @@ class NumberNewsfeedController: WKInterfaceController {
     @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
-    @IBOutlet weak var friend1ProfileButton: WKInterfaceButton!
+    @IBOutlet weak var friend1ProfileButton: WKInterfaceButton! 
     @IBOutlet weak var friend1ProfileImageBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
@@ -59,19 +63,41 @@ class NumberNewsfeedController: WKInterfaceController {
                 } else {
                     
                     for index in 0...3 {
-                        let friendRating = users![index].userNumber!
-                        let friendFacebookID = users![index].userFacebookID!
+                        let friendName = users![index].userName! as String
+                        let friendRating = users![index].userNumber! as Int
+                        let friendActivity = users![index].userActivity! as String
+                        let friendFacebookID = users![index].userFacebookID! as String
                         
                         if index == 0 {
+                            self.friend1.userName = friendName
+                            self.friend1.userNumber = friendRating
+                            self.friend1.userActivity = friendActivity
+                            self.friend1.userFacebookID = friendFacebookID
+                            
                             self.friend1NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend1ProfileImageBG, userID: friendFacebookID)
                         } else if index == 1 {
+                            self.friend2.userName = friendName
+                            self.friend2.userNumber = friendRating
+                            self.friend2.userActivity = friendActivity
+                            self.friend2.userFacebookID = friendFacebookID
+                            
                             self.friend2NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend2ProfileImageBG, userID: friendFacebookID)
                         } else if index == 2 {
+                            self.friend3.userName = friendName
+                            self.friend3.userNumber = friendRating
+                            self.friend3.userActivity = friendActivity
+                            self.friend3.userFacebookID = friendFacebookID
+                            
                             self.friend3NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend3ProfileImageBG, userID: friendFacebookID)
                         } else if index == 3 {
+                            self.friend4.userName = friendName
+                            self.friend4.userNumber = friendRating
+                            self.friend4.userActivity = friendActivity
+                            self.friend4.userFacebookID = friendFacebookID
+                            
                             self.friend4NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend4ProfileImageBG, userID: friendFacebookID)
                         }
@@ -109,53 +135,17 @@ class NumberNewsfeedController: WKInterfaceController {
     }
     
     
+    @IBAction func receiveFriendOneDetailToSend() {
+        self.pushControllerWithName("UserDetail", context: self.friend1)
+    }
     @IBAction func receiveFriendFourDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![3].userNumber
-                self.user.userActivity = users![3].userActivity
-                self.user.userName = users![3].userName
-                self.user.userFacebookID = users![3].userFacebookID
-            }
-            
-        }
-        
-        self.pushControllerWithName("UserDetail", context: self.user)
+        self.pushControllerWithName("UserDetail", context: self.friend4)
     }
     @IBAction func receiveFriendThreeDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![2].userNumber
-                self.user.userActivity = users![2].userActivity
-                self.user.userName = users![2].userName
-                self.user.userFacebookID = users![2].userFacebookID
-            }
-            
-        }
-        self.pushControllerWithName("UserDetail", context: self.user)
+        self.pushControllerWithName("UserDetail", context: self.friend3)
     }
     @IBAction func receiveFriendTwoDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![1].userNumber
-                self.user.userActivity = users![1].userActivity
-                self.user.userName = users![1].userName
-                self.user.userFacebookID = users![1].userFacebookID
-                
-            }
-            
-        }
-        
-        self.pushControllerWithName("UserDetail", context: self.user)
+        self.pushControllerWithName("UserDetail", context: self.friend2)
     }
     
     @IBAction func receiveUserDetailToSend() {
@@ -169,22 +159,26 @@ class NumberNewsfeedController: WKInterfaceController {
         self.pushControllerWithName("UserDetail", context: thisUser)
     }
     
-    @IBAction func receiveFriendOneDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![0].userNumber
-                self.user.userActivity = users![0].userActivity
-                self.user.userName = users![0].userName
-                self.user.userFacebookID = users![0].userFacebookID
-                
-            }
-            
-        self.pushControllerWithName("UserDetail", context: self.user)
-    }
-    
-   
-    }
+//    var interfaceProperty: WKInterfaceButton {
+//        User.getLastFourUsers { (users, error) -> Void in
+//            if let error = error {
+//                println(error)
+//            } else {
+//                
+//                self.user.userNumber = users![0].userNumber
+//                self.user.userActivity = users![0].userActivity
+//                self.user.userName = users![0].userName
+//                self.user.userFacebookID = users![0].userFacebookID
+//                
+//            }
+//            
+//        }
+//        self.pushControllerWithName("UserDetail", context: self.user)
+//        
+//        return WKInterfaceButton()
+//    }
+
 }
+   
+    
+
