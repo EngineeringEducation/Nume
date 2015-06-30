@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         }
         
         let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
+        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count), height: pagesScrollViewSize.height)
         
         loadVisiblePages()
     }

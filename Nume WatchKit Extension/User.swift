@@ -43,7 +43,7 @@ public class User: NSObject {
         request.HTTPMethod = "POST"
         request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users")
         
-        var params = ["name": userName, "email": userEmail, "user_fb_id": userFacebookID] as Dictionary<String, String>
+        let params = ["name": userName, "email": userEmail, "user_fb_id": userFacebookID] as [String:String]
         var err: NSError?
         
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -75,7 +75,7 @@ public class User: NSObject {
         request.HTTPMethod = "POST"
         request.URL = NSURL(string: "https://whispering-everglades-1936.herokuapp.com/users/\(token)")
         
-        var params = ["message": dictation, "rating": rating] as Dictionary<String, AnyObject>
+        let params = ["message": dictation, "rating": rating] as [String:AnyObject]
         var err: NSError?
         
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -120,7 +120,7 @@ public class User: NSObject {
             responseData,
             options: nil,
             error: &serializationError
-            ) as! Array<Dictionary<String, AnyObject>>
+            ) as! [[String : AnyObject]]
         
         if let serializationError = serializationError {
             return nil

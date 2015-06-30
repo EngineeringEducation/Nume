@@ -54,18 +54,11 @@ class DictationController: WKInterfaceController {
                 Information.storeRating(self.user!.userNumber! as Int)
                 Information.storeActivity(self.user!.userActivity! as String)
                 
-                // Pulls username from logged in FB account on iPhone and sends userRating and userActivity to be posted via iPhone to server
-                let defaultConnect = NSUserDefaults.standardUserDefaults()
-                let userDictionary = defaultConnect.dictionaryRepresentation()
+                // Sends userNumber and userActivity to be posted via iPhone to server
+                let userDictionary = Information.getDictionary()
                 NumberNewsfeedController.openParentApplication(userDictionary) {
                     (replyDictionary, error) -> Void in
-                    
-                    if let castedResponseDictionary = replyDictionary,
-                        responseName = castedResponseDictionary["userNameKey"] as? String
-                    {
-                        self.user.userName = responseName
-                        println("Congratulations, \(responseName) successfully rated a \(self.user!.userNumber!) with '\(self.user!.userActivity!)'")
-                    }
+                    println("Congratulations, \(Information.getName()) successfully rated a \(Information.getRating()) with '\(Information.getActivity())'")
                 }
 
                 

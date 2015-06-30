@@ -25,7 +25,7 @@ class NumberNewsfeedController: WKInterfaceController {
     @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
-    @IBOutlet weak var friend1ProfileButton: WKInterfaceButton! 
+    @IBOutlet weak var friend1ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend1ProfileImageBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
@@ -133,21 +133,23 @@ class NumberNewsfeedController: WKInterfaceController {
     override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
         return self.user
     }
-    
+
+
     
     @IBAction func receiveFriendOneDetailToSend() {
         self.pushControllerWithName("UserDetail", context: self.friend1)
     }
-    @IBAction func receiveFriendFourDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend4)
+    @IBAction func receiveFriendTwoDetailToSend() {
+        self.pushControllerWithName("UserDetail", context: self.friend2)
     }
     @IBAction func receiveFriendThreeDetailToSend() {
         self.pushControllerWithName("UserDetail", context: self.friend3)
     }
-    @IBAction func receiveFriendTwoDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend2)
+    @IBAction func receiveFriendFourDetailToSend() {
+        self.pushControllerWithName("UserDetail", context: self.friend4)
     }
-    
+
+
     @IBAction func receiveUserDetailToSend() {
         
         let rating = Information.getRating()
@@ -158,27 +160,9 @@ class NumberNewsfeedController: WKInterfaceController {
         var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
         self.pushControllerWithName("UserDetail", context: thisUser)
     }
-    
-//    var interfaceProperty: WKInterfaceButton {
-//        User.getLastFourUsers { (users, error) -> Void in
-//            if let error = error {
-//                println(error)
-//            } else {
-//                
-//                self.user.userNumber = users![0].userNumber
-//                self.user.userActivity = users![0].userActivity
-//                self.user.userName = users![0].userName
-//                self.user.userFacebookID = users![0].userFacebookID
-//                
-//            }
-//            
-//        }
-//        self.pushControllerWithName("UserDetail", context: self.user)
-//        
-//        return WKInterfaceButton()
-//    }
 
 }
+
    
     
 

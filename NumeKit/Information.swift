@@ -49,4 +49,8 @@ public class Information: NSObject {
         return defaults.valueForKey("userNameKey") as! String
     }
     
+    public class func getDictionary() -> [NSObject:AnyObject] {
+        return defaults.dictionaryRepresentation()
+    }
+    
 }
