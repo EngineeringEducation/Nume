@@ -103,9 +103,6 @@
                                 </group>
                             </items>
                         </group>
-                        <label width="121" alignment="center" text="Test Dictation" textAlignment="center" id="EQy-rd-RAF">
-                            <fontDescription key="font" type="system" pointSize="12"/>
-                        </label>
                         <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
                                 <group width="40" height="40" alignment="left" radius="22" id="IYl-bz-Lta" userLabel="Friend 1">
@@ -174,7 +171,6 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="dictationResultLabel" destination="EQy-rd-RAF" id="Cga-dn-SfK"/>
                         <outlet property="friend1NumberResultLabel" destination="h0L-Fu-J87" id="FJg-qM-Iap"/>
                         <outlet property="friend1ProfileButton" destination="tRU-wO-3bi" id="dVn-sp-Agb"/>
                         <outlet property="friend1ProfileImageBG" destination="IYl-bz-Lta" id="o5a-zs-65e"/>

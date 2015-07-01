@@ -20,7 +20,6 @@ class NumberNewsfeedController: WKInterfaceController {
     var friend4 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
-    @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
     @IBOutlet weak var userProfileButton: WKInterfaceButton!
     @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
     
@@ -50,7 +49,6 @@ class NumberNewsfeedController: WKInterfaceController {
         // Make sure data was passed properly and update the label accordingly
         if let val = user {
             self.numberResultLabel.setText("\(val.userNumber!)")
-            self.dictationResultLabel.setText("\(val.userActivity!)")
             
             // Load user FB profile pic
             let userFacebookID = Information.getFacebookID()
