@@ -26,6 +26,9 @@ class RateNumberController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        addNumber.setBackgroundImageNamed("forward")
+        minusNumber.setBackgroundImageNamed("back")
     }
 
     override func didDeactivate() {
