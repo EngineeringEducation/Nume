@@ -12,6 +12,7 @@
             <string>FuturaKoyu</string>
             <string>FuturaKoyu</string>
             <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -96,7 +97,7 @@
             <objects>
                 <controller identifier="SocialFeed" id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" spacing="0.0" id="DWW-mr-Y3q">
+                        <group width="134" alignment="center" spacing="3" id="DWW-mr-Y3q">
                             <items>
                                 <label height="1" alignment="right" verticalAlignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +117,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                             </items>
@@ -138,10 +139,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
-                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="h0L-Fu-J87">
+                                <label width="22" height="40" alignment="left" text="0" textAlignment="center" id="h0L-Fu-J87">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
@@ -158,10 +159,10 @@
                                             </items>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
-                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="vXb-aV-L9T">
+                                <label width="22" height="40" alignment="left" text="0" textAlignment="center" id="vXb-aV-L9T">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
@@ -182,10 +183,10 @@
                                             </items>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
-                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="ROB-0Y-daQ">
+                                <label width="22" height="40" alignment="left" text="0" textAlignment="center" id="ROB-0Y-daQ">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
@@ -203,10 +204,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
-                                <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="fNB-uY-vUa">
+                                <label width="22" height="40" alignment="left" text="0" textAlignment="center" id="fNB-uY-vUa">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
@@ -244,26 +245,43 @@
             <objects>
                 <controller identifier="UserDetail" id="deh-LD-Ud7" customClass="UserDetailController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="hpO-cH-xJm">
+                        <group width="1" height="62" alignment="left" spacing="0.0" id="hpO-cH-xJm">
                             <items>
-                                <group width="70" height="70" alignment="left" radius="35" id="0vW-7r-qH3"/>
-                                <label width="67" height="70" alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="35"/>
-                                </label>
+                                <group height="60" alignment="left" layout="vertical" id="3Dv-fV-dMf">
+                                    <items>
+                                        <group alignment="center" radius="22" id="eSd-rG-93U">
+                                            <items>
+                                                <group width="40" height="40" alignment="left" radius="22" id="0vW-7r-qH3"/>
+                                            </items>
+                                            <color key="backgroundColor" red="0.77369967009999996" green="1" blue="0.2254811343" alpha="1" colorSpace="calibratedRGB"/>
+                                            <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
+                                        </group>
+                                        <label width="70" alignment="center" verticalAlignment="center" text="Name" textAlignment="center" numberOfLines="2" id="sPP-60-ass">
+                                            <color key="textColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group height="1" alignment="left" id="NnK-OE-i5S">
+                                    <items>
+                                        <label alignment="center" text="0" textAlignment="center" id="DCN-uI-eNS">
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="35"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                                </group>
                             </items>
+                            <edgeInsets key="margins" left="14" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
-                        <label width="136" alignment="left" text="Name" textAlignment="center" id="sPP-60-ass">
-                            <color key="textColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" weight="light" pointSize="16"/>
-                        </label>
-                        <label width="121" height="82" alignment="center" text="Test Dictation" textAlignment="center" id="ycI-XS-Bya">
+                        <label width="121" alignment="center" text="Test Dictation" textAlignment="left" numberOfLines="100" id="ycI-XS-Bya">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                     </items>
                     <connections>
                         <outlet property="dictationResultLabel" destination="ycI-XS-Bya" id="IG6-YX-xBb"/>
                         <outlet property="numberResultLabel" destination="DCN-uI-eNS" id="WmV-ou-UxC"/>
+                        <outlet property="userBorderBG" destination="eSd-rG-93U" id="u56-Ce-lTS"/>
                         <outlet property="userNameLabel" destination="sPP-60-ass" id="rH4-H3-UdA"/>
                         <outlet property="userProfileImageBG" destination="0vW-7r-qH3" id="rpC-eG-cGn"/>
                     </connections>
