@@ -22,22 +22,27 @@ class NumberNewsfeedController: WKInterfaceController {
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var userProfileButton: WKInterfaceButton!
     @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var userBorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend1ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend1ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend1BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend2ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend2ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend2BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend3NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend3ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend3ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend3BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend4NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend4ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend4ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend4BorderBG: WKInterfaceGroup!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
@@ -53,6 +58,7 @@ class NumberNewsfeedController: WKInterfaceController {
             // Load user FB profile pic
             let userFacebookID = Information.getFacebookID()
             loadProfileImage(userProfileImageBG, userID: userFacebookID)
+            setColor(numberResultLabel, number: val.userNumber!, border: userBorderBG)
             
             // Load four friends' profile pics and rating numbers
             User.getLastFourUsers { (users, error) -> Void in
@@ -74,6 +80,7 @@ class NumberNewsfeedController: WKInterfaceController {
                             
                             self.friend1NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend1ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend1NumberResultLabel, number: friendRating, border: self.friend1BorderBG)
                         } else if index == 1 {
                             self.friend2.userName = friendName
                             self.friend2.userNumber = friendRating
@@ -82,6 +89,7 @@ class NumberNewsfeedController: WKInterfaceController {
                             
                             self.friend2NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend2ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend2NumberResultLabel, number: friendRating, border: self.friend2BorderBG)
                         } else if index == 2 {
                             self.friend3.userName = friendName
                             self.friend3.userNumber = friendRating
@@ -90,6 +98,7 @@ class NumberNewsfeedController: WKInterfaceController {
                             
                             self.friend3NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend3ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend3NumberResultLabel, number: friendRating, border: self.friend3BorderBG)
                         } else if index == 3 {
                             self.friend4.userName = friendName
                             self.friend4.userNumber = friendRating
@@ -98,6 +107,7 @@ class NumberNewsfeedController: WKInterfaceController {
                             
                             self.friend4NumberResultLabel.setText("\(friendRating)")
                             self.loadProfileImage(self.friend4ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend4NumberResultLabel, number: friendRating, border: self.friend4BorderBG)
                         }
                     }
                     
@@ -116,6 +126,44 @@ class NumberNewsfeedController: WKInterfaceController {
         let url: NSURL = NSURL(string: profileURL as String)!
         var data: NSData = NSData(contentsOfURL: url)!
         profileImage.setBackgroundImageData(data)
+    }
+    
+    func setColor(label: WKInterfaceLabel, number: Int, border: WKInterfaceGroup) {
+        switch number {
+        case -5:
+            label.setTextColor(UIColor.redColor())
+            border.setBackgroundColor(UIColor.redColor())
+        case -4:
+            label.setTextColor(UIColor.greenColor())
+            border.setBackgroundColor(UIColor.greenColor())
+        case -3:
+            label.setTextColor(UIColor.blueColor())
+            border.setBackgroundColor(UIColor.blueColor())
+        case -2:
+            label.setTextColor(UIColor.yellowColor())
+            border.setBackgroundColor(UIColor.yellowColor())
+        case -1:
+            label.setTextColor(UIColor.orangeColor())
+            border.setBackgroundColor(UIColor.orangeColor())
+        case 0:
+            label.setTextColor(UIColor.redColor())
+            border.setBackgroundColor(UIColor.redColor())
+        case 1:
+            label.setTextColor(UIColor.blueColor())
+            border.setBackgroundColor(UIColor.blueColor())
+        case 2:
+            label.setTextColor(UIColor.yellowColor())
+            border.setBackgroundColor(UIColor.yellowColor())
+        case 3:
+            label.setTextColor(UIColor.greenColor())
+            border.setBackgroundColor(UIColor.greenColor())
+        case 4:
+            label.setTextColor(UIColor.orangeColor())
+            border.setBackgroundColor(UIColor.orangeColor())
+        default:
+            label.setTextColor(UIColor.redColor())
+            border.setBackgroundColor(UIColor.redColor())
+        }
     }
     
     override func willActivate() {

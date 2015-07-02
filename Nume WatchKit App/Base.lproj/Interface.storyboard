@@ -96,51 +96,70 @@
             <objects>
                 <controller identifier="SocialFeed" id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="DWW-mr-Y3q">
+                        <group width="1" alignment="center" spacing="0.0" id="DWW-mr-Y3q">
                             <items>
-                                <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
+                                <label height="1" alignment="right" verticalAlignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="22"/>
                                 </label>
-                                <group width="40" height="40" alignment="left" radius="22" id="C7D-9W-Cep" userLabel="User">
+                                <group alignment="left" radius="22" id="YXd-W8-vkt">
                                     <items>
-                                        <button width="40" alignment="left" id="lQ5-6g-mJu">
+                                        <group width="40" height="40" alignment="left" radius="22" id="C7D-9W-Cep" userLabel="User">
+                                            <items>
+                                                <button width="40" alignment="center" id="lQ5-6g-mJu">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="eLZ-yE-v2m"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="receiveUserDetailToSend" destination="XLe-eE-GyL" id="eLZ-yE-v2m"/>
-                                            </connections>
-                                        </button>
+                                        </group>
                                     </items>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                             </items>
+                            <edgeInsets key="margins" left="37" right="30" top="0.0" bottom="0.0"/>
                         </group>
                         <group width="134" alignment="left" id="tog-fI-TAb">
                             <items>
-                                <group width="40" height="40" alignment="left" radius="22" id="IYl-bz-Lta" userLabel="Friend 1">
+                                <group alignment="left" radius="22" id="ppt-O4-Nbo">
                                     <items>
-                                        <button width="40" alignment="left" id="tRU-wO-3bi">
+                                        <group width="40" height="40" alignment="left" radius="22" id="IYl-bz-Lta" userLabel="Friend 1">
+                                            <items>
+                                                <button width="40" alignment="left" id="tRU-wO-3bi">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="J4d-PT-hDB"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="receiveFriendOneDetailToSend" destination="XLe-eE-GyL" id="J4d-PT-hDB"/>
-                                            </connections>
-                                        </button>
+                                        </group>
                                     </items>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="h0L-Fu-J87">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
-                                <group width="40" height="40" alignment="left" radius="22" id="qQT-Oo-Sdn" userLabel="Friend 2">
+                                <group alignment="left" radius="22" id="0hl-x2-29z">
                                     <items>
-                                        <button width="40" alignment="right" id="LpX-OQ-e0l">
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="D5x-dG-mP6"/>
-                                            </connections>
-                                        </button>
+                                        <group width="40" height="40" alignment="left" radius="22" id="qQT-Oo-Sdn" userLabel="Friend 2">
+                                            <items>
+                                                <button width="40" alignment="right" id="LpX-OQ-e0l">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="receiveFriendTwoDetailToSend" destination="XLe-eE-GyL" id="D5x-dG-mP6"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
+                                    <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="vXb-aV-L9T">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,30 +169,42 @@
                         </group>
                         <group width="1" alignment="left" id="Man-Jf-fD9">
                             <items>
-                                <group width="40" height="40" alignment="left" radius="22" id="YlY-GD-8Uq" userLabel="Friend 3">
+                                <group alignment="left" radius="22" id="vya-nq-tST">
                                     <items>
-                                        <button width="40" alignment="left" id="FPm-aM-B5V">
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="7Ge-41-4u8"/>
-                                            </connections>
-                                        </button>
+                                        <group width="40" height="40" alignment="left" radius="22" id="YlY-GD-8Uq" userLabel="Friend 3">
+                                            <items>
+                                                <button width="40" alignment="left" id="FPm-aM-B5V">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="receiveFriendThreeDetailToSend" destination="XLe-eE-GyL" id="7Ge-41-4u8"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="ROB-0Y-daQ">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
-                                <group width="40" alignment="left" radius="22" id="5g5-fk-EfC" userLabel="Friend 4">
+                                <group alignment="left" radius="22" id="X9y-Gg-lZN">
                                     <items>
-                                        <button width="40" alignment="left" id="7a0-Bv-kZd">
+                                        <group width="40" height="40" alignment="left" radius="22" id="5g5-fk-EfC" userLabel="Friend 4">
+                                            <items>
+                                                <button width="40" alignment="left" id="7a0-Bv-kZd">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="hSD-LH-Xdn"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="receiveFriendFourDetailToSend" destination="XLe-eE-GyL" id="hSD-LH-Xdn"/>
-                                            </connections>
-                                        </button>
+                                        </group>
                                     </items>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="fNB-uY-vUa">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,19 +214,24 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="friend1BorderBG" destination="ppt-O4-Nbo" id="HCl-wk-ePJ"/>
                         <outlet property="friend1NumberResultLabel" destination="h0L-Fu-J87" id="FJg-qM-Iap"/>
                         <outlet property="friend1ProfileButton" destination="tRU-wO-3bi" id="dVn-sp-Agb"/>
                         <outlet property="friend1ProfileImageBG" destination="IYl-bz-Lta" id="o5a-zs-65e"/>
+                        <outlet property="friend2BorderBG" destination="0hl-x2-29z" id="OHL-sw-QVG"/>
                         <outlet property="friend2NumberResultLabel" destination="vXb-aV-L9T" id="vuJ-Ix-5he"/>
                         <outlet property="friend2ProfileButton" destination="LpX-OQ-e0l" id="Afd-QP-OHw"/>
                         <outlet property="friend2ProfileImageBG" destination="qQT-Oo-Sdn" id="aCT-7R-XtU"/>
+                        <outlet property="friend3BorderBG" destination="vya-nq-tST" id="2a1-zV-c0F"/>
                         <outlet property="friend3NumberResultLabel" destination="ROB-0Y-daQ" id="oGH-M0-Iox"/>
                         <outlet property="friend3ProfileButton" destination="FPm-aM-B5V" id="gqr-V0-14B"/>
                         <outlet property="friend3ProfileImageBG" destination="YlY-GD-8Uq" id="eNS-f0-aOP"/>
+                        <outlet property="friend4BorderBG" destination="X9y-Gg-lZN" id="qiH-bS-l6a"/>
                         <outlet property="friend4NumberResultLabel" destination="fNB-uY-vUa" id="ZLf-fD-5Yd"/>
                         <outlet property="friend4ProfileButton" destination="7a0-Bv-kZd" id="0oa-33-nkW"/>
                         <outlet property="friend4ProfileImageBG" destination="5g5-fk-EfC" id="nKk-jD-pnd"/>
                         <outlet property="numberResultLabel" destination="Xtn-R0-X2A" id="ege-2f-RiI"/>
+                        <outlet property="userBorderBG" destination="YXd-W8-vkt" id="1kv-p5-QwG"/>
                         <outlet property="userProfileButton" destination="lQ5-6g-mJu" id="NT3-PD-xZ8"/>
                         <outlet property="userProfileImageBG" destination="C7D-9W-Cep" id="7ad-SB-cVq"/>
                     </connections>
