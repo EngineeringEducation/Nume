@@ -56,6 +56,7 @@ class RateNumberController: WKInterfaceController {
             addNumber.setEnabled(ratingNumber < maxNumber)
             minusNumber.setEnabled(ratingNumber > minNumber)
             self.user.userNumber = ratingNumber
+            setColor(ratingNumber)
         }
     }
     @IBAction func increaseRating() {
@@ -72,6 +73,32 @@ class RateNumberController: WKInterfaceController {
         ratingNumber -= 1
     }
     
+    func setColor(number: Int) {
+        switch number {
+        case -5:
+            ratingLabel.setTextColor(UIColor.redColor())
+        case -4:
+            ratingLabel.setTextColor(UIColor.greenColor())
+        case -3:
+            ratingLabel.setTextColor(UIColor.blueColor())
+        case -2:
+            ratingLabel.setTextColor(UIColor.yellowColor())
+        case -1:
+            ratingLabel.setTextColor(UIColor.orangeColor())
+        case 0:
+            ratingLabel.setTextColor(UIColor.redColor())
+        case 1:
+            ratingLabel.setTextColor(UIColor.blueColor())
+        case 2:
+            ratingLabel.setTextColor(UIColor.yellowColor())
+        case 3:
+            ratingLabel.setTextColor(UIColor.greenColor())
+        case 4:
+            ratingLabel.setTextColor(UIColor.orangeColor())
+        default:
+            ratingLabel.setTextColor(UIColor.redColor())
+        }
+    }
     
    
 

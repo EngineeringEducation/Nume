@@ -65,8 +65,6 @@ class DictationController: WKInterfaceController {
                 self.pushControllerWithName("SocialFeed", context: self.user)
         }
         
-
-        
     }
 
 }

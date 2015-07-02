@@ -23,7 +23,7 @@
                         <label width="113" height="34" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
-                        <group width="1" alignment="left" verticalAlignment="center" spacing="15" id="IBt-un-Nnk">
+                        <group width="1" alignment="left" verticalAlignment="center" spacing="6" id="IBt-un-Nnk">
                             <items>
                                 <button width="32" height="32" alignment="center" verticalAlignment="center" id="C1L-Da-snV">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -32,9 +32,9 @@
                                         <action selector="decreaseRating" destination="AgC-eL-Hgc" id="kdS-8C-DJ5"/>
                                     </connections>
                                 </button>
-                                <label alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                                <label width="48" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="42"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="40"/>
                                 </label>
                                 <button width="32" height="32" alignment="center" verticalAlignment="center" id="IDt-Hl-aSO">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -64,7 +64,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="302"/>
+            <point key="canvasLocation" x="220" y="301.5"/>
         </scene>
         <!--Dictation Controller-->
         <scene sceneID="Je4-AJ-KYC">
