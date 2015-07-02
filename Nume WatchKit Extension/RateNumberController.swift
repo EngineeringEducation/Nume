@@ -16,6 +16,8 @@ class RateNumberController: WKInterfaceController {
     // Model
     var user = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Daniel", userEmail: "daniel@tradecrafted.com", userFacebookID: "12345") //dummy data for testing now
     
+    @IBOutlet weak var lineImage: WKInterfaceImage!
+    
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -29,6 +31,7 @@ class RateNumberController: WKInterfaceController {
         
         addNumber.setBackgroundImageNamed("forward")
         minusNumber.setBackgroundImageNamed("back")
+        lineImage.setImageNamed("line")
     }
 
     override func didDeactivate() {

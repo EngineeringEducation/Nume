@@ -26,9 +26,8 @@
 		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
-		20B486A41B44AD6F002085C7 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486A01B44AD6F002085C7 /* line.png */; };
-		20B486A61B44AD6F002085C7 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486A11B44AD6F002085C7 /* forward.png */; };
-		20B486A81B44AD6F002085C7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486A21B44AD6F002085C7 /* back.png */; };
+		20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
+		20B486AC1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
 		20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B11B02C71100FA1719 /* DictationController.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
@@ -149,9 +148,7 @@
 		20A552D91AE81D82005AFB27 /* NumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
-		20B486A01B44AD6F002085C7 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
-		20B486A11B44AD6F002085C7 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
-		20B486A21B44AD6F002085C7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Koyu.ttf"; sourceTree = "<group>"; };
 		20C8F6B11B02C71100FA1719 /* DictationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictationController.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../Nume WatchKit Extension/User.swift"; sourceTree = "<group>"; };
@@ -252,9 +249,7 @@
 		201D00911AF1F8BA00D32F95 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				20B486A01B44AD6F002085C7 /* line.png */,
-				20B486A11B44AD6F002085C7 /* forward.png */,
-				20B486A21B44AD6F002085C7 /* back.png */,
+				20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */,
 				20D152721AF978320072E2AA /* Microphone.png */,
 				201D00921AF1F8BA00D32F95 /* Info.plist */,
 			);
@@ -581,6 +576,7 @@
 			files = (
 				201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */,
 				201D008D1AF1F8BA00D32F95 /* Nume WatchKit App.app in Resources */,
+				20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,10 +586,8 @@
 			files = (
 				201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */,
 				20D152731AF978320072E2AA /* Microphone.png in Resources */,
-				20B486A81B44AD6F002085C7 /* back.png in Resources */,
+				20B486AC1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */,
 				201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */,
-				20B486A41B44AD6F002085C7 /* line.png in Resources */,
-				20B486A61B44AD6F002085C7 /* forward.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

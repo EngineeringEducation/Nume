@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Futura Koyu.ttf">
+            <string>FuturaKoyu</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Rate Number Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -11,21 +16,24 @@
                 <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
                         <label width="113" height="34" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
-                            <fontDescription key="font" type="system" weight="light" pointSize="14"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
-                        <group width="1" alignment="left" verticalAlignment="center" id="IBt-un-Nnk">
+                        <group width="1" alignment="left" verticalAlignment="center" spacing="15" id="IBt-un-Nnk">
                             <items>
-                                <button width="31" height="31" alignment="left" verticalAlignment="center" id="C1L-Da-snV">
+                                <button width="31" height="31" alignment="center" verticalAlignment="center" id="C1L-Da-snV">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="decreaseRating" destination="AgC-eL-Hgc" id="kdS-8C-DJ5"/>
                                     </connections>
                                 </button>
-                                <label width="49" height="38" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" weight="light" pointSize="31"/>
+                                <label alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="42"/>
                                 </label>
-                                <button width="32" height="32" alignment="right" verticalAlignment="center" id="IDt-Hl-aSO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button width="32" height="32" alignment="center" verticalAlignment="center" id="IDt-Hl-aSO">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" type="system" pointSize="31"/>
                                     <connections>
                                         <action selector="increaseRating" destination="AgC-eL-Hgc" id="FZQ-Cr-M3e"/>
@@ -33,13 +41,11 @@
                                 </button>
                             </items>
                         </group>
-                        <button width="1" height="20" alignment="left" verticalAlignment="center" id="8Hz-GB-KgI">
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </button>
-                        <button width="119" height="35" alignment="center" verticalAlignment="center" alpha="0.94999999999999996" title="Next" id="aoJ-LH-DLU">
-                            <color key="titleColor" red="0.97647058823529409" green="0.792156862745098" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <fontDescription key="font" type="system" pointSize="15"/>
+                        <imageView alignment="center" verticalAlignment="center" id="Mqf-Hg-yns"/>
+                        <button width="119" height="35" alignment="center" verticalAlignment="bottom" alpha="0.94999999999999996" title="Next" id="aoJ-LH-DLU">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
                             <connections>
                                 <segue destination="fz6-vz-CmI" kind="push" identifier="toMicrophone" id="Q5l-Ke-x9K"/>
                             </connections>
@@ -47,6 +53,7 @@
                     </items>
                     <connections>
                         <outlet property="addNumber" destination="IDt-Hl-aSO" id="NHT-zM-DZF"/>
+                        <outlet property="lineImage" destination="Mqf-Hg-yns" id="yce-K0-eBQ"/>
                         <outlet property="minusNumber" destination="C1L-Da-snV" id="qIL-ZK-aLN"/>
                         <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="ufO-zF-T35"/>
                     </connections>
