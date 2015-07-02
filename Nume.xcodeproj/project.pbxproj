@@ -28,6 +28,8 @@
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
 		20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
 		20B486AC1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
+		20B486AE1B44B803002085C7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AD1B44B803002085C7 /* logo.png */; };
+		20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AF1B44B80B002085C7 /* loading screen-logo.png */; };
 		20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B11B02C71100FA1719 /* DictationController.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
@@ -149,6 +151,8 @@
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
 		20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Koyu.ttf"; sourceTree = "<group>"; };
+		20B486AD1B44B803002085C7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		20B486AF1B44B80B002085C7 /* loading screen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading screen-logo.png"; sourceTree = "<group>"; };
 		20C8F6B11B02C71100FA1719 /* DictationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictationController.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../Nume WatchKit Extension/User.swift"; sourceTree = "<group>"; };
@@ -355,6 +359,8 @@
 		CA51F4A11AF9890A00BC94BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				20B486AD1B44B803002085C7 /* logo.png */,
+				20B486AF1B44B80B002085C7 /* loading screen-logo.png */,
 				CAE8035F1B2AC0D600F9B783 /* transparentButton.png */,
 				CA1DA3411B20ED5D0058C964 /* 1.png */,
 				CA1DA3421B20ED5D0058C964 /* 2.png */,
@@ -615,9 +621,11 @@
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
+				20B486AE1B44B803002085C7 /* logo.png in Resources */,
 				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
 				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 				CA1DA3461B20ED5D0058C964 /* 2.png in Resources */,
+				20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

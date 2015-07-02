@@ -7,6 +7,11 @@
     <customFonts key="customFonts">
         <mutableArray key="Futura Koyu.ttf">
             <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
+            <string>FuturaKoyu</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -20,7 +25,7 @@
                         </label>
                         <group width="1" alignment="left" verticalAlignment="center" spacing="15" id="IBt-un-Nnk">
                             <items>
-                                <button width="31" height="31" alignment="center" verticalAlignment="center" id="C1L-Da-snV">
+                                <button width="32" height="32" alignment="center" verticalAlignment="center" id="C1L-Da-snV">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <connections>
@@ -94,8 +99,8 @@
                         <group width="1" alignment="left" id="DWW-mr-Y3q">
                             <items>
                                 <label width="47" height="40" alignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="22"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="22"/>
                                 </label>
                                 <group width="40" height="40" alignment="left" radius="22" id="C7D-9W-Cep" userLabel="User">
                                     <items>
@@ -124,8 +129,8 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="h0L-Fu-J87">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
                                 <group width="40" height="40" alignment="left" radius="22" id="qQT-Oo-Sdn" userLabel="Friend 2">
                                     <items>
@@ -138,8 +143,8 @@
                                     </items>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="vXb-aV-L9T">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
                             </items>
                         </group>
@@ -156,8 +161,8 @@
                                     </items>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="ROB-0Y-daQ">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
                                 <group width="40" alignment="left" radius="22" id="5g5-fk-EfC" userLabel="Friend 4">
                                     <items>
@@ -171,8 +176,8 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </group>
                                 <label width="20" height="40" alignment="left" text="0" textAlignment="center" id="fNB-uY-vUa">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="17"/>
                                 </label>
                             </items>
                         </group>
