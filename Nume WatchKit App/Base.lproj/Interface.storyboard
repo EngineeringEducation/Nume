@@ -22,7 +22,7 @@
                 <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
                         <label width="113" height="34" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
-                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="13"/>
                         </label>
                         <group width="1" alignment="left" verticalAlignment="center" spacing="6" id="IBt-un-Nnk">
                             <items>
@@ -97,7 +97,7 @@
             <objects>
                 <controller identifier="SocialFeed" id="XLe-eE-GyL" customClass="NumberNewsfeedController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <group width="134" alignment="center" spacing="3" id="DWW-mr-Y3q">
+                        <group width="134" alignment="center" spacing="5" id="DWW-mr-Y3q">
                             <items>
                                 <label height="1" alignment="right" verticalAlignment="center" text="0" textAlignment="center" id="Xtn-R0-X2A">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
