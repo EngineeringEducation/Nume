@@ -49,49 +49,49 @@ class UserDetailController: WKInterfaceController {
     func setColor(username: WKInterfaceLabel, label: WKInterfaceLabel, number: Int, border: WKInterfaceGroup) {
         switch number {
         case -5:
-            username.setTextColor(UIColor.redColor())
-            label.setTextColor(UIColor.redColor())
-            border.setBackgroundColor(UIColor.redColor())
+            username.setTextColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
+            label.setTextColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
         case -4:
-            username.setTextColor(UIColor.greenColor())
-            label.setTextColor(UIColor.greenColor())
-            border.setBackgroundColor(UIColor.greenColor())
+            username.setTextColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
+            label.setTextColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
         case -3:
-            username.setTextColor(UIColor.blueColor())
-            label.setTextColor(UIColor.blueColor())
-            border.setBackgroundColor(UIColor.blueColor())
+            username.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
+            label.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
         case -2:
-            username.setTextColor(UIColor.yellowColor())
-            label.setTextColor(UIColor.yellowColor())
-            border.setBackgroundColor(UIColor.yellowColor())
+            username.setTextColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
+            label.setTextColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
         case -1:
-            username.setTextColor(UIColor.orangeColor())
-            label.setTextColor(UIColor.orangeColor())
-            border.setBackgroundColor(UIColor.orangeColor())
+            username.setTextColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
+            label.setTextColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
         case 0:
-            username.setTextColor(UIColor.redColor())
-            label.setTextColor(UIColor.redColor())
-            border.setBackgroundColor(UIColor.redColor())
+            username.setTextColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
+            label.setTextColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
         case 1:
-            username.setTextColor(UIColor.blueColor())
-            label.setTextColor(UIColor.blueColor())
-            border.setBackgroundColor(UIColor.blueColor())
+            username.setTextColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
+            label.setTextColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
         case 2:
-            username.setTextColor(UIColor.yellowColor())
-            label.setTextColor(UIColor.yellowColor())
-            border.setBackgroundColor(UIColor.yellowColor())
+            username.setTextColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
+            label.setTextColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
         case 3:
-            username.setTextColor(UIColor.greenColor())
-            label.setTextColor(UIColor.greenColor())
-            border.setBackgroundColor(UIColor.greenColor())
+            username.setTextColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
+            label.setTextColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
         case 4:
-            username.setTextColor(UIColor.orangeColor())
-            label.setTextColor(UIColor.orangeColor())
-            border.setBackgroundColor(UIColor.orangeColor())
+            username.setTextColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
+            label.setTextColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
         default:
-            username.setTextColor(UIColor.redColor())
-            label.setTextColor(UIColor.redColor())
-            border.setBackgroundColor(UIColor.redColor())
+            username.setTextColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
+            label.setTextColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
         }
     }
     

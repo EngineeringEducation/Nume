@@ -76,27 +76,27 @@ class RateNumberController: WKInterfaceController {
     func setColor(number: Int) {
         switch number {
         case -5:
-            ratingLabel.setTextColor(UIColor.redColor())
+            ratingLabel.setTextColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
         case -4:
-            ratingLabel.setTextColor(UIColor.greenColor())
+            ratingLabel.setTextColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
         case -3:
-            ratingLabel.setTextColor(UIColor.blueColor())
+            ratingLabel.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
         case -2:
-            ratingLabel.setTextColor(UIColor.yellowColor())
+            ratingLabel.setTextColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
         case -1:
-            ratingLabel.setTextColor(UIColor.orangeColor())
+            ratingLabel.setTextColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
         case 0:
-            ratingLabel.setTextColor(UIColor.redColor())
+            ratingLabel.setTextColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
         case 1:
-            ratingLabel.setTextColor(UIColor.blueColor())
+            ratingLabel.setTextColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
         case 2:
-            ratingLabel.setTextColor(UIColor.yellowColor())
+            ratingLabel.setTextColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
         case 3:
-            ratingLabel.setTextColor(UIColor.greenColor())
+            ratingLabel.setTextColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
         case 4:
-            ratingLabel.setTextColor(UIColor.orangeColor())
+            ratingLabel.setTextColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
         default:
-            ratingLabel.setTextColor(UIColor.redColor())
+            ratingLabel.setTextColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
         }
     }
     
