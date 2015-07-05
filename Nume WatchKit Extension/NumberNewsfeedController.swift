@@ -183,16 +183,16 @@ class NumberNewsfeedController: WKInterfaceController {
 
     
     @IBAction func receiveFriendOneDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend1)
+        self.presentControllerWithName("UserDetail", context: self.friend1)
     }
     @IBAction func receiveFriendTwoDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend2)
+        self.presentControllerWithName("UserDetail", context: self.friend2)
     }
     @IBAction func receiveFriendThreeDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend3)
+        self.presentControllerWithName("UserDetail", context: self.friend3)
     }
     @IBAction func receiveFriendFourDetailToSend() {
-        self.pushControllerWithName("UserDetail", context: self.friend4)
+        self.presentControllerWithName("UserDetail", context: self.friend4)
     }
 
 
@@ -204,7 +204,7 @@ class NumberNewsfeedController: WKInterfaceController {
         let facebookID = Information.getFacebookID()
         
         var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: thisUser)
+        self.presentControllerWithName("UserDetail", context: thisUser)
     }
 
 }

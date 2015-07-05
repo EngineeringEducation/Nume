@@ -24,7 +24,7 @@ class UserDetailController: WKInterfaceController {
     // Views
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+                    
         // Make sure data was passed properly and update the label accordingly
         if let val = context as? User {
             self.numberResultLabel.setText("\(val.userNumber!)")
