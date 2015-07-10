@@ -21,10 +21,10 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RateNumberController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <label width="113" height="34" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
-                            <fontDescription key="font" type="system" weight="light" pointSize="13"/>
+                        <label width="113" height="46" alignment="center" text="How do you feel right now?" textAlignment="center" numberOfLines="3" minimumScaleFactor="0.20000000000000015" id="03W-c7-uTB">
+                            <fontDescription key="font" type="system" weight="light" pointSize="15"/>
                         </label>
-                        <group width="1" alignment="left" verticalAlignment="center" spacing="6" id="IBt-un-Nnk">
+                        <group width="1" alignment="left" verticalAlignment="center" spacing="5" id="IBt-un-Nnk">
                             <items>
                                 <button width="32" height="32" alignment="center" verticalAlignment="center" id="C1L-Da-snV">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -33,7 +33,7 @@
                                         <action selector="decreaseRating" destination="AgC-eL-Hgc" id="kdS-8C-DJ5"/>
                                     </connections>
                                 </button>
-                                <label width="48" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
+                                <label width="51" height="46" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
                                     <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="40"/>
                                 </label>
@@ -47,11 +47,10 @@
                                 </button>
                             </items>
                         </group>
-                        <imageView alignment="center" verticalAlignment="center" id="Mqf-Hg-yns"/>
                         <button width="119" height="35" alignment="center" verticalAlignment="bottom" alpha="0.94999999999999996" title="Next" id="aoJ-LH-DLU">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
                             <connections>
                                 <segue destination="fz6-vz-CmI" kind="push" identifier="toMicrophone" id="Q5l-Ke-x9K"/>
                             </connections>
@@ -59,29 +58,23 @@
                     </items>
                     <connections>
                         <outlet property="addNumber" destination="IDt-Hl-aSO" id="NHT-zM-DZF"/>
-                        <outlet property="lineImage" destination="Mqf-Hg-yns" id="yce-K0-eBQ"/>
                         <outlet property="minusNumber" destination="C1L-Da-snV" id="qIL-ZK-aLN"/>
                         <outlet property="ratingLabel" destination="kjk-Cl-pzw" id="ufO-zF-T35"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="301.5"/>
+            <point key="canvasLocation" x="220" y="301"/>
         </scene>
         <!--Dictation Controller-->
         <scene sceneID="Je4-AJ-KYC">
             <objects>
                 <controller id="fz6-vz-CmI" customClass="DictationController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <button width="47" height="40" alignment="center" verticalAlignment="center" backgroundImage="Microphone" id="82Z-bK-eWK">
+                        <button alignment="center" verticalAlignment="center" backgroundImage="mic" id="82Z-bK-eWK">
                             <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="35"/>
                             <connections>
                                 <action selector="onVoiceDictationTap" destination="fz6-vz-CmI" id="sZF-wP-Fl5"/>
-                            </connections>
-                        </button>
-                        <button width="134" height="46" alignment="center" verticalAlignment="bottom" title="Send" id="HdP-AB-6C7">
-                            <connections>
-                                <segue destination="XLe-eE-GyL" kind="push" identifier="toNumberNewsFeed" id="9hc-Lr-hb5"/>
                             </connections>
                         </button>
                     </items>
@@ -256,7 +249,7 @@
                                             <color key="backgroundColor" red="0.77369967009999996" green="1" blue="0.2254811343" alpha="1" colorSpace="calibratedRGB"/>
                                             <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
                                         </group>
-                                        <label width="70" alignment="center" verticalAlignment="center" text="Name" textAlignment="center" numberOfLines="2" id="sPP-60-ass">
+                                        <label width="74" alignment="center" verticalAlignment="center" text="Name" textAlignment="center" numberOfLines="2" id="sPP-60-ass">
                                             <color key="textColor" red="0.84773334700000003" green="0.90415810029999999" blue="0.39117495889999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="font" type="system" weight="light" pointSize="10"/>
                                         </label>

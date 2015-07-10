@@ -14,7 +14,7 @@ import Foundation
 class RateNumberController: WKInterfaceController {
     
     // Model
-    var user = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Daniel", userEmail: "daniel@tradecrafted.com", userFacebookID: "12345") //dummy data for testing now
+    var user = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Daniel", userEmail: "daniel@tradecrafted.com", userFacebookID: "12345") //dummy data for testing
     
     @IBOutlet weak var lineImage: WKInterfaceImage!
     
@@ -31,7 +31,6 @@ class RateNumberController: WKInterfaceController {
         
         addNumber.setBackgroundImageNamed("arrowr")
         minusNumber.setBackgroundImageNamed("arrowl")
-        lineImage.setImageNamed("line")
     }
 
     override func didDeactivate() {
