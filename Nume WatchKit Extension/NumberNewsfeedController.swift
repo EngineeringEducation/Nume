@@ -137,32 +137,32 @@ class NumberNewsfeedController: WKInterfaceController {
             label.setTextColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
             border.setBackgroundColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
         case -3:
-            label.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
+            label.setTextColor(UIColor(red:0.10, green:0.74, blue:0.93, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.10, green:0.74, blue:0.93, alpha:1.0))
         case -2:
-            label.setTextColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.76, green:0.67, blue:0.18, alpha:1.0))
+            label.setTextColor(UIColor(red:0.51, green:0.83, blue:0.97, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.51, green:0.83, blue:0.97, alpha:1.0))
         case -1:
-            label.setTextColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.84, green:0.60, blue:0.16, alpha:1.0))
+            label.setTextColor(UIColor(red:0.71, green:0.89, blue:0.98, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.71, green:0.89, blue:0.98, alpha:1.0))
         case 0:
-            label.setTextColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.90, green:0.54, blue:0.14, alpha:1.0))
+            label.setTextColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0))
         case 1:
-            label.setTextColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.86, green:0.59, blue:0.15, alpha:1.0))
+            label.setTextColor(UIColor(red:1.00, green:0.94, blue:0.79, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:1.00, green:0.94, blue:0.79, alpha:1.0))
         case 2:
-            label.setTextColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.87, green:0.57, blue:0.15, alpha:1.0))
+            label.setTextColor(UIColor(red:0.98, green:0.87, blue:0.56, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.87, blue:0.56, alpha:1.0))
         case 3:
-            label.setTextColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.95, green:0.50, blue:0.13, alpha:1.0))
+            label.setTextColor(UIColor(red:0.98, green:0.84, blue:0.41, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.84, blue:0.41, alpha:1.0))
         case 4:
-            label.setTextColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.95, green:0.39, blue:0.13, alpha:1.0))
+            label.setTextColor(UIColor(red:0.98, green:0.77, blue:0.20, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.77, blue:0.20, alpha:1.0))
         default:
-            label.setTextColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.94, green:0.27, blue:0.14, alpha:1.0))
+            label.setTextColor(UIColor(red:0.96, green:0.65, blue:0.21, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.96, green:0.65, blue:0.21, alpha:1.0))
         }
     }
     
