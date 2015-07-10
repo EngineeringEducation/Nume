@@ -23,8 +23,7 @@
                             <exclude reference="gX1-kW-xq5"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="192" y="189" width="97" height="102"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="2cC-Br-UQr"/>
                             <exclude reference="gX1-kW-xq5"/>
@@ -43,8 +42,7 @@
                             <exclude reference="xtj-52-8vn"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="139" y="304" width="203" height="84"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <exclude reference="44d-cE-hEg"/>
                             <include reference="xtj-52-8vn"/>

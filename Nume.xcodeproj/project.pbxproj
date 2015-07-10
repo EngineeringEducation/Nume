@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D00931AF1F8BA00D32F95 /* Interface.storyboard */; };
 		201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00961AF1F8BA00D32F95 /* Images.xcassets */; };
 		201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201F76DE1B502B3300D99B08 /* Images.xcassets */; };
 		206EC9F61B30BAC900F6B76E /* NumeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 206EC9F51B30BAC900F6B76E /* NumeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		206EC9FC1B30BAC900F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
 		206ECA051B30BAC900F6B76E /* NumeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECA041B30BAC900F6B76E /* NumeKitTests.swift */; };
@@ -23,7 +24,6 @@
 		206ECA091B30BAC900F6B76E /* NumeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		206ECA111B30BAF900F6B76E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
 		206ECA141B30BB7200F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
-		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
 		20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
@@ -136,6 +136,7 @@
 		201D00921AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00941AF1F8BA00D32F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		201D00961AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		201F76DE1B502B3300D99B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		206EC9F11B30BAC900F6B76E /* NumeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206EC9F41B30BAC900F6B76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206EC9F51B30BAC900F6B76E /* NumeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumeKit.h; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		209307401B06C1F7003C4D80 /* Nume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Nume.entitlements; sourceTree = "<group>"; };
 		209307411B06C5C8003C4D80 /* Nume WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nume WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		20A552D01AE81D82005AFB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20A552D31AE81D82005AFB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		20A552D91AE81D82005AFB27 /* NumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -331,10 +331,10 @@
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
-				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
+				201F76DE1B502B3300D99B08 /* Images.xcassets */,
 			);
 			path = Nume;
 			sourceTree = "<group>";
@@ -513,7 +513,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Daniel Hsu";
 				TargetAttributes = {
 					201D007E1AF1F8BA00D32F95 = {
@@ -553,7 +553,7 @@
 				};
 			};
 			buildConfigurationList = 20A552BD1AE81D82005AFB27 /* Build configuration list for PBXProject "Nume" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -619,11 +619,11 @@
 				CA1DA3451B20ED5D0058C964 /* 1.png in Resources */,
 				CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */,
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
+				201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
 				20B486AE1B44B803002085C7 /* logo.png in Resources */,
 				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
-				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
 				CA1DA3461B20ED5D0058C964 /* 2.png in Resources */,
 				20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */,
 			);

@@ -29,8 +29,8 @@ class RateNumberController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        addNumber.setBackgroundImageNamed("forward")
-        minusNumber.setBackgroundImageNamed("back")
+        addNumber.setBackgroundImageNamed("arrowr")
+        minusNumber.setBackgroundImageNamed("arrowl")
         lineImage.setImageNamed("line")
     }
 
@@ -76,9 +76,9 @@ class RateNumberController: WKInterfaceController {
     func setColor(number: Int) {
         switch number {
         case -5:
-            ratingLabel.setTextColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
+            ratingLabel.setTextColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0))
         case -4:
-            ratingLabel.setTextColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
+            ratingLabel.setTextColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
         case -3:
             ratingLabel.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
         case -2:

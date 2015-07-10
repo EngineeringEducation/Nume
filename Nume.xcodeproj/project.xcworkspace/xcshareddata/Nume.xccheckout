@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D8517AAB-5CCA-4287-8913-39B3F7604348</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Nume</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1B5120E8A2ECD17A83B77F4DAF7AB9D8EDE2B056</key>
 		<string>https://github.com/TradecraftEngineering/nume.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Nume.xcodeproj/project.xcworkspace</string>
+	<string>Nume.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1B5120E8A2ECD17A83B77F4DAF7AB9D8EDE2B056</key>

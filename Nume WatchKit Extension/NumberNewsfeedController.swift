@@ -131,11 +131,11 @@ class NumberNewsfeedController: WKInterfaceController {
     func setColor(label: WKInterfaceLabel, number: Int, border: WKInterfaceGroup) {
         switch number {
         case -5:
-            label.setTextColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.32, green:0.72, blue:0.28, alpha:1.0))
+            label.setTextColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0))
         case -4:
-            label.setTextColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
-            border.setBackgroundColor(UIColor(red:0.50, green:0.76, blue:0.25, alpha:1.0))
+            label.setTextColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
         case -3:
             label.setTextColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
             border.setBackgroundColor(UIColor(red:0.64, green:0.74, blue:0.22, alpha:1.0))
