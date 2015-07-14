@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         
         self.profilePic!.layer.cornerRadius = 40
         self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profilePic!.layer.borderColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0).CGColor
         self.profilePic!.layer.borderWidth = 3.0
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
@@ -65,12 +65,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(28, 600, 319, 30)
+        loginView.frame = CGRectMake(84, 610, 200, 30)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
         
-        skipButton.frame = CGRectMake(28, 600, 319, 30)
+        skipButton.frame = CGRectMake(84, 610, 200, 30)
         skipButton.backgroundColor = UIColor.whiteColor()
         skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)
         skipButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -98,6 +98,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         for _ in 0..<pageCount {
             pageViews.append(nil)
         }
+        pageControl.pageIndicatorTintColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0)
         
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count), height: pagesScrollViewSize.height)
