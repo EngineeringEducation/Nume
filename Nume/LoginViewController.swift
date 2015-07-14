@@ -102,8 +102,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         for _ in 0..<pageCount {
             pageViews.append(nil)
         }
-        pageControl.pageIndicatorTintColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0)
-        pageControl.currentPageIndicatorTintColor = UIColor(red:0.11, green:0.13, blue:0.45, alpha:1.0)
+        pageControl.pageIndicatorTintColor = UIColor(red:0.11, green:0.13, blue:0.45, alpha:1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0)
         
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count), height: pagesScrollViewSize.height)
@@ -228,7 +228,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
         
-        if (page == 3) {
+        if (page == 2) {
             skipButton.hidden = true
         }
         
