@@ -36,7 +36,6 @@
 		20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B11B02C71100FA1719 /* DictationController.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
-		CA1DA3481B20ED5D0058C964 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3441B20ED5D0058C964 /* 4.png */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
@@ -160,7 +159,6 @@
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
 		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../Nume WatchKit Extension/User.swift"; sourceTree = "<group>"; };
 		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
-		CA1DA3441B20ED5D0058C964 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51F4991AF9882D00BC94BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 				208C58D71B54950300603F8B /* 01.png */,
 				208C58D91B54950C00603F8B /* 02.png */,
 				208C58DB1B54951A00603F8B /* 03.png */,
-				CA1DA3441B20ED5D0058C964 /* 4.png */,
 				CA51F4A71AF98B4000BC94BC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -624,7 +621,6 @@
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
 				20B486AE1B44B803002085C7 /* logo.png in Resources */,
-				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
 				20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
