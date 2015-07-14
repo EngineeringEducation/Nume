@@ -70,7 +70,7 @@
             <objects>
                 <controller id="fz6-vz-CmI" customClass="DictationController" customModule="Nume_WatchKit_Extension">
                     <items>
-                        <button alignment="center" verticalAlignment="center" backgroundImage="mic" id="82Z-bK-eWK">
+                        <button alignment="center" verticalAlignment="center" backgroundImage="microphone" id="82Z-bK-eWK">
                             <color key="backgroundColor" red="1" green="0.64988693149999999" blue="0.18231684479999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="35"/>
                             <connections>
