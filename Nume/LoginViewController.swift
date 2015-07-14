@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     override func viewWillAppear(animated: Bool) {
         numifyUserLabel.text = "Numify"
-        numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 30)
+        numifyUserLabel.font = UIFont(name: "Hypatia Sans Pro", size: 30)
         
         self.profilePic!.layer.cornerRadius = 40
         self.profilePic!.clipsToBounds = true
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     Information.storeFacebookID(userFacebookID as String)
                     
                     self.numifyUserLabel.text = "Hi \(userName)!"
-                    self.numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 23)
+                    self.numifyUserLabel.font = UIFont(name: "Hypatia Sans Pro", size: 23)
                 }
             })
             
@@ -165,7 +165,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             
                             // Updates top of login controller with user details after FB login
                             self.numifyUserLabel.text = "Hi \(userName)!"
-                            self.numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 23)
+                            self.numifyUserLabel.font = UIFont(name: "Hypatia Sans Pro", size: 23)
                         }
                     })
                     
@@ -180,7 +180,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         println("User Logged Out")
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             numifyUserLabel.text = "Numify"
-            self.numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 30)
+            self.numifyUserLabel.font = UIFont(name: "Hypatia Sans Pro", size: 30)
         }
     }
 

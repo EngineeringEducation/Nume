@@ -17,6 +17,7 @@
 		201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00961AF1F8BA00D32F95 /* Images.xcassets */; };
 		201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201F76DE1B502B3300D99B08 /* Images.xcassets */; };
+		2041F2641B55BBA8005CA757 /* Hypatia-Sans-Pro_23434.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2041F2631B55BBA8005CA757 /* Hypatia-Sans-Pro_23434.ttf */; };
 		206EC9F61B30BAC900F6B76E /* NumeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 206EC9F51B30BAC900F6B76E /* NumeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		206EC9FC1B30BAC900F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
 		206ECA051B30BAC900F6B76E /* NumeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECA041B30BAC900F6B76E /* NumeKitTests.swift */; };
@@ -136,6 +137,7 @@
 		201D00941AF1F8BA00D32F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		201D00961AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		201F76DE1B502B3300D99B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2041F2631B55BBA8005CA757 /* Hypatia-Sans-Pro_23434.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hypatia-Sans-Pro_23434.ttf"; sourceTree = "<group>"; };
 		206EC9F11B30BAC900F6B76E /* NumeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206EC9F41B30BAC900F6B76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206EC9F51B30BAC900F6B76E /* NumeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumeKit.h; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		CA51F4A11AF9890A00BC94BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2041F2631B55BBA8005CA757 /* Hypatia-Sans-Pro_23434.ttf */,
 				20B486AD1B44B803002085C7 /* logo.png */,
 				20B486AF1B44B80B002085C7 /* loading screen-logo.png */,
 				CAE8035F1B2AC0D600F9B783 /* transparentButton.png */,
@@ -617,6 +620,7 @@
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
 				208C58DA1B54950C00603F8B /* 02.png in Resources */,
 				208C58DC1B54951A00603F8B /* 03.png in Resources */,
+				2041F2641B55BBA8005CA757 /* Hypatia-Sans-Pro_23434.ttf in Resources */,
 				201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
