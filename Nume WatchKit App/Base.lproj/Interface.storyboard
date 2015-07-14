@@ -34,7 +34,7 @@
                                     </connections>
                                 </button>
                                 <label width="51" height="46" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="kjk-Cl-pzw">
-                                    <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" name="FuturaKoyu" family="Futura" pointSize="40"/>
                                 </label>
                                 <button width="32" height="32" alignment="center" verticalAlignment="center" id="IDt-Hl-aSO">

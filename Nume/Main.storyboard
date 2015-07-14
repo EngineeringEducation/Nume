@@ -22,12 +22,14 @@
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-fX-vMZ">
                                         <rect key="frame" x="0.0" y="40" width="320" height="430"/>
+                                        <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="430" id="omH-cG-pK6"/>
                                             <constraint firstAttribute="width" constant="320" id="qH9-S6-nRA"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" constant="40" id="0AR-59-4c5"/>
                                     <constraint firstAttribute="height" constant="460" id="2fl-j9-WJj"/>
@@ -54,8 +56,8 @@
                                             <constraint firstAttribute="height" constant="46" id="fdh-fB-Pbm"/>
                                             <constraint firstAttribute="width" constant="149" id="lPr-xQ-kyw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUv-ME-4hd" userLabel="Profile Picture View" customClass="FBSDKProfilePictureView">
@@ -77,7 +79,7 @@
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="iUv-ME-4hd" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="15" id="4OL-oC-kLo"/>
                                     <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="33" id="5SQ-rj-RdB"/>
@@ -88,6 +90,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" red="0.01410602616" green="0.51467367559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Mt6-a2-RmV" firstAttribute="leading" secondItem="b3z-SQ-9Nk" secondAttribute="leadingMargin" constant="-16" id="5Zh-fi-8IL"/>
                             <constraint firstItem="CbY-ID-w4G" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="550" id="S0h-3H-zie"/>
