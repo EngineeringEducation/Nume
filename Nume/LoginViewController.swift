@@ -56,7 +56,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     Information.storeName(userName as String)
                     Information.storeFacebookID(userFacebookID as String)
                     
-                    self.numifyUserLabel.text = "Hi, \(userName)!"
+                    self.numifyUserLabel.text = "Hi \(userName)!"
                     self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                 }
             })
@@ -65,12 +65,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(84, 610, 200, 30)
+        loginView.frame = CGRectMake(86, 610, 200, 30)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
         
-        skipButton.frame = CGRectMake(84, 610, 200, 30)
+        skipButton.frame = CGRectMake(86, 610, 200, 30)
         skipButton.backgroundColor = UIColor.whiteColor()
         skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)
         skipButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -159,7 +159,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                             
                             
                             // Updates top of login controller with user details after FB login
-                            self.numifyUserLabel.text = "Hi, \(userName)!"
+                            self.numifyUserLabel.text = "Hi \(userName)!"
                             self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
                         }
                     })
