@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     override func viewWillAppear(animated: Bool) {
         numifyUserLabel.text = "Numify"
-        numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 38)
+        numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 30)
         
         self.profilePic!.layer.cornerRadius = 40
         self.profilePic!.clipsToBounds = true
@@ -65,12 +65,14 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(36, 610, 300, 30)
+        loginView.frame = CGRectMake(36, 600, 300, 32)
+        loginView.titleLabel!.font = UIFont(name: "Futura", size: 13)        
+        loginView.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
         
-        skipButton.frame = CGRectMake(36, 610, 300, 30)
+        skipButton.frame = CGRectMake(36, 600, 300, 32)
         skipButton.backgroundColor = UIColor.whiteColor()
         skipButton.setTitleColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0), forState: UIControlState.Normal)
         skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)
@@ -101,7 +103,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             pageViews.append(nil)
         }
         pageControl.pageIndicatorTintColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0)
-        pageControl.currentPageIndicatorTintColor = UIColor(red:0.21, green:0.22, blue:0.45, alpha:1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red:0.11, green:0.13, blue:0.45, alpha:1.0)
         
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count), height: pagesScrollViewSize.height)
@@ -178,7 +180,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         println("User Logged Out")
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             numifyUserLabel.text = "Numify"
-            self.numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 38)
+            self.numifyUserLabel.font = UIFont(name: "Bradley Hand", size: 30)
         }
     }
 
