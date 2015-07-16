@@ -63,16 +63,17 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
             
         }
         
+        
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(36, 600, 300, 32)
+        loginView.frame = CGRectMake(self.view.frame.width / 8, self.view.frame.height - 57, self.view.frame.width * 3 / 4, 32)
         loginView.titleLabel!.font = UIFont(name: "Futura", size: 13)        
         loginView.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
         
-        skipButton.frame = CGRectMake(36, 600, 300, 32)
+        skipButton.frame = CGRectMake(self.view.frame.width / 8, self.view.frame.height - 57, self.view.frame.width * 3 / 4, 32)
         skipButton.backgroundColor = UIColor.whiteColor()
         skipButton.setTitleColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0), forState: UIControlState.Normal)
         skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)

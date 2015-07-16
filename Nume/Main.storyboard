@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Da-rh-JnP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Da-rh-JnP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Hypatia-Sans-Pro_23434.ttf">
@@ -20,45 +21,66 @@
                         <viewControllerLayoutGuide type="bottom" id="gHa-ZI-vAW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b3z-SQ-9Nk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haP-dd-L8h" userLabel="Scroll View Container">
-                                <rect key="frame" x="0.0" y="95" width="320" height="460"/>
+                                <rect key="frame" x="171" y="115" width="258" height="370"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-fX-vMZ">
-                                        <rect key="frame" x="0.0" y="50" width="321" height="402"/>
+                                        <rect key="frame" x="-51" y="5" width="360" height="360"/>
                                         <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" priority="750" constant="350" id="omH-cG-pK6"/>
-                                            <constraint firstAttribute="width" priority="750" constant="320" id="qH9-S6-nRA"/>
-                                            <constraint firstAttribute="width" secondItem="7Tb-fX-vMZ" secondAttribute="height" multiplier="4:5" id="wf7-yg-Jxc"/>
+                                            <constraint firstAttribute="height" constant="300" id="3vQ-iE-KdX"/>
+                                            <constraint firstAttribute="width" priority="250" constant="300" id="qH9-S6-nRA"/>
+                                            <constraint firstAttribute="height" priority="250" constant="200" id="vZF-Ek-b4A"/>
+                                            <constraint firstAttribute="width" constant="250" id="yjJ-Kk-Dlz"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3vQ-iE-KdX"/>
+                                                <exclude reference="qH9-S6-nRA"/>
+                                                <exclude reference="vZF-Ek-b4A"/>
+                                                <exclude reference="yjJ-Kk-Dlz"/>
+                                            </mask>
+                                        </variation>
                                     </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-ID-w4G">
+                                        <rect key="frame" x="110" y="363" width="39" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="DHk-iG-ep1"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" red="0.45353929920000002" green="0.45353929920000002" blue="0.45353929920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" constant="50" id="0AR-59-4c5"/>
                                     <constraint firstAttribute="height" constant="460" id="2fl-j9-WJj"/>
+                                    <constraint firstItem="7Tb-fX-vMZ" firstAttribute="top" secondItem="haP-dd-L8h" secondAttribute="top" constant="5" id="3B4-Qk-Bg4"/>
                                     <constraint firstAttribute="centerX" secondItem="7Tb-fX-vMZ" secondAttribute="centerX" id="Gh0-uT-gFu"/>
-                                    <constraint firstItem="7Tb-fX-vMZ" firstAttribute="leading" secondItem="haP-dd-L8h" secondAttribute="leading" id="Wva-w7-DS9"/>
+                                    <constraint firstItem="CbY-ID-w4G" firstAttribute="top" secondItem="7Tb-fX-vMZ" secondAttribute="bottom" constant="-2" id="JUt-gW-rAL"/>
+                                    <constraint firstAttribute="centerX" secondItem="CbY-ID-w4G" secondAttribute="centerX" id="Sph-Gq-BXr"/>
+                                    <constraint firstAttribute="centerY" secondItem="7Tb-fX-vMZ" secondAttribute="centerY" id="Vb2-rM-JCm"/>
                                     <constraint firstAttribute="width" constant="320" id="ZCd-KW-D1d"/>
+                                    <constraint firstAttribute="width" secondItem="haP-dd-L8h" secondAttribute="height" multiplier="16:23" id="iAw-cy-VTb"/>
+                                    <constraint firstAttribute="centerX" secondItem="7Tb-fX-vMZ" secondAttribute="centerX" id="jbL-2O-BRK"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Tb-fX-vMZ" secondAttribute="bottom" constant="5" id="rUp-9j-TWh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2fl-j9-WJj"/>
+                                        <exclude reference="ZCd-KW-D1d"/>
+                                        <exclude reference="Gh0-uT-gFu"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-ID-w4G">
-                                <rect key="frame" x="0.0" y="436" width="320" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="DHk-iG-ep1"/>
-                                </constraints>
-                                <color key="pageIndicatorTintColor" red="0.45353929920000002" green="0.45353929920000002" blue="0.45353929920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-a2-RmV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUv-ME-4hd" userLabel="Profile Picture View" customClass="FBSDKProfilePictureView">
-                                        <rect key="frame" x="227" y="27" width="80" height="80"/>
+                                        <rect key="frame" x="507" y="27" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iUv-ME-4hd" secondAttribute="height" multiplier="1:1" id="QWo-Cj-asl"/>
@@ -75,7 +97,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numify" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-ZK-uNs">
-                                        <rect key="frame" x="105" y="45" width="109" height="54"/>
+                                        <rect key="frame" x="180" y="66" width="240" height="23"/>
                                         <fontDescription key="fontDescription" name="HypatiaSansPro-Regular" family="Hypatia Sans Pro" pointSize="23"/>
                                         <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -85,28 +107,44 @@
                                 <color key="tintColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="PrF-WB-yAk" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="9" id="35v-rQ-9lr"/>
-                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" priority="750" constant="45" id="5SQ-rj-RdB"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="width" secondItem="Mt6-a2-RmV" secondAttribute="width" multiplier="0.4" id="JmI-z0-0lK"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="66" id="LkJ-lj-k6b"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="105" id="PLg-4K-pRQ"/>
                                     <constraint firstItem="Cm7-ZK-uNs" firstAttribute="leading" secondItem="PrF-WB-yAk" secondAttribute="trailing" constant="12" id="POA-aF-gL8"/>
                                     <constraint firstItem="iUv-ME-4hd" firstAttribute="leading" secondItem="Cm7-ZK-uNs" secondAttribute="trailing" constant="13" id="asG-LE-Spe"/>
                                     <constraint firstItem="PrF-WB-yAk" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="31" id="bjf-n2-ISf"/>
                                     <constraint firstItem="iUv-ME-4hd" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="27" id="cgt-e6-oiU"/>
+                                    <constraint firstAttribute="centerX" secondItem="Cm7-ZK-uNs" secondAttribute="centerX" id="e3x-0m-273"/>
                                     <constraint firstAttribute="trailing" secondItem="iUv-ME-4hd" secondAttribute="trailing" constant="13" id="gAH-Gr-KQM"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="leading" secondItem="PrF-WB-yAk" secondAttribute="trailing" constant="12" id="z3d-us-2YB"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PLg-4K-pRQ"/>
+                                        <exclude reference="POA-aF-gL8"/>
+                                        <exclude reference="z3d-us-2YB"/>
+                                        <exclude reference="asG-LE-Spe"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.27058823529999998" green="0.48627450979999998" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="7Tb-fX-vMZ" firstAttribute="height" secondItem="b3z-SQ-9Nk" secondAttribute="height" multiplier="0.6" id="3dg-IC-w6l"/>
                             <constraint firstItem="Mt6-a2-RmV" firstAttribute="leading" secondItem="b3z-SQ-9Nk" secondAttribute="leadingMargin" constant="-16" id="5Zh-fi-8IL"/>
-                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Cm7-ZK-uNs" secondAttribute="bottom" constant="-4" id="C48-LS-ijc"/>
-                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="M0q-7V-wR2" secondAttribute="bottom" constant="75" id="Sur-Bt-gbB"/>
+                            <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Cm7-ZK-uNs" secondAttribute="bottom" constant="5" id="C48-LS-ijc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mt6-a2-RmV" secondAttribute="trailing" constant="-16" id="bSA-Cn-v7O"/>
-                            <constraint firstItem="gHa-ZI-vAW" firstAttribute="top" secondItem="CbY-ID-w4G" secondAttribute="bottom" constant="95" id="dCH-0p-YGc"/>
+                            <constraint firstAttribute="centerY" secondItem="haP-dd-L8h" secondAttribute="centerY" id="emJ-Y3-5ED"/>
+                            <constraint firstItem="7Tb-fX-vMZ" firstAttribute="width" secondItem="b3z-SQ-9Nk" secondAttribute="width" multiplier="0.6" id="sko-p5-t7u"/>
                             <constraint firstItem="Mt6-a2-RmV" firstAttribute="top" secondItem="b3z-SQ-9Nk" secondAttribute="topMargin" id="u6V-kP-u81"/>
-                            <constraint firstItem="CbY-ID-w4G" firstAttribute="width" secondItem="haP-dd-L8h" secondAttribute="width" id="wv5-4d-Hvd"/>
                             <constraint firstItem="haP-dd-L8h" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="bottom" constant="-10" id="xf3-bN-AQA"/>
-                            <constraint firstAttribute="centerX" secondItem="CbY-ID-w4G" secondAttribute="centerX" id="yox-x4-VGW"/>
                             <constraint firstAttribute="centerX" secondItem="haP-dd-L8h" secondAttribute="centerX" id="z0V-R2-ijX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C48-LS-ijc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dQr-n4-eb8"/>
                     <connections>
@@ -118,16 +156,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-Wl-6mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-673" y="-42"/>
+            <point key="canvasLocation" x="-1261.875" y="-44.366197183098592"/>
         </scene>
     </scenes>
     <resources>
         <image name="loading screen-logo.png" width="280" height="327"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
