@@ -7,8 +7,8 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Hypatia-Sans-Pro_23434.ttf">
-            <string>HypatiaSansPro-Regular</string>
+        <mutableArray key="Hanzipen.ttc">
+            <string>HanziPenSC-W3</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -97,8 +97,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numify" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-ZK-uNs">
-                                        <rect key="frame" x="180" y="66" width="240" height="23"/>
-                                        <fontDescription key="fontDescription" name="HypatiaSansPro-Regular" family="Hypatia Sans Pro" pointSize="23"/>
+                                        <rect key="frame" x="180" y="50" width="240" height="33"/>
+                                        <fontDescription key="fontDescription" name="HanziPenSC-W3" family="HanziPen SC" pointSize="23"/>
                                         <color key="textColor" red="0.97647058819999999" green="0.79215686269999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -108,7 +108,7 @@
                                 <constraints>
                                     <constraint firstItem="PrF-WB-yAk" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="9" id="35v-rQ-9lr"/>
                                     <constraint firstItem="Cm7-ZK-uNs" firstAttribute="width" secondItem="Mt6-a2-RmV" secondAttribute="width" multiplier="0.4" id="JmI-z0-0lK"/>
-                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="66" id="LkJ-lj-k6b"/>
+                                    <constraint firstItem="Cm7-ZK-uNs" firstAttribute="top" secondItem="Mt6-a2-RmV" secondAttribute="top" constant="50" id="LkJ-lj-k6b"/>
                                     <constraint firstItem="Cm7-ZK-uNs" firstAttribute="leading" secondItem="Mt6-a2-RmV" secondAttribute="leading" constant="105" id="PLg-4K-pRQ"/>
                                     <constraint firstItem="Cm7-ZK-uNs" firstAttribute="leading" secondItem="PrF-WB-yAk" secondAttribute="trailing" constant="12" id="POA-aF-gL8"/>
                                     <constraint firstItem="iUv-ME-4hd" firstAttribute="leading" secondItem="Cm7-ZK-uNs" secondAttribute="trailing" constant="13" id="asG-LE-Spe"/>
