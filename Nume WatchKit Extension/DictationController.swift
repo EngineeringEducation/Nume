@@ -51,30 +51,19 @@ class DictationController: WKInterfaceController {
                 self.user!.userActivity! = input[0] as! String
                 
                 // Placing dictation text and number rating into NSUserDefaults
-                let appGroupID = "group.io.github.dhsu210.Nume"
-                let defaults = NSUserDefaults(suiteName: appGroupID)
-                defaults!.setValue(self.user!.userNumber, forKey: "userNumberKey")
-                defaults!.setValue(self.user!.userActivity, forKey: "userActivityKey")
+                Information.storeRating(self.user!.userNumber! as Int)
+                Information.storeActivity(self.user!.userActivity! as String)
                 
-                // Pulls username from logged in FB account on iPhone and sends userRating and userActivity to be posted via iPhone to server
-                let defaultConnect = NSUserDefaults.standardUserDefaults()
-                let userDictionary = defaultConnect.dictionaryRepresentation()
+                // Sends userNumber and userActivity to be posted via iPhone to server
+                let userDictionary = Information.getDictionary()
                 NumberNewsfeedController.openParentApplication(userDictionary) {
                     (replyDictionary, error) -> Void in
-                    
-                    if let castedResponseDictionary = replyDictionary as? [String: AnyObject],
-                        responseName = castedResponseDictionary["userNameKey"] as? String
-                    {
-                        self.user.userName = responseName
-                        println("Congratulations, \(responseName) successfully rated a \(self.user!.userNumber!) with '\(self.user!.userActivity!)'")
-                    }
+                    println("Congratulations, \(Information.getName()) successfully rated a \(Information.getRating()) with '\(Information.getActivity())'")
                 }
 
                 
                 self.pushControllerWithName("SocialFeed", context: self.user)
         }
-        
-
         
     }
 

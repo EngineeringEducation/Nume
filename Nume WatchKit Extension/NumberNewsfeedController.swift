@@ -14,27 +14,35 @@ class NumberNewsfeedController: WKInterfaceController {
     
     // Model
     var user : User!
+    var friend1 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend2 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend3 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
+    var friend4 = User(userToken: 1, userNumber: 3, userActivity: "happy", userName: "Dummy", userEmail: "dummy@tradecrafted.com", userFacebookID: "12345")
     
     @IBOutlet weak var numberResultLabel: WKInterfaceLabel!
-    @IBOutlet weak var dictationResultLabel: WKInterfaceLabel!
     @IBOutlet weak var userProfileButton: WKInterfaceButton!
     @IBOutlet weak var userProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var userBorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend1NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend1ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend1ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend1BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend2NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend2ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend2ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend2BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend3NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend3ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend3ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend3BorderBG: WKInterfaceGroup!
     
     @IBOutlet weak var friend4NumberResultLabel: WKInterfaceLabel!
     @IBOutlet weak var friend4ProfileButton: WKInterfaceButton!
     @IBOutlet weak var friend4ProfileImageBG: WKInterfaceGroup!
+    @IBOutlet weak var friend4BorderBG: WKInterfaceGroup!
     
     // Views
     override func awakeWithContext(context: AnyObject?) {
@@ -46,13 +54,11 @@ class NumberNewsfeedController: WKInterfaceController {
         // Make sure data was passed properly and update the label accordingly
         if let val = user {
             self.numberResultLabel.setText("\(val.userNumber!)")
-            self.dictationResultLabel.setText("\(val.userActivity!)")
             
             // Load user FB profile pic
-            let appGroupID = "group.io.github.dhsu210.Nume"
-            let defaults = NSUserDefaults(suiteName: appGroupID)
-            let userFacebookID = defaults!.valueForKey("userFacebookIDKey") as! String
+            let userFacebookID = Information.getFacebookID()
             loadProfileImage(userProfileImageBG, userID: userFacebookID)
+            setColor(numberResultLabel, number: val.userNumber!, border: userBorderBG)
             
             // Load four friends' profile pics and rating numbers
             User.getLastFourUsers { (users, error) -> Void in
@@ -60,31 +66,50 @@ class NumberNewsfeedController: WKInterfaceController {
                     println(error)
                 } else {
                     
-                    let friend1Rating = users![0].userNumber
-                    println(friend1Rating)
-                    let friend1FacebookID = users![0].userFacebookID
-    
-                    self.friend1NumberResultLabel.setText("\(friend1Rating!)")
-                    self.loadProfileImage(self.friend1ProfileImageBG, userID: friend1FacebookID!)
-    
-                    let friend2Rating = users![1].userNumber
-                    println(friend2Rating)
-                    let friend2FacebookID = users![1].userFacebookID
-    
-                    self.friend2NumberResultLabel.setText("\(friend2Rating!)")
-                    self.loadProfileImage(self.friend2ProfileImageBG, userID: friend2FacebookID!)
-    
-                    let friend3Rating = users![2].userNumber
-                    let friend3FacebookID = users![2].userFacebookID
-    
-                    self.friend3NumberResultLabel.setText("\(friend3Rating!)")
-                    self.loadProfileImage(self.friend3ProfileImageBG, userID: friend3FacebookID!)
-    
-                    let friend4Rating = users![3].userNumber
-                    let friend4FacebookID = users![3].userFacebookID
-                    
-                    self.friend4NumberResultLabel.setText("\(friend4Rating!)")
-                    self.loadProfileImage(self.friend4ProfileImageBG, userID: friend4FacebookID!)
+                    for index in 0...3 {
+                        let friendName = users![index].userName! as String
+                        let friendRating = users![index].userNumber! as Int
+                        let friendActivity = users![index].userActivity! as String
+                        let friendFacebookID = users![index].userFacebookID! as String
+                        
+                        if index == 0 {
+                            self.friend1.userName = friendName
+                            self.friend1.userNumber = friendRating
+                            self.friend1.userActivity = friendActivity
+                            self.friend1.userFacebookID = friendFacebookID
+                            
+                            self.friend1NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend1ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend1NumberResultLabel, number: friendRating, border: self.friend1BorderBG)
+                        } else if index == 1 {
+                            self.friend2.userName = friendName
+                            self.friend2.userNumber = friendRating
+                            self.friend2.userActivity = friendActivity
+                            self.friend2.userFacebookID = friendFacebookID
+                            
+                            self.friend2NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend2ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend2NumberResultLabel, number: friendRating, border: self.friend2BorderBG)
+                        } else if index == 2 {
+                            self.friend3.userName = friendName
+                            self.friend3.userNumber = friendRating
+                            self.friend3.userActivity = friendActivity
+                            self.friend3.userFacebookID = friendFacebookID
+                            
+                            self.friend3NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend3ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend3NumberResultLabel, number: friendRating, border: self.friend3BorderBG)
+                        } else if index == 3 {
+                            self.friend4.userName = friendName
+                            self.friend4.userNumber = friendRating
+                            self.friend4.userActivity = friendActivity
+                            self.friend4.userFacebookID = friendFacebookID
+                            
+                            self.friend4NumberResultLabel.setText("\(friendRating)")
+                            self.loadProfileImage(self.friend4ProfileImageBG, userID: friendFacebookID)
+                            self.setColor(self.friend4NumberResultLabel, number: friendRating, border: self.friend4BorderBG)
+                        }
+                    }
                     
                 }
             }
@@ -103,22 +128,43 @@ class NumberNewsfeedController: WKInterfaceController {
         profileImage.setBackgroundImageData(data)
     }
     
-    // Note to fix: should I be including async dispatching to quicken the image load times as below?
-    //    func loadImage(url:String, forImageView: WKInterfaceImage) {
-    //        // load image
-    //        let image_url:String = url
-    //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-    //            let url:NSURL = NSURL(string:image_url)!
-    //            var data:NSData = NSData(contentsOfURL: url)!
-    //            var placeholder = UIImage(data: data)!
-    //
-    //            // update ui
-    //            dispatch_async(dispatch_get_main_queue()) {
-    //                forImageView.setImage(placeholder)
-    //            }
-    //        }
-    //        
-    //    }
+    func setColor(label: WKInterfaceLabel, number: Int, border: WKInterfaceGroup) {
+        switch number {
+        case -5:
+            label.setTextColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0))
+        case -4:
+            label.setTextColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.08, green:0.63, blue:0.86, alpha:1.0))
+        case -3:
+            label.setTextColor(UIColor(red:0.10, green:0.74, blue:0.93, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.10, green:0.74, blue:0.93, alpha:1.0))
+        case -2:
+            label.setTextColor(UIColor(red:0.51, green:0.83, blue:0.97, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.51, green:0.83, blue:0.97, alpha:1.0))
+        case -1:
+            label.setTextColor(UIColor(red:0.71, green:0.89, blue:0.98, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.71, green:0.89, blue:0.98, alpha:1.0))
+        case 0:
+            label.setTextColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0))
+        case 1:
+            label.setTextColor(UIColor(red:1.00, green:0.94, blue:0.79, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:1.00, green:0.94, blue:0.79, alpha:1.0))
+        case 2:
+            label.setTextColor(UIColor(red:0.98, green:0.87, blue:0.56, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.87, blue:0.56, alpha:1.0))
+        case 3:
+            label.setTextColor(UIColor(red:0.98, green:0.84, blue:0.41, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.84, blue:0.41, alpha:1.0))
+        case 4:
+            label.setTextColor(UIColor(red:0.98, green:0.77, blue:0.20, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.98, green:0.77, blue:0.20, alpha:1.0))
+        default:
+            label.setTextColor(UIColor(red:0.96, green:0.65, blue:0.21, alpha:1.0))
+            border.setBackgroundColor(UIColor(red:0.96, green:0.65, blue:0.21, alpha:1.0))
+        }
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -133,86 +179,36 @@ class NumberNewsfeedController: WKInterfaceController {
     override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
         return self.user
     }
-    
-    
-    @IBAction func receiveFriendFourDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![3].userNumber
-                self.user.userActivity = users![3].userActivity
-                self.user.userName = users![3].userName
-                self.user.userFacebookID = users![3].userFacebookID
-            }
-            
-        }
-        
-        self.pushControllerWithName("UserDetail", context: self.user)
-    }
-    @IBAction func receiveFriendThreeDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![2].userNumber
-                self.user.userActivity = users![2].userActivity
-                self.user.userName = users![2].userName
-                self.user.userFacebookID = users![2].userFacebookID
-            }
-            
-        }
-        self.pushControllerWithName("UserDetail", context: self.user)
-    }
-    @IBAction func receiveFriendTwoDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![1].userNumber
-                self.user.userActivity = users![1].userActivity
-                self.user.userName = users![1].userName
-                self.user.userFacebookID = users![1].userFacebookID
-                
-            }
-            
-        }
-        
-        self.pushControllerWithName("UserDetail", context: self.user)
-    }
-    
-    @IBAction func receiveUserDetailToSend() {
-        let appGroupID = "group.io.github.dhsu210.Nume"
-        let defaultGroup = NSUserDefaults(suiteName: appGroupID)
-        
-        let rating = defaultGroup!.valueForKey("userNumberKey") as! Int
-        let activity = defaultGroup!.valueForKey("userActivityKey") as! String
-        let name = defaultGroup!.valueForKey("userNameKey") as! String
-        let facebookID = defaultGroup!.valueForKey("userFacebookIDKey") as! String
-        
-        var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
-        self.pushControllerWithName("UserDetail", context: thisUser)
-    }
+
+
     
     @IBAction func receiveFriendOneDetailToSend() {
-        User.getLastFourUsers { (users, error) -> Void in
-            if let error = error {
-                println(error)
-            } else {
-                
-                self.user.userNumber = users![0].userNumber
-                self.user.userActivity = users![0].userActivity
-                self.user.userName = users![0].userName
-                self.user.userFacebookID = users![0].userFacebookID
-                
-            }
-            
-        self.pushControllerWithName("UserDetail", context: self.user)
+        self.presentControllerWithName("UserDetail", context: self.friend1)
     }
-    
-   
+    @IBAction func receiveFriendTwoDetailToSend() {
+        self.presentControllerWithName("UserDetail", context: self.friend2)
     }
+    @IBAction func receiveFriendThreeDetailToSend() {
+        self.presentControllerWithName("UserDetail", context: self.friend3)
+    }
+    @IBAction func receiveFriendFourDetailToSend() {
+        self.presentControllerWithName("UserDetail", context: self.friend4)
+    }
+
+
+    @IBAction func receiveUserDetailToSend() {
+        
+        let rating = Information.getRating()
+        let activity = Information.getActivity()
+        let name = Information.getName()
+        let facebookID = Information.getFacebookID()
+        
+        var thisUser : User = User(userNumber: rating, userActivity: activity, userName: name, userFacebookID: facebookID)
+        self.presentControllerWithName("UserDetail", context: thisUser)
+    }
+
 }
+
+   
+    
+

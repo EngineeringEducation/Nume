@@ -30,11 +30,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
     
     override func viewWillAppear(animated: Bool) {
         numifyUserLabel.text = "Numify"
-        numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
+        numifyUserLabel.font = UIFont(name: "HanziPen SC", size: 30)
         
         self.profilePic!.layer.cornerRadius = 40
         self.profilePic!.clipsToBounds = true
-        self.profilePic!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profilePic!.layer.borderColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0).CGColor
         self.profilePic!.layer.borderWidth = 3.0
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
@@ -53,28 +53,31 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     let userFacebookID : NSString = result.valueForKey("id") as! NSString
                     println("User Facebook ID is: \(userFacebookID)")
                     
-                    let appGroupID = "group.io.github.dhsu210.Nume"
-                    let defaults = NSUserDefaults(suiteName: appGroupID)
-                    defaults!.setValue(userName, forKey: "userNameKey")
-                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
+                    Information.storeName(userName as String)
+                    Information.storeFacebookID(userFacebookID as String)
                     
-                    self.numifyUserLabel.text = "Hi, \(userName)!"
-                    self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
+                    self.numifyUserLabel.text = "Hi \(userName)!"
+                    self.numifyUserLabel.font = UIFont(name: "HanziPen SC", size: 23)
                 }
             })
             
         }
         
+        
         let loginView : FBSDKLoginButton = FBSDKLoginButton()
         self.view.addSubview(loginView)
-        loginView.frame = CGRectMake(28, 600, 319, 30)
+        loginView.frame = CGRectMake(self.view.frame.width / 8, self.view.frame.height - 57, self.view.frame.width * 3 / 4, 32)
+        loginView.titleLabel!.font = UIFont(name: "Futura", size: 13)        
+        loginView.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         loginView.setTranslatesAutoresizingMaskIntoConstraints(true)
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
         
-        skipButton.frame = CGRectMake(28, 600, 319, 30)
+        skipButton.frame = CGRectMake(self.view.frame.width / 8, self.view.frame.height - 57, self.view.frame.width * 3 / 4, 32)
         skipButton.backgroundColor = UIColor.whiteColor()
+        skipButton.setTitleColor(UIColor(red:0.27, green:0.49, blue:0.75, alpha:1.0), forState: UIControlState.Normal)
         skipButton.setTitle("Skip Tutorial", forState: UIControlState.Normal)
+        skipButton.titleLabel!.font = UIFont(name: "Futura", size: 13)
         skipButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(skipButton)
         skipButton.hidden = false
@@ -89,10 +92,9 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
         
-        pageImages = [UIImage(named:"1.png")!,
-            UIImage(named:"2.png")!,
-            UIImage(named:"3.png")!,
-            UIImage(named:"4.png")!]
+        pageImages = [UIImage(named:"001.png")!,
+            UIImage(named:"002.png")!,
+            UIImage(named:"003.png")!]
         
         let pageCount = pageImages.count
         
@@ -101,9 +103,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         for _ in 0..<pageCount {
             pageViews.append(nil)
         }
+        pageControl.pageIndicatorTintColor = UIColor(red:0.11, green:0.13, blue:0.45, alpha:1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red:0.98, green:0.79, blue:0.20, alpha:1.0)
         
         let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
+        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count), height: pagesScrollViewSize.height)
         
         loadVisiblePages()
     }
@@ -151,19 +155,18 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                                     println(error)
                                 } else {
                                     let userToken : Int = user!.userToken!
-
-                                    let appGroupID = "group.io.github.dhsu210.Nume"
-                                    let defaults = NSUserDefaults(suiteName: appGroupID)
-                                    defaults!.setValue(userName, forKey: "userNameKey")
-                                    defaults!.setInteger(userToken, forKey: "userTokenKey")
-                                    defaults!.setValue(userFacebookID, forKey: "userFacebookIDKey")
+                                    
+                                    Information.storeName(userName as String)
+                                    Information.storeUniqueID(userToken as Int)
+                                    Information.storeFacebookID(userFacebookID as String)
+                                  
                                 }
                             })
                             
                             
                             // Updates top of login controller with user details after FB login
-                            self.numifyUserLabel.text = "Hi, \(userName)!"
-                            self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 14)
+                            self.numifyUserLabel.text = "Hi \(userName)!"
+                            self.numifyUserLabel.font = UIFont(name: "HanziPen SC", size: 23)
                         }
                     })
                     
@@ -178,7 +181,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         println("User Logged Out")
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             numifyUserLabel.text = "Numify"
-            self.numifyUserLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 38)
+            self.numifyUserLabel.font = UIFont(name: "HanziPen SC", size: 30)
         }
     }
 
@@ -226,7 +229,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
         
-        if (page == 3) {
+        if (page == 2) {
             skipButton.hidden = true
         }
         
@@ -280,10 +283,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, FBSDKLoginBut
                     println("User Email is: \(userEmail)")
                 }
                 
-                let appGroupID = "group.io.github.dhsu210.Nume"
-                if let defaults = NSUserDefaults(suiteName: appGroupID) {
-                    defaults.setValue(userName, forKey: "userNameKey")
-                }
+                Information.storeName(userName as String)
                 
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 println("User Email is: \(userEmail)")

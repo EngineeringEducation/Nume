@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2008FDBA1B3E11DD00006533 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008FDB91B3E11DD00006533 /* Information.swift */; };
 		2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019F1F81B167C0200F08FFA /* UserDetailController.swift */; };
 		201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00841AF1F8BA00D32F95 /* RateNumberController.swift */; };
 		201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D00861AF1F8BA00D32F95 /* NotificationController.swift */; };
@@ -15,22 +16,27 @@
 		201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D00931AF1F8BA00D32F95 /* Interface.storyboard */; };
 		201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201D00961AF1F8BA00D32F95 /* Images.xcassets */; };
 		201D009A1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		207D5A3E1AF5F14A00E8C7E2 /* Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A3D1AF5F14A00E8C7E2 /* Book.png */; };
-		207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A3F1AF5F15200E8C7E2 /* Commute.png */; };
-		207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A411AF5F15B00E8C7E2 /* Beer.png */; };
-		207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 207D5A431AF5F16400E8C7E2 /* Restaurant.png */; };
-		20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D01AE81D82005AFB27 /* Images.xcassets */; };
+		201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201F76DE1B502B3300D99B08 /* Images.xcassets */; };
+		206EC9F61B30BAC900F6B76E /* NumeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 206EC9F51B30BAC900F6B76E /* NumeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		206EC9FC1B30BAC900F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
+		206ECA051B30BAC900F6B76E /* NumeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECA041B30BAC900F6B76E /* NumeKitTests.swift */; };
+		206ECA081B30BAC900F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
+		206ECA091B30BAC900F6B76E /* NumeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		206ECA111B30BAF900F6B76E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
+		206ECA141B30BB7200F6B76E /* NumeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */; };
 		20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A552D21AE81D82005AFB27 /* LaunchScreen.xib */; };
 		20A552E01AE81D82005AFB27 /* NumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A552DF1AE81D82005AFB27 /* NumeTests.swift */; };
+		20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
+		20B486AC1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */; };
+		20B486AE1B44B803002085C7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AD1B44B803002085C7 /* logo.png */; };
+		20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B486AF1B44B80B002085C7 /* loading screen-logo.png */; };
 		20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B11B02C71100FA1719 /* DictationController.swift */; };
-		20C8F6B61B040FEF00FA1719 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8F6B51B040FEF00FA1719 /* User.swift */; };
 		20D152731AF978320072E2AA /* Microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D152721AF978320072E2AA /* Microphone.png */; };
-		20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA2A1AFB2ECF00CAC66D /* User.swift */; };
+		20F96E951B58419A0085237C /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F96E921B58419A0085237C /* 003.png */; };
+		20F96E961B58419A0085237C /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F96E931B58419A0085237C /* 002.png */; };
+		20F96E971B58419A0085237C /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F96E941B58419A0085237C /* 001.png */; };
+		20F96E9D1B585A250085237C /* Hanzipen.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 20F96E9C1B585A250085237C /* Hanzipen.ttc */; };
 		20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */; };
-		CA1DA3451B20ED5D0058C964 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3411B20ED5D0058C964 /* 1.png */; };
-		CA1DA3461B20ED5D0058C964 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3421B20ED5D0058C964 /* 2.png */; };
-		CA1DA3471B20ED5D0058C964 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3431B20ED5D0058C964 /* 3.png */; };
-		CA1DA3481B20ED5D0058C964 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1DA3441B20ED5D0058C964 /* 4.png */; };
 		CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA51F4951AF9876300BC94BC /* Main.storyboard */; };
 		CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4981AF9882D00BC94BC /* AppDelegate.swift */; };
 		CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51F4991AF9882D00BC94BC /* LoginViewController.swift */; };
@@ -55,6 +61,34 @@
 			remoteGlobalIDString = 201D007E1AF1F8BA00D32F95;
 			remoteInfo = "Nume WatchKit Extension";
 		};
+		206EC9FD1B30BAC900F6B76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 206EC9F01B30BAC900F6B76E;
+			remoteInfo = NumeKit;
+		};
+		206EC9FF1B30BAC900F6B76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20A552C11AE81D82005AFB27;
+			remoteInfo = Nume;
+		};
+		206ECA061B30BAC900F6B76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 206EC9F01B30BAC900F6B76E;
+			remoteInfo = NumeKit;
+		};
+		206ECA121B30BB6C00F6B76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 206EC9F01B30BAC900F6B76E;
+			remoteInfo = NumeKit;
+		};
 		20A552DA1AE81D82005AFB27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20A552BA1AE81D82005AFB27 /* Project object */;
@@ -76,9 +110,21 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		206ECA0F1B30BAC900F6B76E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				206ECA091B30BAC900F6B76E /* NumeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2008FDB91B3E11DD00006533 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		2019F1F81B167C0200F08FFA /* UserDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 		201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nume WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201D00821AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,27 +136,31 @@
 		201D00921AF1F8BA00D32F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201D00941AF1F8BA00D32F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		201D00961AF1F8BA00D32F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		207D5A3D1AF5F14A00E8C7E2 /* Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Book.png; sourceTree = "<group>"; };
-		207D5A3F1AF5F15200E8C7E2 /* Commute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Commute.png; sourceTree = "<group>"; };
-		207D5A411AF5F15B00E8C7E2 /* Beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beer.png; sourceTree = "<group>"; };
-		207D5A431AF5F16400E8C7E2 /* Restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurant.png; sourceTree = "<group>"; };
+		201F76DE1B502B3300D99B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		206EC9F11B30BAC900F6B76E /* NumeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206EC9F41B30BAC900F6B76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206EC9F51B30BAC900F6B76E /* NumeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumeKit.h; sourceTree = "<group>"; };
+		206EC9FB1B30BAC900F6B76E /* NumeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		206ECA031B30BAC900F6B76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206ECA041B30BAC900F6B76E /* NumeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeKitTests.swift; sourceTree = "<group>"; };
 		209307401B06C1F7003C4D80 /* Nume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Nume.entitlements; sourceTree = "<group>"; };
 		209307411B06C5C8003C4D80 /* Nume WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nume WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20A552C21AE81D82005AFB27 /* Nume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nume.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		20A552D01AE81D82005AFB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20A552D31AE81D82005AFB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		20A552D91AE81D82005AFB27 /* NumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A552DE1AE81D82005AFB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A552DF1AE81D82005AFB27 /* NumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeTests.swift; sourceTree = "<group>"; };
+		20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Koyu.ttf"; sourceTree = "<group>"; };
+		20B486AD1B44B803002085C7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		20B486AF1B44B80B002085C7 /* loading screen-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading screen-logo.png"; sourceTree = "<group>"; };
 		20C8F6B11B02C71100FA1719 /* DictationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictationController.swift; sourceTree = "<group>"; };
-		20C8F6B51B040FEF00FA1719 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20D152721AF978320072E2AA /* Microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microphone.png; sourceTree = "<group>"; };
-		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20F96E921B58419A0085237C /* 003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 003.png; sourceTree = "<group>"; };
+		20F96E931B58419A0085237C /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
+		20F96E941B58419A0085237C /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
+		20F96E9C1B585A250085237C /* Hanzipen.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanzipen.ttc; sourceTree = "<group>"; };
+		20FCBA2A1AFB2ECF00CAC66D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../Nume WatchKit Extension/User.swift"; sourceTree = "<group>"; };
 		20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberNewsfeedController.swift; sourceTree = "<group>"; };
-		CA1DA3411B20ED5D0058C964 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		CA1DA3421B20ED5D0058C964 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		CA1DA3431B20ED5D0058C964 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		CA1DA3441B20ED5D0058C964 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		CA51F4951AF9876300BC94BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CA51F4981AF9882D00BC94BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51F4991AF9882D00BC94BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +177,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206ECA141B30BB7200F6B76E /* NumeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9ED1B30BAC900F6B76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9F81B30BAC900F6B76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206EC9FC1B30BAC900F6B76E /* NumeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +202,7 @@
 			files = (
 				CA51F49E1AF9884400BC94BC /* FBSDKLoginKit.framework in Frameworks */,
 				CA51F4A01AF9884F00BC94BC /* FBSDKCoreKit.framework in Frameworks */,
+				206ECA081B30BAC900F6B76E /* NumeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +225,6 @@
 				20FCBA8F1AFDC0DF00CAC66D /* NumberNewsfeedController.swift */,
 				2019F1F81B167C0200F08FFA /* UserDetailController.swift */,
 				201D00861AF1F8BA00D32F95 /* NotificationController.swift */,
-				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
 				201D00881AF1F8BA00D32F95 /* Images.xcassets */,
 				201D00811AF1F8BA00D32F95 /* Supporting Files */,
 			);
@@ -187,14 +253,47 @@
 		201D00911AF1F8BA00D32F95 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				207D5A431AF5F16400E8C7E2 /* Restaurant.png */,
-				207D5A411AF5F15B00E8C7E2 /* Beer.png */,
-				207D5A3F1AF5F15200E8C7E2 /* Commute.png */,
-				207D5A3D1AF5F14A00E8C7E2 /* Book.png */,
+				20B486AA1B44B5D8002085C7 /* Futura Koyu.ttf */,
 				20D152721AF978320072E2AA /* Microphone.png */,
 				201D00921AF1F8BA00D32F95 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		206EC9F21B30BAC900F6B76E /* NumeKit */ = {
+			isa = PBXGroup;
+			children = (
+				20FCBA2A1AFB2ECF00CAC66D /* User.swift */,
+				2008FDB91B3E11DD00006533 /* Information.swift */,
+				206EC9F51B30BAC900F6B76E /* NumeKit.h */,
+				206EC9F31B30BAC900F6B76E /* Supporting Files */,
+			);
+			path = NumeKit;
+			sourceTree = "<group>";
+		};
+		206EC9F31B30BAC900F6B76E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				206EC9F41B30BAC900F6B76E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		206ECA011B30BAC900F6B76E /* NumeKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				206ECA041B30BAC900F6B76E /* NumeKitTests.swift */,
+				206ECA021B30BAC900F6B76E /* Supporting Files */,
+			);
+			path = NumeKitTests;
+			sourceTree = "<group>";
+		};
+		206ECA021B30BAC900F6B76E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				206ECA031B30BAC900F6B76E /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		20A552B91AE81D82005AFB27 = {
@@ -205,6 +304,8 @@
 				20A552DC1AE81D82005AFB27 /* NumeTests */,
 				201D00801AF1F8BA00D32F95 /* Nume WatchKit Extension */,
 				201D00901AF1F8BA00D32F95 /* Nume WatchKit App */,
+				206EC9F21B30BAC900F6B76E /* NumeKit */,
+				206ECA011B30BAC900F6B76E /* NumeKitTests */,
 				20A552C31AE81D82005AFB27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -216,6 +317,8 @@
 				20A552D91AE81D82005AFB27 /* NumeTests.xctest */,
 				201D007F1AF1F8BA00D32F95 /* Nume WatchKit Extension.appex */,
 				201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */,
+				206EC9F11B30BAC900F6B76E /* NumeKit.framework */,
+				206EC9FB1B30BAC900F6B76E /* NumeKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,14 +328,13 @@
 			children = (
 				209307401B06C1F7003C4D80 /* Nume.entitlements */,
 				CA51F4981AF9882D00BC94BC /* AppDelegate.swift */,
-				20C8F6B51B040FEF00FA1719 /* User.swift */,
 				CA51F4991AF9882D00BC94BC /* LoginViewController.swift */,
 				CA51F4951AF9876300BC94BC /* Main.storyboard */,
 				CA51F49A1AF9882D00BC94BC /* Bridging-Header.h */,
-				20A552D01AE81D82005AFB27 /* Images.xcassets */,
 				20A552D21AE81D82005AFB27 /* LaunchScreen.xib */,
 				CA51F4A41AF9893000BC94BC /* Facebook Frameworks */,
 				CA51F4A11AF9890A00BC94BC /* Supporting Files */,
+				201F76DE1B502B3300D99B08 /* Images.xcassets */,
 			);
 			path = Nume;
 			sourceTree = "<group>";
@@ -257,11 +359,13 @@
 		CA51F4A11AF9890A00BC94BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				20F96E9C1B585A250085237C /* Hanzipen.ttc */,
+				20B486AD1B44B803002085C7 /* logo.png */,
+				20B486AF1B44B80B002085C7 /* loading screen-logo.png */,
 				CAE8035F1B2AC0D600F9B783 /* transparentButton.png */,
-				CA1DA3411B20ED5D0058C964 /* 1.png */,
-				CA1DA3421B20ED5D0058C964 /* 2.png */,
-				CA1DA3431B20ED5D0058C964 /* 3.png */,
-				CA1DA3441B20ED5D0058C964 /* 4.png */,
+				20F96E921B58419A0085237C /* 003.png */,
+				20F96E931B58419A0085237C /* 002.png */,
+				20F96E941B58419A0085237C /* 001.png */,
 				CA51F4A71AF98B4000BC94BC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -280,6 +384,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		206EC9EE1B30BAC900F6B76E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206EC9F61B30BAC900F6B76E /* NumeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */ = {
 			isa = PBXNativeTarget;
@@ -292,6 +407,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				206ECA131B30BB6C00F6B76E /* PBXTargetDependency */,
 				201D008F1AF1F8BA00D32F95 /* PBXTargetDependency */,
 			);
 			name = "Nume WatchKit Extension";
@@ -314,6 +430,43 @@
 			productReference = 201D008C1AF1F8BA00D32F95 /* Nume WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
+		206EC9F01B30BAC900F6B76E /* NumeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 206ECA0E1B30BAC900F6B76E /* Build configuration list for PBXNativeTarget "NumeKit" */;
+			buildPhases = (
+				206EC9EC1B30BAC900F6B76E /* Sources */,
+				206EC9ED1B30BAC900F6B76E /* Frameworks */,
+				206EC9EE1B30BAC900F6B76E /* Headers */,
+				206EC9EF1B30BAC900F6B76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumeKit;
+			productName = NumeKit;
+			productReference = 206EC9F11B30BAC900F6B76E /* NumeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		206EC9FA1B30BAC900F6B76E /* NumeKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 206ECA101B30BAC900F6B76E /* Build configuration list for PBXNativeTarget "NumeKitTests" */;
+			buildPhases = (
+				206EC9F71B30BAC900F6B76E /* Sources */,
+				206EC9F81B30BAC900F6B76E /* Frameworks */,
+				206EC9F91B30BAC900F6B76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				206EC9FE1B30BAC900F6B76E /* PBXTargetDependency */,
+				206ECA001B30BAC900F6B76E /* PBXTargetDependency */,
+			);
+			name = NumeKitTests;
+			productName = NumeKitTests;
+			productReference = 206EC9FB1B30BAC900F6B76E /* NumeKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		20A552C11AE81D82005AFB27 /* Nume */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20A552E31AE81D82005AFB27 /* Build configuration list for PBXNativeTarget "Nume" */;
@@ -322,11 +475,13 @@
 				20A552BF1AE81D82005AFB27 /* Frameworks */,
 				20A552C01AE81D82005AFB27 /* Resources */,
 				201D00A11AF1F8BA00D32F95 /* Embed App Extensions */,
+				206ECA0F1B30BAC900F6B76E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				201D00991AF1F8BA00D32F95 /* PBXTargetDependency */,
+				206ECA071B30BAC900F6B76E /* PBXTargetDependency */,
 			);
 			name = Nume;
 			productName = Nume;
@@ -357,7 +512,8 @@
 		20A552BA1AE81D82005AFB27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Daniel Hsu";
 				TargetAttributes = {
 					201D007E1AF1F8BA00D32F95 = {
@@ -372,6 +528,14 @@
 					201D008B1AF1F8BA00D32F95 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = J4VYN3B6QR;
+					};
+					206EC9F01B30BAC900F6B76E = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = J4VYN3B6QR;
+					};
+					206EC9FA1B30BAC900F6B76E = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 20A552C11AE81D82005AFB27;
 					};
 					20A552C11AE81D82005AFB27 = {
 						CreatedOnToolsVersion = 6.3;
@@ -389,7 +553,7 @@
 				};
 			};
 			buildConfigurationList = 20A552BD1AE81D82005AFB27 /* Build configuration list for PBXProject "Nume" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -405,6 +569,8 @@
 				20A552D81AE81D82005AFB27 /* NumeTests */,
 				201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */,
 				201D008B1AF1F8BA00D32F95 /* Nume WatchKit App */,
+				206EC9F01B30BAC900F6B76E /* NumeKit */,
+				206EC9FA1B30BAC900F6B76E /* NumeKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -416,6 +582,7 @@
 			files = (
 				201D00891AF1F8BA00D32F95 /* Images.xcassets in Resources */,
 				201D008D1AF1F8BA00D32F95 /* Nume WatchKit App.app in Resources */,
+				20B486AB1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +591,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				201D00951AF1F8BA00D32F95 /* Interface.storyboard in Resources */,
-				207D5A441AF5F16400E8C7E2 /* Restaurant.png in Resources */,
-				207D5A401AF5F15200E8C7E2 /* Commute.png in Resources */,
-				207D5A421AF5F15B00E8C7E2 /* Beer.png in Resources */,
 				20D152731AF978320072E2AA /* Microphone.png in Resources */,
-				207D5A3E1AF5F14A00E8C7E2 /* Book.png in Resources */,
+				20B486AC1B44B5D8002085C7 /* Futura Koyu.ttf in Resources */,
 				201D00971AF1F8BA00D32F95 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9EF1B30BAC900F6B76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9F91B30BAC900F6B76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,15 +615,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1DA3471B20ED5D0058C964 /* 3.png in Resources */,
-				CA1DA3451B20ED5D0058C964 /* 1.png in Resources */,
+				20F96E971B58419A0085237C /* 001.png in Resources */,
 				CA6721D41B30C49A0069A622 /* Default-568h@2x.png in Resources */,
+				20F96E9D1B585A250085237C /* Hanzipen.ttc in Resources */,
 				CA51F4961AF9876300BC94BC /* Main.storyboard in Resources */,
+				201F76DF1B502B3300D99B08 /* Images.xcassets in Resources */,
+				20F96E961B58419A0085237C /* 002.png in Resources */,
+				20F96E951B58419A0085237C /* 003.png in Resources */,
 				20A552D41AE81D82005AFB27 /* LaunchScreen.xib in Resources */,
 				CAE803601B2AC0D600F9B783 /* transparentButton.png in Resources */,
-				CA1DA3481B20ED5D0058C964 /* 4.png in Resources */,
-				20A552D11AE81D82005AFB27 /* Images.xcassets in Resources */,
-				CA1DA3461B20ED5D0058C964 /* 2.png in Resources */,
+				20B486AE1B44B803002085C7 /* logo.png in Resources */,
+				20B486B01B44B80B002085C7 /* loading screen-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +645,26 @@
 			files = (
 				201D00871AF1F8BA00D32F95 /* NotificationController.swift in Sources */,
 				201D00851AF1F8BA00D32F95 /* RateNumberController.swift in Sources */,
-				20FCBA2B1AFB2ECF00CAC66D /* User.swift in Sources */,
 				2019F1F91B167C0300F08FFA /* UserDetailController.swift in Sources */,
 				20FCBA901AFDC0DF00CAC66D /* NumberNewsfeedController.swift in Sources */,
 				20C8F6B21B02C71100FA1719 /* DictationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9EC1B30BAC900F6B76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2008FDBA1B3E11DD00006533 /* Information.swift in Sources */,
+				206ECA111B30BAF900F6B76E /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206EC9F71B30BAC900F6B76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206ECA051B30BAC900F6B76E /* NumeKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +672,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20C8F6B61B040FEF00FA1719 /* User.swift in Sources */,
 				CA51F49C1AF9882D00BC94BC /* LoginViewController.swift in Sources */,
 				CA51F49B1AF9882D00BC94BC /* AppDelegate.swift in Sources */,
 			);
@@ -502,6 +697,26 @@
 			isa = PBXTargetDependency;
 			target = 201D007E1AF1F8BA00D32F95 /* Nume WatchKit Extension */;
 			targetProxy = 201D00981AF1F8BA00D32F95 /* PBXContainerItemProxy */;
+		};
+		206EC9FE1B30BAC900F6B76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 206EC9F01B30BAC900F6B76E /* NumeKit */;
+			targetProxy = 206EC9FD1B30BAC900F6B76E /* PBXContainerItemProxy */;
+		};
+		206ECA001B30BAC900F6B76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20A552C11AE81D82005AFB27 /* Nume */;
+			targetProxy = 206EC9FF1B30BAC900F6B76E /* PBXContainerItemProxy */;
+		};
+		206ECA071B30BAC900F6B76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 206EC9F01B30BAC900F6B76E /* NumeKit */;
+			targetProxy = 206ECA061B30BAC900F6B76E /* PBXContainerItemProxy */;
+		};
+		206ECA131B30BB6C00F6B76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 206EC9F01B30BAC900F6B76E /* NumeKit */;
+			targetProxy = 206ECA121B30BB6C00F6B76E /* PBXContainerItemProxy */;
 		};
 		20A552DB1AE81D82005AFB27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -533,6 +748,7 @@
 		201D009C1AF1F8BA00D32F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -554,6 +770,7 @@
 		201D009D1AF1F8BA00D32F95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -597,6 +814,86 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		206ECA0A1B30BAC900F6B76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NumeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		206ECA0B1B30BAC900F6B76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		206ECA0C1B30BAC900F6B76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NumeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nume.app/Nume";
+			};
+			name = Debug;
+		};
+		206ECA0D1B30BAC900F6B76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NumeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nume.app/Nume";
 			};
 			name = Release;
 		};
@@ -773,6 +1070,24 @@
 			buildConfigurations = (
 				201D009F1AF1F8BA00D32F95 /* Debug */,
 				201D00A01AF1F8BA00D32F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		206ECA0E1B30BAC900F6B76E /* Build configuration list for PBXNativeTarget "NumeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206ECA0A1B30BAC900F6B76E /* Debug */,
+				206ECA0B1B30BAC900F6B76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		206ECA101B30BAC900F6B76E /* Build configuration list for PBXNativeTarget "NumeKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206ECA0C1B30BAC900F6B76E /* Debug */,
+				206ECA0D1B30BAC900F6B76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

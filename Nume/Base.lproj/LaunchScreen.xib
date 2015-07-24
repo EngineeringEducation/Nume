@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,22 +11,108 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Numify" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="36"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading screen-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-nK-eB0">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FbK-nK-eB0" secondAttribute="height" multiplier="143:153" id="2cC-Br-UQr"/>
+                        <constraint firstAttribute="width" secondItem="FbK-nK-eB0" secondAttribute="height" multiplier="143:153" id="gX1-kW-xq5"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2cC-Br-UQr"/>
+                            <exclude reference="gX1-kW-xq5"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="2cC-Br-UQr"/>
+                            <exclude reference="gX1-kW-xq5"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-Y1-CFq">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="44d-cE-hEg"/>
+                        <constraint firstAttribute="width" secondItem="ZMx-Y1-CFq" secondAttribute="height" multiplier="80:33" id="xtj-52-8vn"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="44d-cE-hEg"/>
+                            <exclude reference="xtj-52-8vn"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="44d-cE-hEg"/>
+                            <include reference="xtj-52-8vn"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.27058823529411763" green="0.48627450980392156" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="centerX" secondItem="FbK-nK-eB0" secondAttribute="centerX" id="E0H-m5-Y0Z"/>
+                <constraint firstItem="FbK-nK-eB0" firstAttribute="bottom" secondItem="ZMx-Y1-CFq" secondAttribute="top" constant="2" id="LSa-sc-6rk">
+                    <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                </constraint>
+                <constraint firstItem="ZMx-Y1-CFq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="160" id="Mod-fx-RKx">
+                    <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                </constraint>
+                <constraint firstItem="FbK-nK-eB0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="167" id="OJm-gj-Sau"/>
+                <constraint firstAttribute="trailing" secondItem="ZMx-Y1-CFq" secondAttribute="trailing" constant="160" id="UGp-9j-VFb">
+                    <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                </constraint>
+                <constraint firstItem="FbK-nK-eB0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="169" id="ink-ev-7Bk">
+                    <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="FbK-nK-eB0" secondAttribute="trailing" constant="168" id="ki9-dz-fhh">
+                    <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="FbK-nK-eB0" secondAttribute="centerY" id="mjD-Q8-hLK"/>
+                <constraint firstItem="ZMx-Y1-CFq" firstAttribute="top" secondItem="FbK-nK-eB0" secondAttribute="bottom" constant="13" id="yhF-tV-m8O"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="FbK-nK-eB0"/>
+                    <exclude reference="ZMx-Y1-CFq"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="E0H-m5-Y0Z"/>
+                    <exclude reference="LSa-sc-6rk"/>
+                    <exclude reference="OJm-gj-Sau"/>
+                    <exclude reference="ink-ev-7Bk"/>
+                    <exclude reference="ki9-dz-fhh"/>
+                    <exclude reference="mjD-Q8-hLK"/>
+                    <exclude reference="Mod-fx-RKx"/>
+                    <exclude reference="UGp-9j-VFb"/>
+                    <exclude reference="yhF-tV-m8O"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="FbK-nK-eB0"/>
+                    <include reference="ZMx-Y1-CFq"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="E0H-m5-Y0Z"/>
+                    <exclude reference="LSa-sc-6rk"/>
+                    <exclude reference="OJm-gj-Sau"/>
+                    <include reference="ink-ev-7Bk"/>
+                    <include reference="ki9-dz-fhh"/>
+                    <include reference="mjD-Q8-hLK"/>
+                    <include reference="Mod-fx-RKx"/>
+                    <include reference="UGp-9j-VFb"/>
+                    <include reference="yhF-tV-m8O"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="loading screen-logo.png" width="280" height="327"/>
+        <image name="logo.png" width="368" height="135"/>
+    </resources>
 </document>
